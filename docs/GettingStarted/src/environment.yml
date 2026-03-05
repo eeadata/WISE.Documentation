@@ -72,6 +72,9 @@ dependencies:
   - sphinx_rtd_theme=3.1.0
   
   - pip:
+      # I'll probably remove sphinxcontrib-xlsxtable soon
       - sphinxcontrib-xlsxtable
+      - sphinxcontrib-excel-table
       - sphinxcontrib-mermaid
       - sphinxcontrib-bibtex
+      

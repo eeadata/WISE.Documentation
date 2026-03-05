@@ -10,6 +10,8 @@ sphinxcontrib.bibtex
 
 sphinxcontrib.mermaid 
 
+sphinxcontrib-excel-table
+
 sphinxcontrib-xlsxtable==1.1.1
 openpyxl  # Required dependency for xlsxtable
 

@@ -214,9 +214,44 @@ This is the result that you can link to using the name you gave it (:ref:`the-EF
 
 .. _rst-xlsx-table-directive-ref:
 
+Excel tables using excel-table extension
+----------------------------------------
 
-   Excel tables
-   -------------
+Using Excel tables requires an additional module `sphinxcontrib-excel-table`.
+
+The syntax ``excel-table`` is simple (but you'll need to use to "old" style references, because the :name: option doesn't see to exist)::
+
+   .. _the-EFTA-table-in-Excel-ref:
+
+   .. excel-table:: Table 1 - EFTA countries from an Excel file
+      :file: tables/EFTA.xlsx
+      :sheet: example
+      :header: 1
+      :selection: D4-E8
+
+This is the result that you can link to using the name you gave it (:ref:`the-EFTA-table-in-Excel-ref`):
+
+.. _the-EFTA-table-in-Excel-ref:
+
+.. excel-table:: Table 1 - EFTA countries from an Excel file
+   :file: tables/EFTA.xlsx
+   :sheet: example
+   :header: 1
+   :selection: D4-E8
+
+You can also embed worksheets with merged cells (:ref:`the-strange-table-in-Excel-ref`).
+The original formatting of the is **not** kept.
+
+.. _the-strange-table-in-Excel-ref:
+
+.. excel-table:: A table with lots of strange cells
+   :file: tables/EFTA.xlsx
+   :sheet: StrangeExample
+   :header: 1
+
+..
+   Excel tables using xlsxtable
+   ----------------------------
    
    Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`.
    
@@ -251,7 +286,7 @@ This is the result that you can link to using the name you gave it (:ref:`the-EF
       :file: tables/EFTA.xlsx
       :sheet: StrangeExample
       :header-rows: 1
-
+..
 
 .. links-placeholder
 
