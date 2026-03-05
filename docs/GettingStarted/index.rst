@@ -219,6 +219,9 @@ that automatically builds and deploys your HTML files whenever you push changes 
    Use the configuration in the `documentation.yml` file 
    that you can download :download:`here <src/documentation.yml>`.
 
+   Remember to use the `docs/requirements.txt` file 
+   that you can download :download:`here <../requirements.txt>`.
+
 *  **Configure your repository settings**  
 
    Once the action runs for the first time, it will create a new branch called `gh-pages`.
