@@ -214,7 +214,7 @@ This is the result that you can link to using the name you gave it (:ref:`the-EF
 
 .. _rst-xlsx-table-directive-ref:
 
-..
+
    Excel tables
    -------------
    
@@ -251,7 +251,7 @@ This is the result that you can link to using the name you gave it (:ref:`the-EF
       :file: tables/EFTA.xlsx
       :sheet: StrangeExample
       :header-rows: 1
-..
+
 
 .. links-placeholder
 
