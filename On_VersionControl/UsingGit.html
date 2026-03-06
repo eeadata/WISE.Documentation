@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Version Control using Git &mdash; WISE.Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting up an online Git Repository using Github" href="UsingAnOnlineGitRepository.html" />
+    <link rel="prev" title="On Version Control" href="OnVersionControl.html" /> 
+<link rel="stylesheet" type="text/css" href="../_static/handsontable.full.min.css">
+<script src="../_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WISE.Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Chapters:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_TechnicalDocumentation/index.html">Creating technical documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the version control system</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#introduction">Introduction</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="OnVersionControl.html">On Version Control</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Version Control using Git</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#before-you-start">Before you start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git-cheatsheet">Git CheatSheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visual-git-cheatsheet">Visual Git Cheatsheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to">How to…</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="UsingAnOnlineGitRepository.html">Setting up an online Git Repository using Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GeneratingTokens.html">Generating a Personal Access Token in GitHub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellanea:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">To be completed…</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WISE.Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Using the version control system</a></li>
+      <li class="breadcrumb-item active">Version Control using Git</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/On_VersionControl/UsingGit.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="version-control-using-git">
+<h1>Version Control using Git<a class="headerlink" href="#version-control-using-git" title="Link to this heading"></a></h1>
+<section id="before-you-start">
+<h2>Before you start<a class="headerlink" href="#before-you-start" title="Link to this heading"></a></h2>
+<p>The following resources contain useful information on version control systems:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a>:</dt><dd><p>a simple explanation of version control with Subversion examples.</p>
+</dd>
+</dl>
+</li>
+<li><p><a class="reference external" href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a>: a clear and structured workflow.</p></li>
+</ul>
+</section>
+<section id="git-cheatsheet">
+<h2>Git CheatSheet<a class="headerlink" href="#git-cheatsheet" title="Link to this heading"></a></h2>
+<div class="admonition-source admonition">
+<p class="admonition-title">Source</p>
+<p>Git CheatSheet,(c) 2011, salesforce.com, inc.,
+URL: <a class="reference external" href="https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf">https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf</a></p>
+</div>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<p>When you first setup Git, set up your user name and email address so your first
+commits will record them properly:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;My Name&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;user@email.com&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="basic-git-workflow-example">
+<h3>Basic Git Workflow Example<a class="headerlink" href="#basic-git-workflow-example" title="Link to this heading"></a></h3>
+<p>Initialise a new git repository,
+then stage all the files in the directory
+and finally commit the initial snapshot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git init
+$ git add .
+$ git commit -m &#39;initial commit&#39;
+</pre></div>
+</div>
+<p>Create a new branch named feature_A,
+check it out so it is the active branch,
+then edit and stage some files
+and finally commit the new snapshot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git branch feature_A
+$ git checkout feature_A
+$ (edit files)
+$ git add (files)
+$ git commit -m &#39;add feature A&#39;
+</pre></div>
+</div>
+<p>Switch back to the master branch,
+reverting the feature_A changes you just made,
+then edit some files
+and commit your new changes directly in the master branch context.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git checkout master
+$ (edit files)
+$ git commit -a -m &#39;change files&#39;
+</pre></div>
+</div>
+<p>Merge the feature_A changes into the master branch context,
+combining all your work.
+Finally delete the feature_A branch.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git merge feature_A
+$ git branch -d feature_A
+</pre></div>
+</div>
+</section>
+<section id="setup-init">
+<h3>Setup &amp; Init<a class="headerlink" href="#setup-init" title="Link to this heading"></a></h3>
+<p>Git configuration, and repository initialisation &amp; cloning.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">[key]</span> <span class="pre">[value]</span></code></p></td>
+<td><p>set a config value in this repository</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">global</span> <span class="pre">[key]</span> <span class="pre">[value]</span></code></p></td>
+<td><p>set a config value globally for this user</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></p></td>
+<td><p>initialise an existing directory as a Git repository</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">[url]</span></code></p></td>
+<td><p>clone a Git repository from a URL</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">help</span> <span class="pre">[command]</span></code></p></td>
+<td><p>get help on any Git command</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="stage-snapshot">
+<h3>Stage &amp; Snapshot<a class="headerlink" href="#stage-snapshot" title="Link to this heading"></a></h3>
+<p>Working with snapshots and the Git staging area.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p></td>
+<td><p>show the status of what is staged for your next commit and what is modified in your working directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">[file]</span></code></p></td>
+<td><p>add a file as it looks now to your next commit (stage)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">[file]</span></code></p></td>
+<td><p>reset the staging area for a file so the change is not in your next commit (unstage)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code></p></td>
+<td><p>diff of what is changed but not staged</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--staged</span></code></p></td>
+<td><p>diff of what is staged but not yet committed</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code></p></td>
+<td><p>commit your staged content as a new commit snapshot</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">[file]</span></code></p></td>
+<td><p>remove a file from your working directory and unstage</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="branch-merge">
+<h3>Branch &amp; Merge<a class="headerlink" href="#branch-merge" title="Link to this heading"></a></h3>
+<p>Working with Git branches and with the stash.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code></p></td>
+<td><p>list your branches. a * will appear next to the currently active branch</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">[branch-name]</span></code></p></td>
+<td><p>create a new branch at the current commit</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>switch to another branch and check it out into your working directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>create a branch and immediately switch to it</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>merge another branch into your currently active one and record the merge as a commit</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p></td>
+<td><p>show commit logs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span></code></p></td>
+<td><p>stash away the currently uncommitted modifications in your working directory temporarily</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">apply</span></code></p></td>
+<td><p>re-apply the last stashed changes</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="share-update">
+<h3>Share &amp; Update<a class="headerlink" href="#share-update" title="Link to this heading"></a></h3>
+<p>Fetching, merging and working with updates from another repository.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">[alias]</span> <span class="pre">[url]</span></code></p></td>
+<td><p>add a git URL as an alias</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">[alias]</span></code></p></td>
+<td><p>fetch down all the branches from that Git remote</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[alias]/[branch]</span></code></p></td>
+<td><p>merge a branch on the server into your currently active branch to bring it up to date</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">[alias]</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>push the work on your branch to update that branch on the remote git repository</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p></td>
+<td><p>fetch from the URL tracked by the current branch and immediately try to merge in the tracked branch</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="inspect-compare">
+<h3>Inspect &amp; Compare<a class="headerlink" href="#inspect-compare" title="Link to this heading"></a></h3>
+<p>Examining logs, diffs and object information.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p></td>
+<td><p>show the commit history for the currently active branch</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">branchB..branchA</span></code></p></td>
+<td><p>show the commits on branchA that are not on branchB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--follow</span> <span class="pre">[file]</span></code></p></td>
+<td><p>show the commits that changed file, even across renames</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">branchB...branchA</span></code></p></td>
+<td><p>show the diff of what is in branchA that is not in branchB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span> <span class="pre">[SHA]</span></code></p></td>
+<td><p>show any object in Git in human-readable format</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="contributing-on-github">
+<h3>Contributing on GitHub<a class="headerlink" href="#contributing-on-github" title="Link to this heading"></a></h3>
+<p>To contribute to a project that is hosted on GitHub
+(or another repository hosting site, such as BitBucket)
+you can fork the project online,
+then clone your fork locally,
+make a change, push back to GitHub
+and then send a pull request, which will email the maintainer.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fork project on github
+$ git clone https://github.com/my-user/project
+$ cd project
+$ (edit files)
+$ git add (files)
+$ git commit -m &#39;Explain what I changed&#39;
+$ git push origin master
+go to github and click ‘pull request’ button
+</pre></div>
+</div>
+</section>
+</section>
+<section id="visual-git-cheatsheet">
+<h2>Visual Git Cheatsheet<a class="headerlink" href="#visual-git-cheatsheet" title="Link to this heading"></a></h2>
+<div class="admonition-source admonition">
+<p class="admonition-title">Source</p>
+<p>Git Cheatsheet, (c) 2009-2012, Andrew Peterson
+url: <a class="reference external" href="http://ndpsoftware.com/git-cheatsheet.html">http://ndpsoftware.com/git-cheatsheet.html</a></p>
+<p>A list of Git commands, categorized on what they affect.</p>
+<p>The interactive online version provides
+a description for each of the commands.</p>
+</div>
+<section id="stash">
+<h3>Stash<a class="headerlink" href="#stash" title="Link to this heading"></a></h3>
+<p>A place to hide modifications made to the workspace,
+while working on something else.
+(The stash area is not required in a “normal” workflow.)</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_Stash.png"><img alt="Git commands that affect the stash" src="../_images/Git-Cheatsheet_Stash.png" style="width: 80%;" />
+</a>
+</section>
+<section id="workspace">
+<h3>Workspace<a class="headerlink" href="#workspace" title="Link to this heading"></a></h3>
+<p>The local working area.</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_Workspace.png"><img alt="Git commands that affect the workspace" src="../_images/Git-Cheatsheet_Workspace.png" style="width: 80%;" />
+</a>
+</section>
+<section id="staging-area">
+<h3>Staging area<a class="headerlink" href="#staging-area" title="Link to this heading"></a></h3>
+<p>The “index”– or “staging area” –
+holds a snapshot of the content of the working area,
+and it is this snapshot that is taken as the contents of the next commit.</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_Staging.png"><img alt="commands that affect the staging area" src="../_images/Git-Cheatsheet_Staging.png" style="width: 80%;" />
+</a>
+</section>
+<section id="local-repository">
+<h3>Local repository<a class="headerlink" href="#local-repository" title="Link to this heading"></a></h3>
+<p>A local area under version control.
+Typical branches: master, dev (for local development), feature_x, bugfix_y</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_LocalRepo.png"><img alt="commands that affect the local repository" src="../_images/Git-Cheatsheet_LocalRepo.png" style="width: 80%;" />
+</a>
+</section>
+<section id="upstream-repository">
+<h3>Upstream repository<a class="headerlink" href="#upstream-repository" title="Link to this heading"></a></h3>
+<p>Typically a remote area under version control.
+Default name is ‘origin’. Typical branches here: master, shared_feature_x, release_y.</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_UpstreamRepo.png"><img alt="commands that affect the upstream repository" src="../_images/Git-Cheatsheet_UpstreamRepo.png" style="width: 80%;" />
+</a>
+</section>
+</section>
+<section id="how-to">
+<h2>How to…<a class="headerlink" href="#how-to" title="Link to this heading"></a></h2>
+<p>This section include miscellaneous Git commands to perform different operations.</p>
+<section id="set-up-a-merge-tool-to-resolve-conflicts">
+<h3>Set up a merge tool to resolve conflicts<a class="headerlink" href="#set-up-a-merge-tool-to-resolve-conflicts" title="Link to this heading"></a></h3>
+<p>Configure kdiff3 as the merge tool (in Windows):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git config --global mergetool.kdiff3.path &#39;C:\Program Files (x86)\KDiff3\kdiff3.exe&#39;
+$ git config --global merge.tool kdiff3
+</pre></div>
+</div>
+<p>Invoke kdiff3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  git mergetool &lt;file&gt;
+</pre></div>
+</div>
+</section>
+<section id="force-an-update-from-the-upstream-repository">
+<h3>Force an update from the upstream repository<a class="headerlink" href="#force-an-update-from-the-upstream-repository" title="Link to this heading"></a></h3>
+<p>This operation will discard all changes in the local repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git reset --hard HEAD
+$ git pull
+</pre></div>
+</div>
+</section>
+<section id="add-untracked-files-to-the-set-of-files-under-version-control">
+<h3>Add untracked files to the set of files under version control<a class="headerlink" href="#add-untracked-files-to-the-set-of-files-under-version-control" title="Link to this heading"></a></h3>
+<p>A pattern can be used. For example, this will add any new or untracked <code class="docutils literal notranslate"><span class="pre">*.rst</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add $(git ls-files --other *.rst)
+</pre></div>
+</div>
+</section>
+<section id="remove-multiple-files-from-the-set-of-files-under-version-control">
+<h3>Remove multiple files from the set of files under version control<a class="headerlink" href="#remove-multiple-files-from-the-set-of-files-under-version-control" title="Link to this heading"></a></h3>
+<p>This will remove multiple files that have already been deleted from disk:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git rm $(git ls-files --deleted)
+</pre></div>
+</div>
+<p>Alternatively, edit the <code class="docutils literal notranslate"><span class="pre">.git\config</span></code> file, and add the following lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[alias]
+   rma = !git ls-files --deleted -z | xargs -0 git rm
+</pre></div>
+</div>
+<p>Then run the command using the alias:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$git rma
+</pre></div>
+</div>
+</section>
+<section id="disable-quoted-file-names">
+<h3>Disable quoted file names<a class="headerlink" href="#disable-quoted-file-names" title="Link to this heading"></a></h3>
+<p>Special character and spaces in file names can be problematic.
+To disable quotes file names (Windows Unicode Support), use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  git config [--global] core.quotepath off
+</pre></div>
+</div>
+<p class="rubric">Links</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="OnVersionControl.html" class="btn btn-neutral float-left" title="On Version Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UsingAnOnlineGitRepository.html" class="btn btn-neutral float-right" title="Setting up an online Git Repository using Github" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

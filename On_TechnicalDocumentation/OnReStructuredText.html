@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is reStructuredText? &mdash; WISE.Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tables" href="UsingTables.html" />
+    <link rel="prev" title="Creating technical documentation" href="index.html" /> 
+<link rel="stylesheet" type="text/css" href="../_static/handsontable.full.min.css">
+<script src="../_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WISE.Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Chapters:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Creating technical documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#sphinx">Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#restructuredtext-and-markdown">reStructuredText and Markdown</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#restructuredtext">reStructuredText</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">What is reStructuredText?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sections">Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bold-italics-and-other-inline-markup">Bold, italics, and other inline markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lists">Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hyperlinks">Hyperlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#explicit-markup">Explicit Markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#directives">Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#table-of-contents">Table of contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingTables.html">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html">Source code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGraphicsAndDiagramsInSphinx.html">Creating diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingMathEquationsInSphinx.html">Creating math equations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html">Bibliographic citations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../On_VersionControl/index.html">Using the version control system</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellanea:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">To be completed…</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WISE.Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Creating technical documentation</a></li>
+      <li class="breadcrumb-item active">What is reStructuredText?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/On_TechnicalDocumentation/OnReStructuredText.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="what-is-restructuredtext">
+<span id="rst-primer-ref"></span><h1>What is reStructuredText?<a class="headerlink" href="#what-is-restructuredtext" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This document is an abridged and modified version of <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">Sphinx’s reStructuredText Primer</a>.</p>
+</div>
+<p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> (reST) is a simple, easy-to-read markup language used by <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>.</p>
+<p>A reStructuredText document is a text file
+with some markup to specify the format or the semantics of the text.</p>
+<p>Most of the markup used by Sphinx is standard reST markup
+Exceptions (i.e. markup specific to Sphinx) are signalled in the text.</p>
+<p>There are two types of markup:</p>
+<ul class="simple">
+<li><p><strong>inline markup</strong>:
+for example, <code class="docutils literal notranslate"><span class="pre">*the</span> <span class="pre">surrounding</span> <span class="pre">asterisks</span> <span class="pre">would</span> <span class="pre">mark</span> <span class="pre">this</span> <span class="pre">text</span> <span class="pre">as</span> <span class="pre">italics*</span></code>, like <em>this</em>.</p></li>
+<li><p><strong>explicit markup</strong>:
+is used for blocks of text that need special handling,
+such as footnotes, tables, or generic directives.
+Explicit markup always starts with <code class="docutils literal notranslate"><span class="pre">..</span></code> followed by whitespace.</p></li>
+</ul>
+</section>
+<section id="paragraphs">
+<span id="rst-paragraphs-ref"></span><h1>Paragraphs<a class="headerlink" href="#paragraphs" title="Link to this heading"></a></h1>
+<p>Paragraphs are simply chunks of text separated by one or more blank lines.
+All lines of the same paragraph
+must be left-aligned to the same level of indentation.</p>
+<p><strong>Quoted paragraphs</strong> are created by
+just indenting them more than the surrounding paragraphs:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Normal paragraph.
+
+   Indented paragraph.
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Each indentation level is created with 3 whitespaces.
+Do not use tabs.</p>
+</div>
+<p>Line blocks are a way of preserving <strong>line breaks</strong>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> the sweet &amp; aged people
+<span class="o">|</span> who rule this world(and me and
+<span class="o">|</span> you if we’re not very
+<span class="o">|</span> careful)
+</pre></div>
+</div>
+<p>Here is the result of the above markup:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">the sweet &amp; aged people</div>
+<div class="line">who rule this world(and me and</div>
+<div class="line">you if we’re not very</div>
+<div class="line">careful)</div>
+</div>
+</div></blockquote>
+</section>
+<section id="sections">
+<span id="rst-sections-ref"></span><h1>Sections<a class="headerlink" href="#sections" title="Link to this heading"></a></h1>
+<p>Section are created by underlining the title with a punctuation character:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">This is a heading</span>
+<span class="gh">=================</span>
+</pre></div>
+</div>
+<p>The underlining must be at least as long as the text itself.
+Sections must be properly nested.</p>
+<blockquote>
+<div><div class="admonition-this-is-a-style-convention admonition">
+<p class="admonition-title">This is a style convention.</p>
+<p>Use the following punctuation characters in the section titles:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> for Parts</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> for Chapters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">=</span></code> for sections (“Heading 1”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> for subsections (“Heading 2”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code> for subsubsections (“Heading 3”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;</span></code> for paragraphs (“Heading 4”)</p></li>
+</ul>
+<p>When converting to HTML format,
+sections are converted to an appropriate heading tag
+(for example: <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;Heading</span> <span class="pre">text&lt;/h2&gt;</span></code>).</p>
+<p>When converting to ODT or DOCX,
+an appropriate Heading style is applied.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="bold-italics-and-other-inline-markup">
+<span id="rst-inlinemarkup-ref"></span><h1>Bold, italics, and other inline markup<a class="headerlink" href="#bold-italics-and-other-inline-markup" title="Link to this heading"></a></h1>
+<p>The markup is quite simple:</p>
+<ul class="simple">
+<li><p>use one asterisk for <em>italics</em>: <code class="docutils literal notranslate"><span class="pre">*text*</span></code></p></li>
+<li><p>use two asterisks for <strong>bold</strong>: <code class="docutils literal notranslate"><span class="pre">**text**</span></code></p></li>
+<li><p>use backquotes for text <code class="docutils literal notranslate"><span class="pre">literals</span></code>: <code class="docutils literal notranslate"><span class="pre">``text``</span></code></p></li>
+<li><p>Subscript is marked with <code class="docutils literal notranslate"><span class="pre">:sub:`subscript</span> <span class="pre">text`</span></code>.</p></li>
+<li><p>Superscript is marked with <code class="docutils literal notranslate"><span class="pre">:sup:`superscript</span> <span class="pre">text`</span></code>.</p></li>
+</ul>
+<p>There are some restrictions:</p>
+<ul>
+<li><p>The markup may not be nested.
+For example, this is wrong: <code class="docutils literal notranslate"><span class="pre">*italics</span> <span class="pre">with</span> <span class="pre">**bold**</span> <span class="pre">inside*</span></code></p></li>
+<li><p>The text content within the markup may not start or end with whitespace.
+For example, this is wrong: <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">text*</span></code></p></li>
+<li><p>The markup must be separated from surrounding text by whitespace or punctuation.
+Use a backslash-escaped-space to work around that.
+For example: <code class="docutils literal notranslate"><span class="pre">thisis\</span> <span class="pre">*one*\</span> <span class="pre">word</span></code> is rendered like thisis<em>one</em>word.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Whitespace or punctuation is required around interpreted text,
+but often not desired with subscripts &amp; superscripts.
+Backslash-escaped whitespace can be used;
+the whitespace will be removed from the processed document:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The chemical formula for molecular oxygen is O\ <span class="na">:sub:</span><span class="nv">`2`</span>.
+</pre></div>
+</div>
+<p>To improve the readability of the text, the use backslash-escapes is discouraged.
+If possible, use <a class="reference internal" href="#rst-substitutions-ref"><span class="std std-ref">Substitutions</span></a> instead:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The chemical formula for pure water is |H2O|.
+
+<span class="p">..</span> <span class="nt">|H2O|</span> <span class="ow">replace</span><span class="p">::</span> H\ <span class="na">:sub:</span><span class="nv">`2`</span>\ O
+</pre></div>
+</div>
+<p>Keep all substitutions together (e.g. at the end of the file or in a separate file).</p>
+</div>
+</li>
+</ul>
+</section>
+<section id="lists">
+<span id="rst-lists-ref"></span><h1>Lists<a class="headerlink" href="#lists" title="Link to this heading"></a></h1>
+<section id="bulleted-lists">
+<h2>Bulleted lists<a class="headerlink" href="#bulleted-lists" title="Link to this heading"></a></h2>
+<p>List markup is natural:
+just place an asterisk at the start of a paragraph and indent properly:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">*</span>  This is a bulleted list.
+<span class="m">*</span>  It has two items, the second
+   item uses two lines.
+</pre></div>
+</div>
+<p>Nested lists are possible,
+but be aware that they must be separated
+from the parent list items by blank lines:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">*</span> this is
+<span class="m">*</span> a list
+
+  <span class="m">*</span> with a nested list
+  <span class="m">*</span> and some sub-items
+
+<span class="m">*</span> and here the parent list continues
+</pre></div>
+</div>
+</section>
+<section id="numbered-lists">
+<h2>Numbered lists<a class="headerlink" href="#numbered-lists" title="Link to this heading"></a></h2>
+<p>The same goes for numbered lists;
+they can also be auto-numbered using a <code class="docutils literal notranslate"><span class="pre">#</span></code> sign:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> This is a numbered list.
+<span class="m">2.</span> It has two items too.
+
+<span class="m">#.</span> This is a numbered list.
+<span class="m">#.</span> It has two items too.
+</pre></div>
+</div>
+</section>
+<section id="definition-lists">
+<span id="rst-definitionlists-ref"></span><h2>Definition lists<a class="headerlink" href="#definition-lists" title="Link to this heading"></a></h2>
+<p>Definition lists are created as follows:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>term (up to a line of text)
+   Definition of the term, which must be indented
+
+   and can even consist of multiple paragraphs
+
+next term
+   Description.
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a> documentation generator
+provides a more flexible alternative to definition lists
+(see <a class="reference internal" href="#rst-glossaries-ref"><span class="std std-ref">Glossaries</span></a>).</p>
+</section>
+<section id="glossaries">
+<span id="rst-glossaries-ref"></span><h2>Glossaries<a class="headerlink" href="#glossaries" title="Link to this heading"></a></h2>
+<p>The Sphinx <code class="docutils literal notranslate"><span class="pre">..glossary::</span></code> directive
+contains a reST definition-list-like markup
+with terms and definitions.</p>
+<p>See the following example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
+
+   environment
+      A structure where information about all documents under the root is
+      saved, and used for cross-referencing.  The environment is pickled
+      after the parsing stage, so that successive runs only need to read
+      and parse new and changed documents.
+
+   source directory
+      The directory which, including its subdirectories, contains all
+      source files for one Sphinx project.
+</pre></div>
+</div>
+<p>The definitions will then be used in cross-references with the <code class="docutils literal notranslate"><span class="pre">:term:</span></code> role.
+For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The <span class="na">:term:</span><span class="nv">`source directory`</span> for this project is ...
+</pre></div>
+</div>
+<p>In contrast to regular definition lists,
+a glossary supports <em>multiple</em> terms per entry
+and inline markup is allowed in terms.
+You can link to all of the terms.  For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
+
+   term 1
+   term 2
+      Definition of both terms.
+</pre></div>
+</div>
+<p>When the glossary is sorted, the first term determines the sort order.</p>
+<p>To automatically sort a glossary, include the following flag:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
+   <span class="nc">:sorted:</span>
+</pre></div>
+</div>
+</section>
+<section id="field-lists">
+<span id="rst-fieldlists-ref"></span><h2>Field lists<a class="headerlink" href="#field-lists" title="Link to this heading"></a></h2>
+<p>Field lists are two-column table-like structures
+resembling database records (label &amp; data pairs).
+For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:Date:</span> 2001-08-16
+<span class="nc">:Version:</span> 1
+<span class="nc">:Authors:</span> - Me
+          <span class="m">-</span> Myself
+          <span class="m">-</span> I
+<span class="nc">:Indentation:</span> Since the field marker may be quite long, the second
+   and subsequent lines of the field body do not have to line up
+   with the first line, but they must be indented relative to the
+   field name marker, and they must line up with each other.
+<span class="nc">:Parameter i:</span> integer
+</pre></div>
+</div>
+<p>In this project, field lists are used to include metadata in each document.</p>
+<blockquote>
+<div><div class="admonition-this-is-a-style-convention admonition">
+<p class="admonition-title">This is a style convention.</p>
+<p>The basic <a class="reference external" href="https://www.dublincore.org/">Dublin Core</a> metadata fields
+should be included in the very beginning of each document
+(like a header to the text file),
+like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. metadata-placeholder</span>
+
+<span class="nc">:DC.title:</span>
+   Document title
+<span class="nc">:DC.creator:</span>
+   Author(s) and/or organisation(s) responsible for the content of the document.
+<span class="nc">:DC.date:</span>
+   Creation date or last update date of the document.
+   Use the YYYY-MM-DD format.
+<span class="nc">:DC.description:</span>
+   Abstract
+<span class="nc">:DC.language:</span>
+   eng
+<span class="nc">:DC.format:</span>
+   text/x-rst
+<span class="nc">:DC.license:</span>
+   https://creativecommons.org/licenses/by/4.0/
+<span class="nc">:DC.rights:</span>
+   Access rights
+<span class="nc">:DC.rightsHolder:</span>
+   E.g. European Environment Agency, European Commission, etc.
+</pre></div>
+</div>
+<p>Note that these metadata field names
+are not automatically recognised by the Sphinx parser,
+so the text itself will not be visible in the HTML pages (for example).
+The metadata fields are the equivalent
+to the <em>Document properties</em> fields in a <code class="docutils literal notranslate"><span class="pre">DOCX</span></code> file or an <code class="docutils literal notranslate"><span class="pre">ODT</span></code> file.</p>
+</div>
+</div></blockquote>
+<p><a class="reference external" href="https://docutils.sourceforge.io/">docutils</a> recognises a number of Bibliographic Fields
+(such as <code class="docutils literal notranslate"><span class="pre">docinfo</span></code>, <code class="docutils literal notranslate"><span class="pre">author</span></code>, <code class="docutils literal notranslate"><span class="pre">authors</span></code>,
+<code class="docutils literal notranslate"><span class="pre">organization</span></code>, <code class="docutils literal notranslate"><span class="pre">contact</span></code>, <code class="docutils literal notranslate"><span class="pre">version</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>,
+<code class="docutils literal notranslate"><span class="pre">date</span></code>, <code class="docutils literal notranslate"><span class="pre">copyright</span></code>, <code class="docutils literal notranslate"><span class="pre">field</span></code>, <code class="docutils literal notranslate"><span class="pre">topic</span></code>).</p>
+</section>
+</section>
+<section id="hyperlinks">
+<span id="rst-hyperlinks-ref"></span><h1>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Link to this heading"></a></h1>
+<section id="external-links">
+<h2>External links<a class="headerlink" href="#external-links" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">text</span> <span class="pre">&lt;http://example.com/&gt;`_</span></code> for inline web links.
+If the link text should be the web address,
+you don’t need special markup at all,
+the parser finds links and mail addresses in ordinary text (with no markup).</p>
+<p>You can also separate the link and the target definition, like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is a paragraph that contains <span class="s">`a link`_</span>.
+
+<span class="p">..</span> <span class="nt">_a link:</span> http://example.com/
+
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> This is a tip.
+
+   The use of inline web links is discouraged,
+   to improve the readability of the reST text.
+
+   Simple links (e.g. to institutional sites, software sites, and so on)
+   should be kept together at the end of the text file
+   (this is merely a way to simplify the editing procedure,
+   and the update and verification of the links).
+</pre></div>
+</div>
+</section>
+<section id="internal-links">
+<span id="rst-internallinks-ref"></span><h2>Internal links<a class="headerlink" href="#internal-links" title="Link to this heading"></a></h2>
+<p>To support cross-referencing to arbitrary locations in any document,
+the standard reST labels are used.
+For this to work,
+the label names must be unique throughout the entire documentation.
+There are two ways in which you can refer to labels:</p>
+<ul>
+<li><p>If you place a label directly before a section title,
+you can reference to it with <code class="docutils literal notranslate"><span class="pre">:ref:`label-name`</span></code>.
+Example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_my-label-ref:</span>
+
+<span class="gh">Section to cross-reference</span>
+<span class="gh">--------------------------</span>
+
+This is the text of the section.
+
+In the end of this phrase is a reference to the section title, see <span class="na">:ref:</span><span class="nv">`my-label-ref`</span>.
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> role would then generate a link to the section,
+with the link  title being “Section to cross-reference”.
+This works just as well
+when section and reference are in different source files.</p>
+<p>Automatic labels also work with <a class="reference internal" href="#rst-figures-ref"><span class="std std-ref">figures</span></a>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_my-figure-ref:</span>
+
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> my-image.png
+
+   My figure caption
+</pre></div>
+</div>
+<p>A reference like <code class="docutils literal notranslate"><span class="pre">:ref:`my-figure-ref`</span></code>
+would insert a reference to the figure
+with link text “My figure caption”.</p>
+</li>
+<li><p>Labels that aren’t placed before a section title can still be referenced
+to, but you must provide the text for the link, using this syntax:
+<code class="docutils literal notranslate"><span class="pre">:ref:`Link</span> <span class="pre">text</span> <span class="pre">&lt;label-name&gt;`</span></code>.</p></li>
+</ul>
+<p>Using <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> is advised over standard reStructuredText links to sections
+(like <code class="docutils literal notranslate"><span class="pre">`Section</span> <span class="pre">title`_</span></code>) because it works across files, when section
+headings are changed, and for all builders that support cross-references.</p>
+</section>
+</section>
+<section id="explicit-markup">
+<span id="rst-explicitmarkup-ref"></span><h1>Explicit Markup<a class="headerlink" href="#explicit-markup" title="Link to this heading"></a></h1>
+<p>Explicit markup is used in reStructuredText
+for most constructs that need special handling,
+such as footnotes,
+specially-highlighted paragraphs,
+comments,
+and generic directives.</p>
+<p>An explicit markup block begins with a line starting with <code class="docutils literal notranslate"><span class="pre">..</span></code>
+followed by whitespace
+and is terminated by the next paragraph
+at the same level of indentation.
+(There needs to be a blank line
+between explicit markup and normal paragraphs.
+This may all sound a bit complicated,
+but it is intuitive enough when you write it.)</p>
+</section>
+<section id="directives">
+<span id="rst-directives-ref"></span><h1>Directives<a class="headerlink" href="#directives" title="Link to this heading"></a></h1>
+<p>A directive is a generic block of explicit markup.</p>
+<p>The directive content follows after a blank line
+and is indented relative to the directive start.</p>
+<p>Basically, a directive consists of a name, arguments, options and content.</p>
+<p>Look at this example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">contents</span><span class="p">::</span> This is my Table of Contents
+   <span class="nc">:depth:</span> 2
+</pre></div>
+</div>
+<p>The directive starts with <code class="docutils literal notranslate"><span class="pre">..</span></code> followed by one whitespace.
+The name of the directive is <code class="docutils literal notranslate"><span class="pre">contents</span></code> (it creates a table of contents).
+This directive takes one argument:
+the table of contents’ title (“This is my Table of Contents”).
+The option <code class="docutils literal notranslate"><span class="pre">depth</span></code> specifies
+the number of section levels that are collected in the table of contents.</p>
+<p>Options are given in the lines immediately following the arguments
+and are indicated by the colons.
+Options must be indented to the same level as the directive content.</p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/">Docutils</a> supports the many directives (not all are listed below!):</p>
+<ul class="simple">
+<li><p>Admonitions: <code class="docutils literal notranslate"><span class="pre">attention</span></code>, <code class="docutils literal notranslate"><span class="pre">caution</span></code>, <code class="docutils literal notranslate"><span class="pre">danger</span></code>,
+<code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">hint</span></code>, <code class="docutils literal notranslate"><span class="pre">important</span></code>, <code class="docutils literal notranslate"><span class="pre">note</span></code>,
+<code class="docutils literal notranslate"><span class="pre">tip</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code> and the generic <code class="docutils literal notranslate"><span class="pre">admonition</span></code>.
+(Most themes style only <code class="docutils literal notranslate"><span class="pre">note</span></code> and <code class="docutils literal notranslate"><span class="pre">warning</span></code> specially.)</p></li>
+<li><p>Images:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> - see the <a class="reference internal" href="#images">images</a> section;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">figure</span></code> - an image with caption and optional legend.</p></li>
+</ul>
+</li>
+<li><p>Additional body elements:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span> <span class="pre">&lt;table-of-contents&gt;</span></code> -
+a local table of contents for the sections in the current file only;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rubric</span></code> -
+a heading without relation to the document’s sections
+that won’t be included in any table of contents;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> and <code class="docutils literal notranslate"><span class="pre">sidebar</span></code> - special highlighted body elements;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">epigraph</span></code> - a block quote with optional attribution line;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container</span></code> -   a container with a custom class,
+useful to generate an outer <code class="docutils literal notranslate"><span class="pre">``&lt;div&gt;``</span></code> in HTML output.</p></li>
+</ul>
+</li>
+<li><p>Special directives:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">include</span></code> - include reStructuredText from another file;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raw</span></code> -  include raw target-format markup, such as LaTeX;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code> - assign a class attribute to the next element.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="table-of-contents">
+<span id="rst-contents-ref"></span><h1>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h1>
+<p>To include a table of contents within a given document,
+use the directive <code class="docutils literal notranslate"><span class="pre">contents</span></code>.
+The following example creates a local table of contents
+with a maximum of two levels (below the level where it is located):</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Part II</span>
+<span class="gh">#######</span>
+
+<span class="gh">Chapter 1</span>
+<span class="gh">*********</span>
+
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+   <span class="nc">:depth:</span> 2
+   <span class="nc">:local:</span>
+
+<span class="gh">Heading 1</span>
+<span class="gh">=========</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive creates a table of contents
+that collets information from several files.
+The following example creates a table of contents
+from the sections of various documents (up to a depth of 3 levels).
+The <code class="docutils literal notranslate"><span class="pre">:glob:</span></code> option allows all documents in the ‘chapter2’ folder
+to be included (sorted according to their name):</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:glob:</span>
+   <span class="nc">:maxdepth:</span> 3
+
+   preamble
+   chapter1/part1
+   chapter1/conclusion
+   chapter2/*
+   references
+</pre></div>
+</div>
+<section id="images">
+<span id="rst-images-ref"></span><h2>Images<a class="headerlink" href="#images" title="Link to this heading"></a></h2>
+<p>reST supports an image directive, used like so:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> myImage.png
+   <span class="nc">:width:</span> 100%
+   <span class="nc">:align:</span> middle
+</pre></div>
+</div>
+<p>The filename must either be relative to the source file,
+or absolute (which means that they are relative to the top source directory).</p>
+</section>
+<section id="figures">
+<span id="rst-figures-ref"></span><h2>Figures<a class="headerlink" href="#figures" title="Link to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">figure</span></code> consists of image data (including image options),
+an optional caption (a single paragraph),
+and an optional legend (arbitrary body elements):</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> picture.png
+   <span class="nc">:scale:</span> 50 %
+   <span class="nc">:alt:</span> map to buried treasure
+
+   This is the caption of the figure (a simple paragraph).
+
+   The legend consists of all elements after the caption.  In this
+   case, the legend consists of this paragraph and the following
+   table:
+
+   +-----------------------+-----------------------+
+   <span class="o">|</span> Symbol                | Meaning               |
+   +=======================+=======================+
+   <span class="o">|</span> .. image:: tent.png   | Campground            |
+   +-----------------------+-----------------------+
+   <span class="o">|</span> .. image:: waves.png  | Lake                  |
+   +-----------------------+-----------------------+
+   <span class="o">|</span> .. image:: peak.png   | Mountain              |
+   +-----------------------+-----------------------+
+</pre></div>
+</div>
+<p>There must be blank lines before the caption paragraph and before the legend.
+To specify a legend without a caption,
+use an empty comment (<code class="docutils literal notranslate"><span class="pre">..</span></code>) in place of the caption.</p>
+</section>
+<section id="footnotes">
+<span id="rst-footnotes-ref"></span><h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<p>For footnotes, use <code class="docutils literal notranslate"><span class="pre">[#name]_</span></code> to mark the footnote
+location, and add the footnote body at the bottom of the document after a
+“Footnotes” rubric heading, like so:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Lorem ipsum <span class="s">[#first-footnote-name]_</span> dolor sit amet <span class="s">[#second-footnote-name]_</span>
+
+<span class="p">..</span> <span class="ow">rubric</span><span class="p">::</span> Footnotes
+
+<span class="p">..</span> <span class="nt">[#first-footnote-name]</span> Text of the first footnote.
+<span class="p">..</span> <span class="nt">[#fsecond-footnote-name]</span> Text of the second footnote.
+</pre></div>
+</div>
+<p>You can also explicitly number the footnotes (<code class="docutils literal notranslate"><span class="pre">[1]_</span></code>) or use auto-numbered
+footnotes without names (<code class="docutils literal notranslate"><span class="pre">[#]_</span></code>).</p>
+<blockquote>
+<div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To facilitate editing, auto-numbered footnotes should <strong>not</strong> be used.
+Instead, use short descriptive names (that simplify cross-referencing).</p>
+</div>
+</div></blockquote>
+</section>
+<section id="citations">
+<span id="rst-citations-ref"></span><h2>Citations<a class="headerlink" href="#citations" title="Link to this heading"></a></h2>
+<p>Standard reST citations are supported:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Lorem ipsum <span class="s">[Ref]_</span> dolor sit amet.
+
+<span class="p">..</span> <span class="nt">[Ref]</span> Book or article reference, URL or whatever.
+</pre></div>
+</div>
+<p>Citation usage is similar to footnote usage,
+but with a label that is not numeric or begins with <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
+<p>When the documentation is built using the <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>  document generator,
+the citations are “global”,
+meaning that every citation can be referenced from any .rst files.
+In this case, a separate file may be created (e.g. a <code class="docutils literal notranslate"><span class="pre">references.rst</span></code> file).</p>
+<blockquote>
+<div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See <a class="reference internal" href="UsingBibTeXCitationsInSphinx.html#rst-biblio-ref"><span class="std std-ref">Bibliographic citations</span></a> for further information.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="substitutions">
+<span id="rst-substitutions-ref"></span><h2>Substitutions<a class="headerlink" href="#substitutions" title="Link to this heading"></a></h2>
+<p>reST supports “substitutions”,
+which are pieces of text and/or markup referred to in the text by <code class="docutils literal notranslate"><span class="pre">|name|</span></code>.
+They are defined like footnotes with explicit markup blocks, like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|name|</span> <span class="ow">replace</span><span class="p">::</span> replacement <span class="ge">*text*</span>
+</pre></div>
+</div>
+<p>or this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|caution|</span> <span class="ow">image</span><span class="p">::</span> warning.png
+             <span class="nc">:alt:</span> Warning!
+</pre></div>
+</div>
+<p>If you want to use some substitutions for all documents,
+put them into a separate file
+(e.g. <code class="docutils literal notranslate"><span class="pre">substitutions.txt</span></code>)
+and include it into all documents you want to use them in,
+using the <code class="docutils literal notranslate"><span class="pre">include</span></code> directive.</p>
+<p>Be sure to use a file name extension
+which different from that of other source files,
+to avoid Sphinx finding it as a standalone document.
+For example, use the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file extension for the source files,
+and the <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file extension for the files which are to be included.</p>
+<blockquote>
+<div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is useful in technical documentation such as User’s Manuals,
+where a substitution file can be built for each localised version
+of the interface elements (menus, messages, etc),
+guaranteeing the consistency of the document translation
+with the software’s human user interface.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Substitutions do NOT work inside directives (or inside the options of a directive).</p>
+<p>Do not try to google for a solution (…been there).
+It is a design limitation: RST markup can not be nested. Period.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Substitutions can be used with the <code class="docutils literal notranslate"><span class="pre">image</span></code> directive,
+which is an inline element.
+Substitutions can <strong>not</strong> be used with the <code class="docutils literal notranslate"><span class="pre">figure</span></code> directive,
+which creates a block-level element.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="comments">
+<span id="rst-comments-ref"></span><h2>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
+<p>Every explicit markup block
+which isn’t a valid markup construct is regarded as a comment.
+For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. This is a comment.</span>
+</pre></div>
+</div>
+<p>You can indent text after a comment start to form multiline comments:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">..</span>
+<span class="cp">   This whole indented block</span>
+<span class="cp">   is a comment.</span>
+
+<span class="cp">   Still in the comment.</span>
+<span class="cp">..</span>
+</pre></div>
+</div>
+<div class="admonition-this-is-a-style-convention admonition">
+<p class="admonition-title">This is a style convention.</p>
+<p>Comments can also be used as placeholders
+to mark places within the document.
+For example:</p>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">links-placeholder</span></code> can mark the place
+where hyperlinks are kept together at the end of the document;</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">metadata-placeholder</span></code> can mark the place
+where document metadata (author, date, etc)
+is kept together at the beginning of the document.</p></li>
+</ul>
+</div>
+<p class="rubric">Links</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Creating technical documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UsingTables.html" class="btn btn-neutral float-right" title="Tables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

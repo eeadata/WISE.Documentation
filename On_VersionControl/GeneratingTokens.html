@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generating a Personal Access Token in GitHub &mdash; WISE.Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="To be completed…" href="../Notebook/index.html" />
+    <link rel="prev" title="Setting up an online Git Repository using Github" href="UsingAnOnlineGitRepository.html" /> 
+<link rel="stylesheet" type="text/css" href="../_static/handsontable.full.min.css">
+<script src="../_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WISE.Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Chapters:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_TechnicalDocumentation/index.html">Creating technical documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the version control system</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#introduction">Introduction</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="OnVersionControl.html">On Version Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGit.html">Version Control using Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingAnOnlineGitRepository.html">Setting up an online Git Repository using Github</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Generating a Personal Access Token in GitHub</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#navigate-to-developer-settings">1. Navigate to Developer Settings\</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#choose-your-token-type">2. Choose Your Token Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-your-token">3. Save Your Token</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellanea:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">To be completed…</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WISE.Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Using the version control system</a></li>
+      <li class="breadcrumb-item active">Generating a Personal Access Token in GitHub</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/On_VersionControl/GeneratingTokens.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generating-a-personal-access-token-in-github">
+<h1>Generating a Personal Access Token in GitHub<a class="headerlink" href="#generating-a-personal-access-token-in-github" title="Link to this heading"></a></h1>
+<p>Using a <strong>Personal Access Token</strong> or PAT is the standard way to authenticate when using the command line or the API. GitHub now offers two types: <strong>Fine-grained</strong> (recommended) and <strong>Classic</strong>.</p>
+<section id="navigate-to-developer-settings">
+<h2>1. Navigate to Developer Settings\<a class="headerlink" href="#navigate-to-developer-settings" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Log in to your GitHub account.</p></li>
+<li><p>Click your <strong>profile photo</strong> in the top-right corner and select <strong>Settings</strong>.</p></li>
+<li><p>In the left-hand sidebar, scroll all the way to the bottom and click <strong>Developer settings</strong>.</p></li>
+</ol>
+</section>
+<section id="choose-your-token-type">
+<h2>2. Choose Your Token Type<a class="headerlink" href="#choose-your-token-type" title="Link to this heading"></a></h2>
+<p>On the left sidebar, click <strong>Personal access tokens</strong>. You will see two options:</p>
+<section id="option-a-fine-grained-tokens-recommended">
+<h3>Option A: Fine-grained tokens (Recommended)<a class="headerlink" href="#option-a-fine-grained-tokens-recommended" title="Link to this heading"></a></h3>
+<p><em>Best for specific projects. You can limit access to specific repositories.</em></p>
+<ol class="arabic simple">
+<li><p>Click <strong>Fine-grained tokens</strong> -&gt; <strong>Generate new token</strong>.</p></li>
+<li><p><strong>Name &amp; Expiration:</strong> Give it a name and set an expiry (default is 30 days).</p></li>
+<li><p><strong>Resource owner:</strong> Select your account (or an organization).</p></li>
+<li><p><strong>Repository access:</strong> Choose <strong>“Only select repositories”</strong> to keep things secure.</p></li>
+<li><p><strong>Permissions:</strong> Under <strong>Repository permissions</strong>, find what you need. (For basic git actions like push/pull, set <strong>Contents</strong> to “Read and write”).</p></li>
+<li><p>Click <strong>Generate token</strong>.</p></li>
+</ol>
+</section>
+<section id="option-b-tokens-classic">
+<h3>Option B: Tokens (classic)<a class="headerlink" href="#option-b-tokens-classic" title="Link to this heading"></a></h3>
+<p><em>Best for general use or older tools that don’t support fine-grained permissions.</em></p>
+<ol class="arabic simple">
+<li><p>Click <strong>Tokens (classic)</strong> -&gt; <strong>Generate new token (classic)</strong>.</p></li>
+<li><p><strong>Note:</strong> Enter a description (e.g., “Home PC Access”).</p></li>
+<li><p><strong>Expiration:</strong> Select a duration.</p></li>
+<li><p><strong>Scopes:</strong> For general command-line use, check the <strong><code class="docutils literal notranslate"><span class="pre">repo</span></code></strong> box (this grants full control of private and public repositories).</p></li>
+<li><p>Click <strong>Generate token</strong>.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="save-your-token">
+<h2>3. Save Your Token<a class="headerlink" href="#save-your-token" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p>[!IMPORTANT]
+<strong>Copy the token immediately.</strong> GitHub will never show it to you again. If you lose it, you’ll have to delete it and create a new one.</p>
+</div></blockquote>
+<section id="how-to-use-it">
+<h3>How to use it<a class="headerlink" href="#how-to-use-it" title="Link to this heading"></a></h3>
+<p>When your terminal (or VS Code) asks for your GitHub password, <strong>paste the token instead of your actual password</strong>.</p>
+<p><strong>Pro-tip:</strong> If you find yourself pasting this constantly, you can save it globally using:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">credential.helper</span> <span class="pre">store</span></code></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="UsingAnOnlineGitRepository.html" class="btn btn-neutral float-left" title="Setting up an online Git Repository using Github" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Notebook/index.html" class="btn btn-neutral float-right" title="To be completed…" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

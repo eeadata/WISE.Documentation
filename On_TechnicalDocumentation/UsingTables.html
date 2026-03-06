@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables &mdash; WISE.Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Source code" href="ShowingCodeExamplesInSphinx.html" />
+    <link rel="prev" title="What is reStructuredText?" href="OnReStructuredText.html" /> 
+<link rel="stylesheet" type="text/css" href="../_static/handsontable.full.min.css">
+<script src="../_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WISE.Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Chapters:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Creating technical documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#sphinx">Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#restructuredtext-and-markdown">reStructuredText and Markdown</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#restructuredtext">reStructuredText</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html">What is reStructuredText?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#paragraphs">Paragraphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#sections">Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#bold-italics-and-other-inline-markup">Bold, italics, and other inline markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#lists">Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#hyperlinks">Hyperlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#explicit-markup">Explicit Markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#directives">Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#table-of-contents">Table of contents</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html">Source code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGraphicsAndDiagramsInSphinx.html">Creating diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingMathEquationsInSphinx.html">Creating math equations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html">Bibliographic citations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../On_VersionControl/index.html">Using the version control system</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellanea:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">To be completed…</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WISE.Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Creating technical documentation</a></li>
+      <li class="breadcrumb-item active">Tables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/On_TechnicalDocumentation/UsingTables.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tables">
+<span id="rst-tables-ref"></span><h1>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h1>
+<nav class="contents local" id="on-this-page">
+<p class="topic-title">On this page…</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#grid-tables" id="id3">Grid tables</a></p></li>
+<li><p><a class="reference internal" href="#simple-tables" id="id4">Simple tables</a></p></li>
+<li><p><a class="reference internal" href="#table-directive" id="id5">Table directive</a></p></li>
+<li><p><a class="reference internal" href="#list-table-directive-recommended" id="id6">List-table directive - <strong>recommended</strong></a></p></li>
+<li><p><a class="reference internal" href="#csv-table-directive-recommended" id="id7">CSV-table directive - <strong>recommended</strong></a></p></li>
+<li><p><a class="reference internal" href="#excel-tables-using-the-excel-table-extension" id="id8">Excel tables using the excel-table extension</a></p></li>
+<li><p><a class="reference internal" href="#excel-tables-using-the-xlsx-table-extension" id="id9">Excel tables using the xlsx-table extension</a></p></li>
+</ul>
+</nav>
+<section id="grid-tables">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Grid tables</a><a class="headerlink" href="#grid-tables" title="Link to this heading"></a></h2>
+<p>The reStructuredText markup supports two basic types of tables.
+For <em>grid tables</em>,
+you have to “paint” the cell grid yourself.
+They look like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>+------------------------+------------+----------+----------+
+<span class="o">|</span> Header row, column 1   | Header 2   | Header 3 | Header 4 |
+<span class="o">|</span> (header rows optional) |            |          |          |
++========================+============+==========+==========+
+<span class="o">|</span> body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+<span class="o">|</span> body row 2             | ...        | ...      |          |
++------------------------+------------+----------+----------+
+</pre></div>
+</div>
+<p>This is the result:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Header row, column 1
+(header rows optional)</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1, column 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>column 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="simple-tables">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Simple tables</a><a class="headerlink" href="#simple-tables" title="Link to this heading"></a></h2>
+<p><em>Simple tables</em> are easier to write, but limited:
+they must contain more than one row,
+and the first column cannot contain multiple lines.
+They look like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>=====  =====  =======
+A      B      A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+</pre></div>
+</div>
+<p>This is the result:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A and B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="table-directive">
+<span id="rst-table-directive-ref"></span><h2><a class="toc-backref" href="#id5" role="doc-backlink">Table directive</a><a class="headerlink" href="#table-directive" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">table</span></code> directive associates a title with the following table:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">table</span><span class="p">::</span> Table 1 - User list with two persons
+
+   ==========  =========
+   First name  Last name
+   ==========  =========
+   John        Doe
+   Jane        Dove
+   ==========  =========
+</pre></div>
+</div>
+<p>This is the result:</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Table 1 - User list with two persons</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>First name</p></th>
+<th class="head"><p>Last name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>John</p></td>
+<td><p>Doe</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jane</p></td>
+<td><p>Dove</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="list-table-directive-recommended">
+<span id="rst-list-table-directive-ref"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">List-table directive - <strong>recommended</strong></a><a class="headerlink" href="#list-table-directive-recommended" title="Link to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">list-table</span></code> is created from a uniform two-level bullet list:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span> User list
+   <span class="nc">:header-rows:</span> 1
+   <span class="nc">:name:</span> a-name-you-can-use-to-link-to-this-table
+   <span class="nc">:widths:</span> 10 20 10
+   <span class="nc">:width:</span> 50%
+   <span class="nc">:align:</span> center
+
+   <span class="m">*</span>  - First name
+      <span class="m">-</span> Last name
+      <span class="m">-</span> Photo
+   <span class="m">*</span>  - John
+      <span class="m">-</span> Doe
+      <span class="m">-</span> .. image:: img/john.png
+   <span class="m">*</span>  - Jane
+      <span class="m">-</span> Dove
+      <span class="m">-</span> .. image:: img/jane.png
+</pre></div>
+</div>
+<p>This is the result:</p>
+<table class="docutils align-center" id="a-name-you-can-use-to-link-to-this-table" style="width: 50%">
+<caption><span class="caption-text">User list</span><a class="headerlink" href="#a-name-you-can-use-to-link-to-this-table" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>First name</p></th>
+<th class="head"><p>Last name</p></th>
+<th class="head"><p>Photo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>John</p></td>
+<td><p>Doe</p></td>
+<td><img alt="../_images/john.png" src="../_images/john.png" />
+</td>
+</tr>
+<tr class="row-odd"><td><p>Jane</p></td>
+<td><p>Dove</p></td>
+<td><img alt="../_images/jane.png" src="../_images/jane.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>And this is how you reference the table in your text:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>As you can see in the <span class="na">:ref:</span><span class="nv">`a-name-you-can-use-to-link-to-this-table`</span> table, we only have two users.
+</pre></div>
+</div>
+<p>Which generates the following paragraph:</p>
+<blockquote>
+<div><p>As you can see in the <a class="reference internal" href="#a-name-you-can-use-to-link-to-this-table"><span class="std std-ref">User list</span></a> table, we only have two users.</p>
+</div></blockquote>
+</section>
+<section id="csv-table-directive-recommended">
+<span id="rst-csv-table-directive-ref"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink">CSV-table directive - <strong>recommended</strong></a><a class="headerlink" href="#csv-table-directive-recommended" title="Link to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">csv-table</span></code> is created from comma-separated values
+(either in the document or in an external file):</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> User list
+   <span class="nc">:header:</span> &quot;First name&quot;,&quot;Last name&quot;
+
+   &quot;John&quot;,&quot;Doe&quot;
+   &quot;Jane&quot;,&quot;Dove&quot;
+</pre></div>
+</div>
+<p>This is the result:</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">User list</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>First name</p></th>
+<th class="head"><p>Last name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>John</p></td>
+<td><p>Doe</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jane</p></td>
+<td><p>Dove</p></td>
+</tr>
+</tbody>
+</table>
+<p>Another example of <code class="docutils literal notranslate"><span class="pre">csv-table</span></code>, using and external file:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Table 1 - EFTA countries.
+   <span class="nc">:name:</span> the-EFTA-table
+   <span class="nc">:file:</span> tables/EFTA.csv
+   <span class="nc">:header-rows:</span> 1
+   <span class="nc">:stub-columns:</span> 1
+</pre></div>
+</div>
+<p>This is the result that you can link to using the name you gave it (<a class="reference internal" href="#the-efta-table"><span class="std std-ref">Table 1 - EFTA countries.</span></a>):</p>
+<table class="docutils align-default" id="the-efta-table">
+<caption><span class="caption-text">Table 1 - EFTA countries.</span><a class="headerlink" href="#the-efta-table" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Country Code</p></th>
+<th class="head"><p>Country Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>IS</p></th>
+<td><p>Iceland</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>LI</p></th>
+<td><p>Liechtenstein</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>NO</p></th>
+<td><p>Norway</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>CH</p></th>
+<td><p>Switzerland</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="excel-tables-using-the-excel-table-extension">
+<span id="rst-excel-table-directive-ref"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink">Excel tables using the excel-table extension</a><a class="headerlink" href="#excel-tables-using-the-excel-table-extension" title="Link to this heading"></a></h2>
+<p>Using Excel tables requires an additional module <cite>sphinxcontrib-excel-table</cite>.
+See <a class="reference external" href="https://pypi.org/project/sphinxcontrib-excel-table/">https://pypi.org/project/sphinxcontrib-excel-table/</a> for the instalation instructions,
+which require copying some files to the Sphinx project <cite>_templates</cite> and <cite>_static</cite> folders.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This extension is not very flexible. If possible, avoid it using it.
+The reason this section is included is to document the perceived limitations, and not to encourage its use.</p>
+</div>
+<p>The syntax <code class="docutils literal notranslate"><span class="pre">excel-table</span></code> is simple:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">excel-table</span><span class="p">::</span>
+   <span class="nc">:file:</span> tables/EFTA.xlsx
+   <span class="nc">:selection:</span> D4:E8
+</pre></div>
+</div>
+<p>Creates this table, using the first worksheet (even if there are several worksheets in the Excel):</p>
+<div id="excel-tables/EFTA.xlsx-sheet-None-icnt-1" style="margin-bottom: 24px"></div>
+<script>
+  var container = document.getElementById('excel-tables/EFTA.xlsx-sheet-None-icnt-1');
+    var hot = new Handsontable(container, {
+    data: [["Country Code", "Country Name"], ["IS", "Iceland"], ["LI", "Liechtenstein"], ["NO", "Norway"], ["CH", "Switzerland"]],
+    preventOverflow: 'horizontal',
+    readOnly: true,
+    width: undefined,
+    colWidths: undefined,
+    manualColumnResize: true,
+    manualRowResize: true,
+    rowHeaders: true,
+    colHeaders: true,
+    mergeCells: []
+    });
+</script>
+<p>You can also embed worksheets with merged cells:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">excel-table</span><span class="p">::</span>
+   <span class="nc">:file:</span> tables/EFTA.xlsx
+   <span class="nc">:sheet:</span> StrangeExample
+</pre></div>
+</div>
+<div id="excel-tables/EFTA.xlsx-sheet-StrangeExample-icnt-2" style="margin-bottom: 24px"></div>
+<script>
+  var container = document.getElementById('excel-tables/EFTA.xlsx-sheet-StrangeExample-icnt-2');
+    var hot = new Handsontable(container, {
+    data: [["Column A has \"normal\" cells", "Column B has merged cells", "Column C and D have some merged cell, too.", null, "Now some values formatted as pounds"], ["ROW 2", "3 MERGED CELLS", "NORMAL", "NORMAL", 4648], ["ROW 3", null, "MERGED!", null, 46874], ["ROW 4", null, "BACK TO NORMAL", "NORMAL", 549848], ["ROW 5", "NORMAL CELL AGAIN", "MERGED AGAIN!", null, null], ["ROW 6", null, null, "Total", "=SUM(E2:E4)"]],
+    preventOverflow: 'horizontal',
+    readOnly: true,
+    width: undefined,
+    colWidths: undefined,
+    manualColumnResize: true,
+    manualRowResize: true,
+    rowHeaders: true,
+    colHeaders: true,
+    mergeCells: [{"row": 0, "col": 2, "rowspan": 1, "colspan": 2}, {"row": 2, "col": 2, "rowspan": 1, "colspan": 2}, {"row": 4, "col": 2, "rowspan": 1, "colspan": 2}, {"row": 1, "col": 1, "rowspan": 3, "colspan": 1}]
+    });
+</script>
+<p>Apparently, only one option can be used at a time (e.g. if you select a worksheet, you can’t simultaneously select a range of cells).
+It is not possible to specify a caption, nor to use the generic <cite>:name:</cite> option.</p>
+</section>
+<section id="excel-tables-using-the-xlsx-table-extension">
+<span id="rst-xlsx-table-directive-ref"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink">Excel tables using the xlsx-table extension</a><a class="headerlink" href="#excel-tables-using-the-xlsx-table-extension" title="Link to this heading"></a></h2>
+<p>Using Excel tables requires an additional module <cite>sphinxcontrib.xlsxtable</cite>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When deplying to GitHub pages, there is a problem rendering tables
+created with the <cite>.. xlsx-table::</cite> directive.</p>
+<p>As of early 2026, the official sphinxcontrib-xlsxtable (version 1.1.1)
+is not compatible with Docutils 0.21 or 0.22+.</p>
+<p>Therefore the examples in this section will be commented out,
+until a solution can be found.</p>
+</div>
+<p>The syntax <code class="docutils literal notranslate"><span class="pre">xlsx-table</span></code> is simple:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">xlsx-table</span><span class="p">::</span> Table 1 - EFTA countries from an Excel file
+   <span class="nc">:file:</span> tables/EFTA.xlsx
+   <span class="nc">:sheet:</span> example
+   <span class="nc">:header-rows:</span> 1
+   <span class="nc">:include-columns:</span> D-E
+   <span class="nc">:include-rows:</span> 4-8
+</pre></div>
+</div>
+<p>You can also embed worksheets with merged cells.
+The original formatting of the is <strong>not</strong> kept.</p>
+<p>It is possible to specify a caption, but it is NOT possible to use the generic <cite>:name:</cite> option.</p>
+<p class="rubric">Links</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="OnReStructuredText.html" class="btn btn-neutral float-left" title="What is reStructuredText?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ShowingCodeExamplesInSphinx.html" class="btn btn-neutral float-right" title="Source code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

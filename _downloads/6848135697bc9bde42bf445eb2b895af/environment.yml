@@ -1,0 +1,79 @@
+# This file is used to create a conda environment for the wiseEnvironment projects. 
+# It is based on the CodeRefinery project environment.yml
+# It specifies the name of the environment, the channels to use for package installation, and the dependencies required for the project. 
+# To create the environment, run `conda env create -f environment.yml` in your terminal.
+
+name: wiseEnvironment
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Python interpreter; restricted to versions 3.10 through 3.13 to ensure broad compatibility.
+  - python>=3.10,<3.14
+  
+  # Command Line Interface Creation Kit; used to build intuitive terminal commands.
+  - click=8.3.1
+  
+  # Interactive HTML widgets for Jupyter notebooks to build dynamic GUIs.
+  - ipywidgets=8.1.8
+  
+  # The next-generation web-based user interface for Project Jupyter.
+  - jupyterlab=4.5.3
+  
+  # A JupyterLab extension providing a UI for version control using Git.
+  - jupyterlab-git=0.51.4
+  
+  # Python's foundational plotting library for static, animated, and interactive visualizations.
+  - matplotlib=3.10.8
+  
+  # Parser for MyST (Markedly Structured Text), a rich and extensible Markdown flavor for Sphinx.
+  - myst-parser=5.0.0
+  
+  # Tools for diffing and merging Jupyter notebooks, essential for version control.
+  - nbdime=4.0.2
+  
+  # The fundamental package for scientific computing and working with N-dimensional arrays.
+  - numpy=2.4.2
+  
+  # Powerful, flexible data structures for data analysis and manipulation.
+  - pandas=3.0.1
+  
+  # The standard package installer for Python; needed to install packages not found in Conda channels.
+  - pip
+  
+  # Generic syntax highlighter suitable for use in code hosting, forums, and documentation.
+  - pygments=2.19.2
+
+  # A mature, full-featured, and highly scalable Python testing framework.
+  - pytest=9.0.2
+  
+  # A pytest plugin for measuring code coverage during test runs.
+  - pytest-cov=7.0.0
+
+  # A Python interface for Graphviz, a graph visualization software.
+  - python-graphviz=0.21
+  
+  # Statistical data visualization library based on matplotlib, providing high-level drawing interfaces.
+  - seaborn=0.13.2
+  
+  # Workflow management system for reproducible and scalable data analyses (minimal build).
+  - snakemake-minimal=9.14.8
+  
+  # Documentation generator that makes it easy to create beautiful documentation for Python projects.
+  - sphinx=8.2.3
+  
+  # Automatically rebuilds Sphinx documentation and refreshes the browser on file changes.
+  - sphinx-autobuild=2025.8.25
+
+  # A Sphinx extension to automatically generate documentation from Python docstrings.
+  - sphinx-autodoc2=0.5.0
+
+  # The official and widely used Read the Docs theme for Sphinx.
+  - sphinx_rtd_theme=3.1.0
+  
+  - pip:
+      - sphinxcontrib-xlsxtable
+      - sphinxcontrib-excel-table
+      - sphinxcontrib-mermaid
+      - sphinxcontrib-bibtex
+      

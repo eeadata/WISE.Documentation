@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On Version Control &mdash; WISE.Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Version Control using Git" href="UsingGit.html" />
+    <link rel="prev" title="Using the version control system" href="index.html" /> 
+<link rel="stylesheet" type="text/css" href="../_static/handsontable.full.min.css">
+<script src="../_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WISE.Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Chapters:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_TechnicalDocumentation/index.html">Creating technical documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the version control system</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#introduction">Introduction</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">On Version Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storyboard-1-the-basic-workflow">Storyboard #1 - The basic workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storyboard-2-using-branches-to-manage-the-document-translation-process">Storyboard #2 - Using branches to manage the document translation process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#glossary">Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGit.html">Version Control using Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingAnOnlineGitRepository.html">Setting up an online Git Repository using Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GeneratingTokens.html">Generating a Personal Access Token in GitHub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellanea:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">To be completed…</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WISE.Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Using the version control system</a></li>
+      <li class="breadcrumb-item active">On Version Control</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/On_VersionControl/OnVersionControl.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="on-version-control">
+<h1>On Version Control<a class="headerlink" href="#on-version-control" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Version_control">Version Control</a> is the management of of changes to documents,
+computer programs, large web sites, and other collections of information.
+The set of files under version control is kept in a <a class="reference internal" href="#term-repository"><span class="xref std std-term">repository</span></a>.</p>
+<p>The <strong>Version Control System</strong> (VCS) is the application responsible
+for keeping track of the successive versions of a repository.</p>
+<p>The basic workflow is:</p>
+<ol class="arabic">
+<li><p>A user clones the repository and creates a local <a class="reference internal" href="#term-working-copy"><span class="xref std std-term">working copy</span></a>
+of the files.
+(The local copy can itself be a local repository under version control).</p></li>
+<li><p>The user works on the local copy of the files.
+(Note that not every change to every file is registered as a <a class="reference internal" href="#term-revision"><span class="xref std std-term">revision</span></a>).</p></li>
+<li><p>When the user wants to
+(e.g. when a new version of a document is quite complete, or every day at 6:14pm …),
+a group of new or modified files (or <a class="reference internal" href="#term-changeset"><span class="xref std std-term">changeset</span></a>)
+can be committed as a revision to the local working copy.</p></li>
+<li><p>The user can also choose when to <a class="reference internal" href="#term-commit"><span class="xref std std-term">commit</span></a>
+the revisions back into the original repository.</p></li>
+<li><p>If the local revisions are merged into the original repository,
+a new revision point is created therein.</p>
+<p>The <a class="reference internal" href="#term-merge"><span class="xref std std-term">merge</span></a> can be performed automatically by the version control system:</p>
+<ol class="loweralpha simple">
+<li><p>if the user has the required permissions
+to commit (<code class="docutils literal notranslate"><span class="pre">push</span></code>) to the original repository;</p></li>
+<li><p>and if no <a class="reference internal" href="#term-conflict"><span class="xref std std-term">conflict</span></a> is detected
+(e.g. while the user was working in the local copy,
+someone else committed a revision to same files).</p></li>
+</ol>
+</li>
+<li><p>If the user does not have the required permissions
+to commit to the original repository,
+a <code class="docutils literal notranslate"><span class="pre">pull</span></code> request can be sent to the owner of the repository.</p>
+<p>The owner reviews the proposed changes, and accepts or rejects the changeset.</p>
+</li>
+</ol>
+<p>The following storyboard illustrates this steps.</p>
+</section>
+<section id="storyboard-1-the-basic-workflow">
+<h2>Storyboard #1 - The basic workflow<a class="headerlink" href="#storyboard-1-the-basic-workflow" title="Link to this heading"></a></h2>
+<p>This storyboard depicts a simplified workflow, using a simplified hierarchy.
+(In real-world use, links can exist between any two different actors and repositories.
+The technology allows networks with arbitrary configuration.)</p>
+<section id="network-of-actors">
+<h3>Network of actors<a class="headerlink" href="#network-of-actors" title="Link to this heading"></a></h3>
+<p>Consider a typical hierarchy:</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/01-NetworkOfActors.png"><img alt="Network of actors" src="../_images/01-NetworkOfActors.png" style="width: 80%;" />
+</a>
+</figure>
+<ul class="simple">
+<li><p>The ‘blue’ actor only works and knows the ‘green’ actors.</p></li>
+<li><p>Each ‘green’ actor works with a distinct group of ‘yellow’ actors.</p></li>
+<li><p>The blue actor’s responsibility is to collate the green actors’ contributions (changes)
+and to resolve any conflicts between different changes proposed by distinct green actors.</p></li>
+<li><p>Each green actor’s responsibility is similar, with regard to the yellow actors.</p></li>
+</ul>
+</section>
+<section id="networks-of-trust">
+<h3>Networks of trust<a class="headerlink" href="#networks-of-trust" title="Link to this heading"></a></h3>
+<p>This hierarchy is a particular type of network (…a directed acyclic network or ‘tree’).</p>
+<p>It can be viewed as 3 distinct “networks of trust”.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/02-NetworksOfTrust.png"><img alt="Networks of trust" src="../_images/02-NetworksOfTrust.png" style="width: 80%;" />
+</a>
+</figure>
+<p>The concept of “network of trust” simplifies the work:</p>
+<ul class="simple">
+<li><p>The blue actor trusts the green actor to review the work done by his yellow co-workers.</p>
+<ul>
+<li><p>From the blue actor’s point of view,
+the specific configuration of each ‘green &amp; yellow’ network is irrelevant.</p></li>
+<li><p>It is also irrelevant whether the all network is really a tree
+(or if a given yellow actor participates in two distinct subnetworks).</p></li>
+</ul>
+</li>
+<li><p>Each actor needs only trust (and interact with) his immediate neighbourhood:</p>
+<ul>
+<li><p>The green actor accepts any upstream changes approved by his blue neighbour.</p></li>
+<li><p>The green actor approves (or declines) changes made by his yellow neighbours
+(or resolves conflicts between different changes).</p></li>
+</ul>
+</li>
+<li><p>By definition, the blue actor can directly commit changes
+to his own blue repository of information.
+So can the green actors to their own green repositories.</p></li>
+<li><p>Each actor can also ‘pull’ into his repository
+any changes that his immediate neighbours have made.</p></li>
+</ul>
+</section>
+<section id="cloning-a-repository">
+<h3>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Link to this heading"></a></h3>
+<p>The initial workflow is depicted below:</p>
+<ol class="arabic simple">
+<li><p>Mr Blue creates the <strong>original</strong> repository.</p></li>
+<li><p>Mr Green <strong>clones</strong> Blue’s repository</p></li>
+<li><p>thus obtaining a <strong>working</strong> copy.</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/03-CloningARepository.png"><img alt="Cloning a repository" src="../_images/03-CloningARepository.png" style="width: 80%;" />
+</a>
+</figure>
+</section>
+<section id="distributed-repositories">
+<h3>Distributed repositories<a class="headerlink" href="#distributed-repositories" title="Link to this heading"></a></h3>
+<p>The repository is then distributed to all the team:</p>
+<ol class="arabic simple">
+<li><p>Each yellow actor can obtain their working copy, by cloning Green’s repository.</p></li>
+<li><p>Mr Green’s repository is now the <strong>master</strong> repository for all the yellow actors.</p></li>
+<li><p>Mr Blue’s repository is now the <strong>upstream</strong> repository for all the yellow actors.</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/04-DistributedRepositories.png"><img alt="Distributed repositories" src="../_images/04-DistributedRepositories.png" style="width: 80%;" />
+</a>
+</figure>
+</section>
+<section id="synchronising-repositories">
+<h3>Synchronising repositories<a class="headerlink" href="#synchronising-repositories" title="Link to this heading"></a></h3>
+<p>The repositories must be explicitly synced. For example, suppose that:</p>
+<ol class="arabic simple">
+<li><p>Mr Green changed some files and then made a ‘local commit’.
+Green’s repository now has a new revision (which does not exist in any other repository).</p></li>
+<li><p>One of the yellow actors synchronises the local working copy everyday,
+to ensure that he has the latest files.
+His local working copy is updated with the latest revision made
+by Mr Green to the master repository.</p></li>
+<li><p>The other yellow actors didn’t update their local working copies,
+and still have the previous revision.</p></li>
+<li><p>Meanwhile, Mr Blue is unaware of any changes in the downstream repositories.</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/05-SynchronisingRepositories.png"><img alt="Synchronising repositories" src="../_images/05-SynchronisingRepositories.png" style="width: 80%;" />
+</a>
+</figure>
+</section>
+<section id="commit-and-merge">
+<h3>Commit and merge<a class="headerlink" href="#commit-and-merge" title="Link to this heading"></a></h3>
+<p>Changes can also by propagated upstream. Suppose that:</p>
+<ol class="arabic simple">
+<li><p>A yellow actor has changed some files and made a ‘local commit’.
+The local repository has a new revision
+(jargon: ‘the local repository is one commit ahead of the master repository’).</p></li>
+<li><p>The yellow actor notifies Mr Green and asks him to merge the changeset
+into Mr Green’s repository (jargon: ‘sends Mr Green a pull request’).</p></li>
+<li><p>Mr Green reviews the changes, approves them (or not…) and merges
+the changeset into his own repository.</p></li>
+<li><p>Meanwhile, Mr Blue is still unaware of any changes in the downstream repositories
+(he has received no pull requests).</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/06-CommitAndMerge1.png"><img alt="Commit and merge" src="../_images/06-CommitAndMerge1.png" style="width: 80%;" />
+</a>
+</figure>
+<p>When the work assigned to Mr Green’s team is ready:</p>
+<ol class="arabic simple">
+<li><p>Mr Green send a ‘pull request’ to Mr Blue.</p></li>
+<li><p>Mr. Blue reviews and accepts the changes, and updates his repository.</p></li>
+<li><p>Everyone else can synchronise their repositories to the latest version.</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/07-CommitAndMerge2.png"><img alt="Commit and merge" src="../_images/07-CommitAndMerge2.png" style="width: 80%;" />
+</a>
+</figure>
+</section>
+</section>
+<section id="storyboard-2-using-branches-to-manage-the-document-translation-process">
+<h2>Storyboard #2 - Using branches to manage the document translation process<a class="headerlink" href="#storyboard-2-using-branches-to-manage-the-document-translation-process" title="Link to this heading"></a></h2>
+<section id="trunk-and-branches">
+<h3>Trunk and branches<a class="headerlink" href="#trunk-and-branches" title="Link to this heading"></a></h3>
+<p>Consider the following network:</p>
+<ul class="simple">
+<li><p>Mr Grey is the technical writer responsible for the English version of the ‘User Manual’ and ‘Project Handbook’.
+Mr Grey is also responsible for the templates and stylesheets that will be used in the various documents.</p></li>
+<li><p>Mr Πράσινος is responsible for the Greek language version.</p></li>
+<li><p>Mr Жълт is responsible for the Bulgarian language version.</p></li>
+<li><p>Mr Azul is responsible for the Portuguese language version.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/08-TrunkAndBranches1.png"><img alt="Trunk and branches" src="../_images/08-TrunkAndBranches1.png" style="width: 80%;" />
+</a>
+</figure>
+<p>When the translation process begins:</p>
+<ol class="arabic">
+<li><p>Mr Grey creates a repository
+with the English documents
+(e.g. one file per chapter)
+and with the image files
+(e.g. the application screenshots),
+templates and stylesheets
+required to build the final document.</p></li>
+<li><p>Messrs  Πράσινος,  Жълт and Azul
+all clone the English language repository
+and create their own working copies.</p></li>
+<li><p>Each of them also creates a local branch:
+a replica of the files so that each can work on translating the text to their own language
+while reusing the image files and the stylesheet.</p>
+<p>In this example, the English version is the <strong>trunk</strong>.
+Each localised version is a <strong>branch</strong>.</p>
+</li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/09-TrunkAndBranches2.png"><img alt="Trunk and branches" src="../_images/09-TrunkAndBranches2.png" style="width: 80%;" />
+</a>
+</figure>
+<p>When new documents are ready to be translated:</p>
+<ol class="arabic">
+<li><p>Mr Grey completes a new chapter
+and commits it to the repository.</p>
+<p>Mr Grey also changes some of the images.</p>
+<p>A new revision is now available.</p>
+</li>
+<li><p>Messrs  Πράσινος,  Жълт and Azul synchronise  their working copies
+with the master repository
+(only the trunk is updated).</p></li>
+<li><p>Each of them also updates the local branch.</p></li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/10-TrunkAndBranches3.png"><img alt="Trunk and branches" src="../_images/10-TrunkAndBranches3.png" style="width: 80%;" />
+</a>
+</figure>
+<p>What if Mr Πράσινος detects some spelling errors in the English version?</p>
+<ol class="arabic">
+<li><p>Mr Πράσινος changes the English files
+in the trunk, makes a local commit
+and notifies Mr Grey.</p></li>
+<li><p>Mr Grey reviews the changes
+and accepts the pull request.</p>
+<p>The last revision of the master repository
+now includes the changes made by Mr Πράσινος
+(but not the Greek branch).</p>
+</li>
+<li><p>Messrs  Жълт and Azul
+synchronise  their working copies
+with the master repository.</p>
+<p>The working copies of the trunk are updated.
+Each team member must update their specific local branches.</p>
+</li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/11-TrunkAndBranches4.png"><img alt="Trunk and branches" src="../_images/11-TrunkAndBranches4.png" style="width: 80%;" />
+</a>
+</figure>
+<p>Branches can function as different versions…</p>
+<ol class="arabic">
+<li><p>Mr Πράσινος changes
+the default stylesheet,
+including some styles that improve its use with the Greek alphabet.</p>
+<p>Changes are made only
+in the Greek language branch.</p>
+</li>
+<li><p>Mr Жълт makes a similar
+change, due to the Cyrillic alphabet.</p>
+<p>Changes are made only
+to the Bulgarian language branch.</p>
+</li>
+<li><p>Mr Azul dislikes the colour of chapter headings and changes the stylesheet
+in the Portuguese language branch.</p>
+<p>Mr Azul decides to submit the changes to Mr Grey,
+so that the trunk can also be changed.</p>
+</li>
+<li><p>Mr Grey reviews the changes made by Mr Azul,
+but does not accept them.</p>
+<p>The trunk stylesheet is not changed.</p>
+</li>
+</ol>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/12-TrunkAndBranches5.png"><img alt="Trunk and branches" src="../_images/12-TrunkAndBranches5.png" style="width: 80%;" />
+</a>
+</figure>
+</section>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Link to this heading"></a></h2>
+<dl class="glossary">
+<dt id="term-baseline">baseline<a class="headerlink" href="#term-baseline" title="Link to this term"></a></dt><dd><p>An approved revision of a file from which subsequent changes can be made.</p>
+</dd>
+<dt id="term-branch">branch<a class="headerlink" href="#term-branch" title="Link to this term"></a></dt><dd><p>A set of files under version control may be branched (forked) at a point
+in time. From that time forward, the two copies of the files may develop
+in different ways, independently of each other.</p>
+</dd>
+<dt id="term-change">change<a class="headerlink" href="#term-change" title="Link to this term"></a></dt><dd><p>A change (or diff, or delta) represents a specific modification to a
+file under version control.</p>
+</dd>
+<dt id="term-changeset">changeset<a class="headerlink" href="#term-changeset" title="Link to this term"></a></dt><dd><p>A collection of files that have changes.</p>
+</dd>
+<dt id="term-checkout">checkout<a class="headerlink" href="#term-checkout" title="Link to this term"></a></dt><dd><p>See ‘clone’.</p>
+</dd>
+<dt id="term-clone">clone<a class="headerlink" href="#term-clone" title="Link to this term"></a></dt><dd><p>To clone is to create a local working copy from the repository.
+A user may specify a revision or obtain the latest.
+In centralised version control systems (with a single central repository),
+the term ‘checkout’ is also used.
+The term ‘checkout’ can be used as a noun to describe the working copy.</p>
+</dd>
+<dt id="term-commit">commit<a class="headerlink" href="#term-commit" title="Link to this term"></a></dt><dd><p>To commit is to write or merge the changes made in the working copy back
+to the repository. The terms ‘commit’ and ‘checkin’ can also be used as
+nouns to describe the revision that is created as a result of committing.</p>
+</dd>
+<dt id="term-conflict">conflict<a class="headerlink" href="#term-conflict" title="Link to this term"></a></dt><dd><p>A conflict occurs when different parties make changes to the same file,
+and the system is unable to reconcile the changes.</p>
+<p>A user must resolve the conflict by combining the changes,
+or by selecting one change in favour of the other.</p>
+</dd>
+<dt id="term-fork">fork<a class="headerlink" href="#term-fork" title="Link to this term"></a></dt><dd><p>See ‘branch’.</p>
+</dd>
+<dt id="term-head">head<a class="headerlink" href="#term-head" title="Link to this term"></a></dt><dd><p>The most recent revision, either to the trunk or to a branch.</p>
+<p>The trunk and each branch have their own head.
+HEAD is sometimes used to refer to the head of the trunk.</p>
+</dd>
+<dt id="term-merge">merge<a class="headerlink" href="#term-merge" title="Link to this term"></a></dt><dd><p>A merge is an operation in which two sets of changes are applied
+to a file or set of files under version control.</p>
+<p>A user updates their working copy with changes made to the repository
+by other users.</p>
+<p>A user tries to update a repository with changes made to a working copy.</p>
+</dd>
+<dt id="term-repository">repository<a class="headerlink" href="#term-repository" title="Link to this term"></a></dt><dd><p>The repository is where the files’ current and historical data are stored,
+often on a server.</p>
+</dd>
+<dt id="term-resolve">resolve<a class="headerlink" href="#term-resolve" title="Link to this term"></a></dt><dd><p>The act of user intervention to address a conflict between different
+changes to the same file.</p>
+</dd>
+<dt id="term-revision">revision<a class="headerlink" href="#term-revision" title="Link to this term"></a></dt><dd><p>A revision (version) is any registered “snapshot” in time of the repository.</p>
+</dd>
+<dt id="term-sync">sync<a class="headerlink" href="#term-sync" title="Link to this term"></a></dt><dd><p>See ‘update’.</p>
+</dd>
+<dt id="term-trunk">trunk<a class="headerlink" href="#term-trunk" title="Link to this term"></a></dt><dd><p>The trunk is the “main” line of development to the collection of
+information under version control, consisting only of ‘baseline’ (approved)
+files.</p>
+</dd>
+<dt id="term-update">update<a class="headerlink" href="#term-update" title="Link to this term"></a></dt><dd><p>An update (or sync) merges changes made in the original repository
+(by other users, for example) into the local working copy.</p>
+</dd>
+<dt id="term-version">version<a class="headerlink" href="#term-version" title="Link to this term"></a></dt><dd><p>See ‘revision’.</p>
+</dd>
+<dt id="term-working-copy">working copy<a class="headerlink" href="#term-working-copy" title="Link to this term"></a></dt><dd><p>A working copy is a local copy of files from a repository, made
+at a specific time (revision).</p>
+</dd>
+</dl>
+<p class="rubric">Links</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Using the version control system" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UsingGit.html" class="btn btn-neutral float-right" title="Version Control using Git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

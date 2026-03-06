@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating technical documentation &mdash; WISE.Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What is reStructuredText?" href="OnReStructuredText.html" />
+    <link rel="prev" title="Getting started" href="../GettingStarted/index.html" /> 
+<link rel="stylesheet" type="text/css" href="../_static/handsontable.full.min.css">
+<script src="../_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WISE.Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Chapters:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating technical documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx">Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructuredtext-and-markdown">reStructuredText and Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructuredtext">reStructuredText</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html">What is reStructuredText?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#paragraphs">Paragraphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#sections">Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#bold-italics-and-other-inline-markup">Bold, italics, and other inline markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#lists">Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#hyperlinks">Hyperlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#explicit-markup">Explicit Markup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#directives">Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html#table-of-contents">Table of contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingTables.html">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html">Source code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGraphicsAndDiagramsInSphinx.html">Creating diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingMathEquationsInSphinx.html">Creating math equations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html">Bibliographic citations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../On_VersionControl/index.html">Using the version control system</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellanea:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">To be completed…</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WISE.Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Creating technical documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/On_TechnicalDocumentation/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-technical-documentation">
+<h1>Creating technical documentation<a class="headerlink" href="#creating-technical-documentation" title="Link to this heading"></a></h1>
+<p>This chapter covers the following topics:</p>
+<ul class="simple">
+<li><p>How to write the documentation using <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>.</p></li>
+<li><p>How to write the documentation using <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">Markdown</a>.</p></li>
+</ul>
+<p>The purpose is to provide ‘quick’ reference information
+(on syntax, available tools, style conventions, etc)
+that may be required by those writing technical documentation.</p>
+<p>The most important information is about <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>,
+the markup language used in the technical documentation (user manual, etc.).</p>
+<p>There is also some (basic) information about <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>,
+the application that automatically converts the text files
+and generates the documentation in HTML format or PDF format.</p>
+<p>For example, this HTML page was originally written in reStructuredText.</p>
+<p>Press the <em>View page source</em> link (in the top right of the page)
+to see the original reStructuredText source code.</p>
+<section id="sphinx">
+<h2>Sphinx<a class="headerlink" href="#sphinx" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a> is a document generator based on <a class="reference external" href="https://docutils.sourceforge.io/">docutils</a>
+(an open-source text processing system,
+for processing plain text documentation into useful formats,
+such as HTML, LaTeX, ODT or XML).</p>
+<p>In Sphinx, content (the text) is separated from presentation (formatting):</p>
+<ul class="simple">
+<li><p>Content is stored in plain text files using a simple markup language
+(reStructuredText or Markdown).</p></li>
+<li><p>Presentation is defined using themes and templates
+for each type of output (HTML, LaTeX, PDF).</p></li>
+</ul>
+<p>This separation allows the authors to focus on the content
+and not on the presentation or the output format(s).</p>
+<p>Also, if the documentation needs to be localised to another language,
+the text can be translated (using translation tools, if required),
+and all the formatting is applied later
+(without requiring further changes to the localised documents).</p>
+</section>
+<section id="restructuredtext-and-markdown">
+<h2>reStructuredText and Markdown<a class="headerlink" href="#restructuredtext-and-markdown" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> and <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">Markdown</a> are two popular lightweight markup languages.
+They are both plain text formats, and can be edited with any text editor.</p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> is the markup language used in this project,
+and is the default markup language supported by <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>.</p>
+<p><a class="reference external" href="https://www.markdownguide.org/basic-syntax/">Markdown</a> is also supported by <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>, but only the <a class="reference external" href="https://commonmark.org/">CommonMark</a> flavour
+(supported by <a class="reference external" href="https://github.com/">GitHub</a> and other platforms) is supported.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a section in Markdown   This is a section in RST</span>
+                                 <span class="o">========================</span>
+
+<span class="c1">## This is a subsection           This is a subsection</span>
+                                 <span class="o">--------------------</span>
+
+<span class="n">Nothing</span> <span class="n">special</span> <span class="n">needed</span> <span class="k">for</span>        <span class="n">Nothing</span> <span class="n">special</span> <span class="n">needed</span> <span class="k">for</span>
+<span class="n">a</span> <span class="n">normal</span> <span class="n">paragraph</span><span class="o">.</span>               <span class="n">a</span> <span class="n">normal</span> <span class="n">paragraph</span><span class="o">.</span>
+
+                                 <span class="p">::</span>
+
+   <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">code</span> <span class="n">block</span>          <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">code</span> <span class="n">block</span>
+
+<span class="o">**</span><span class="n">Bold</span><span class="o">**</span> <span class="ow">and</span> <span class="o">*</span><span class="n">emphasized</span><span class="o">*.</span>        <span class="o">**</span><span class="n">Bold</span><span class="o">**</span> <span class="ow">and</span> <span class="o">*</span><span class="n">emphasized</span><span class="o">*.</span>
+
+<span class="n">A</span> <span class="nb">list</span><span class="p">:</span>                           <span class="n">A</span> <span class="nb">list</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">item</span>                 <span class="o">-</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">item</span>
+<span class="o">-</span> <span class="n">another</span> <span class="n">item</span>                    <span class="o">-</span> <span class="n">another</span> <span class="n">item</span>
+
+<span class="n">There</span> <span class="ow">is</span> <span class="n">more</span><span class="p">:</span> <span class="n">images</span><span class="p">,</span>            <span class="n">There</span> <span class="ow">is</span> <span class="n">more</span><span class="p">:</span> <span class="n">images</span><span class="p">,</span>
+<span class="n">tables</span><span class="p">,</span> <span class="n">links</span><span class="p">,</span> <span class="o">...</span>                <span class="n">tables</span><span class="p">,</span> <span class="n">links</span><span class="p">,</span> <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="restructuredtext">
+<h2>reStructuredText<a class="headerlink" href="#restructuredtext" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html">What is reStructuredText?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#paragraphs">Paragraphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#sections">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#bold-italics-and-other-inline-markup">Bold, italics, and other inline markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#lists">Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#bulleted-lists">Bulleted lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#numbered-lists">Numbered lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#definition-lists">Definition lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#glossaries">Glossaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#field-lists">Field lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#hyperlinks">Hyperlinks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#external-links">External links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#internal-links">Internal links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#explicit-markup">Explicit Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#directives">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OnReStructuredText.html#table-of-contents">Table of contents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#figures">Figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#footnotes">Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#citations">Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#substitutions">Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OnReStructuredText.html#comments">Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UsingTables.html">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UsingTables.html#grid-tables">Grid tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingTables.html#simple-tables">Simple tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingTables.html#table-directive">Table directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingTables.html#list-table-directive-recommended">List-table directive - <strong>recommended</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingTables.html#csv-table-directive-recommended">CSV-table directive - <strong>recommended</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingTables.html#excel-tables-using-the-excel-table-extension">Excel tables using the excel-table extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingTables.html#excel-tables-using-the-xlsx-table-extension">Excel tables using the xlsx-table extension</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html">Source code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html#literal-blocks">Literal blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html#highlight-directive">Highlight directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html#code-block-directive">Code-block directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html#literalinclude-directive">Literalinclude directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html#pygments-lexers">Pygments lexers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UsingGraphicsAndDiagramsInSphinx.html">Creating diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UsingGraphicsAndDiagramsInSphinx.html#using-mermaid">Using Mermaid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UsingMathEquationsInSphinx.html">Creating math equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UsingMathEquationsInSphinx.html#latex">LaTeX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingMathEquationsInSphinx.html#mathjax">MathJax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingMathEquationsInSphinx.html#equation-editors-or-previewers">Equation editors or previewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingMathEquationsInSphinx.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html">Bibliographic citations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html#using-sphinx-bibtex-extension">Using Sphinx BibTeX extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html#using-latex-directly-in-sphinx">Using LaTeX directly in Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html#managing-bibtex-bibliographies">Managing BibTeX bibliographies</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p class="rubric">Links</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../GettingStarted/index.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="OnReStructuredText.html" class="btn btn-neutral float-right" title="What is reStructuredText?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
