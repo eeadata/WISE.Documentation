@@ -169,6 +169,7 @@ Before building the documentation, ensure your Conda environment is activated:
 If you are actively writing or editing documentation, the best way to preview your changes is using `sphinx-autobuild`. 
 This will start a local web server and automatically refresh your browser whenever you save a file.
 
+
 *  **Start the autobuild server.**  
 
    Navigate to the root of your project and run:
@@ -182,6 +183,8 @@ This will start a local web server and automatically refresh your browser whenev
 *  **View the docs:**  
 
    Open your web browser and navigate to the local URL provided in the terminal (usually `http://127.0.0.1:8000`).
+
+*   Use `CTRL+C` to stop the autobuild.
 
 Standard HTML Build
 -----------------------------

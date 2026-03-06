@@ -26,7 +26,7 @@ else:
                  'sphinx.ext.graphviz', 
                  'sphinxcontrib.bibtex', 
                  'sphinxcontrib.mermaid', 
-                 'sphinxcontrib-excel-table',
+                 'sphinxcontrib.excel_table',
                  'sphinxcontrib.xlsxtable']
 	
 

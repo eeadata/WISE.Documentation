@@ -26,16 +26,14 @@
       Copyright (c) 2007-2011 by Georg Brandl
       Copyright (c) 2007-2013 by the Sphinx team
 
-   
+.. _rst-primer-ref:
+  
 What is reStructuredText?
 =========================
 
 .. note::
 
    This document is an abridged and modified version of `Sphinx's reStructuredText Primer`_.
-
-
-.. _rst-primer-ref:
 
 reStructuredText_ (reST) is a simple, easy-to-read markup language used by Sphinx_.
 
@@ -54,11 +52,6 @@ There are two types of markup:
    is used for blocks of text that need special handling,
    such as footnotes, tables, or generic directives.
    Explicit markup always starts with ``..`` followed by whitespace.
-
-
-.. contents:: On this page...
-   :depth: 3
-   :local:
 
 
 .. _rst-paragraphs-ref:
@@ -412,36 +405,6 @@ There are two ways in which you can refer to labels:
 Using ``:ref:`` is advised over standard reStructuredText links to sections
 (like ```Section title`_``) because it works across files, when section
 headings are changed, and for all builders that support cross-references.
-
-.. _rst-sourcecode-ref:
-
-Source Code
-===========
-
-Literal code blocks are introduced by ending a
-paragraph with the special marker ``::``.
-The literal block must be indented
-(and, like all paragraphs, separated from the surrounding ones by blank lines)::
-
-   This is a normal text paragraph. The next paragraph is a code sample::
-
-      It is not processed in any way, except
-      that the indentation is removed.
-
-      It can span multiple lines.
-
-   This is a normal text paragraph again.
-
-The handling of the ``::`` marker is smart:
-
-*  If it occurs as a paragraph of its own, that paragraph is completely left
-   out of the document.
-*  If it is preceded by whitespace, the marker is removed.
-*  If it is preceded by non-whitespace, the marker is replaced by a single
-   colon.
-
-That way, the second sentence in the above example's first paragraph would be
-rendered as "The next paragraph is a code sample:".
 
 .. _rst-explicitmarkup-ref:
       

@@ -1,4 +1,4 @@
-:tocdepth: 2
+:tocdepth: 3
 
 .. highlight:: rst
 
@@ -30,15 +30,9 @@
 Tables
 ======
 
-
-.. tip::
-
-   Go directly to the recommended options:
-
-   *  :ref:`list-table <rst-list-table-directive-ref>`
-   *  :ref:`csv-table <rst-csv-table-directive-ref>`
-   *  :ref:`xlsx-table <rst-xlsx-table-directive-ref>`
-
+.. contents:: On this page...
+   :depth: 3
+   :local:
 
 Grid tables
 -----------
@@ -125,8 +119,8 @@ This is the result:
 
 .. _rst-list-table-directive-ref:
 
-List-table directive
----------------------
+List-table directive - **recommended**
+--------------------------------------
 
 A ``list-table`` is created from a uniform two-level bullet list::
 
@@ -176,8 +170,8 @@ Which generates the following paragraph:
    
 .. _rst-csv-table-directive-ref:
 
-CSV-table directive
--------------------
+CSV-table directive - **recommended**
+-------------------------------------
 
 A ``csv-table`` is created from comma-separated values
 (either in the document or in an external file)::
@@ -212,52 +206,66 @@ This is the result that you can link to using the name you gave it (:ref:`the-EF
    :header-rows: 1
    :stub-columns: 1
 
-.. _rst-xlsx-table-directive-ref:
+.. _rst-excel-table-directive-ref:
 
-Excel tables using excel-table extension
-----------------------------------------
+Excel tables using the excel-table extension
+---------------------------------------------
 
 Using Excel tables requires an additional module `sphinxcontrib-excel-table`.
+See https://pypi.org/project/sphinxcontrib-excel-table/ for the instalation instructions,
+which require copying some files to the Sphinx project `_templates` and `_static` folders.
 
-The syntax ``excel-table`` is simple (but you'll need to use to "old" style references, because the :name: option doesn't see to exist)::
+.. warning:: 
+   
+   This extension is not very flexible. If possible, avoid it using it.
+   The reason this section is included is to document the perceived limitations, and not to encourage its use.
 
-   .. _the-EFTA-table-in-Excel-ref:
+The syntax ``excel-table`` is simple::
 
-   .. excel-table:: Table 1 - EFTA countries from an Excel file
+   .. excel-table:: 
       :file: tables/EFTA.xlsx
-      :sheet: example
-      :header: 1
-      :selection: D4-E8
+      :selection: D4:E8
 
-This is the result that you can link to using the name you gave it (:ref:`the-EFTA-table-in-Excel-ref`):
+Creates this table, using the first worksheet (even if there are several worksheets in the Excel):
 
-.. _the-EFTA-table-in-Excel-ref:
-
-.. excel-table:: Table 1 - EFTA countries from an Excel file
+.. excel-table:: 
    :file: tables/EFTA.xlsx
-   :sheet: example
-   :header: 1
-   :selection: D4-E8
+   :selection: D4:E8
 
-You can also embed worksheets with merged cells (:ref:`the-strange-table-in-Excel-ref`).
-The original formatting of the is **not** kept.
+You can also embed worksheets with merged cells::
 
-.. _the-strange-table-in-Excel-ref:
+   .. excel-table:: 
+      :file: tables/EFTA.xlsx
+      :sheet: StrangeExample
 
-.. excel-table:: A table with lots of strange cells
+.. excel-table:: 
    :file: tables/EFTA.xlsx
    :sheet: StrangeExample
-   :header: 1
 
-..
-   Excel tables using xlsxtable
-   ----------------------------
+
+Apparently, only one option can be used at a time (e.g. if you select a worksheet, you can't simultaneously select a range of cells).
+It is not possible to specify a caption, nor to use the generic `:name:` option.
+
+ 
+.. _rst-xlsx-table-directive-ref:
+
+Excel tables using the xlsx-table extension
+-------------------------------------------
+      
+Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`.
+
+.. warning:: 
    
-   Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`.
-   
-   The syntax ``xlsx-table`` is simple (but you'll need to use to "old" style references, because the :name: option doesn't see to exist)::
-   
-      .. _the-EFTA-table-in-Excel-ref:
+   When deplying to GitHub pages, there is a problem rendering tables 
+   created with the `.. xlsx-table::` directive. 
+
+   As of early 2026, the official sphinxcontrib-xlsxtable (version 1.1.1) 
+   is not compatible with Docutils 0.21 or 0.22+.
+
+   Therefore the examples in this section will be commented out, 
+   until a solution can be found.
+
+The syntax ``xlsx-table`` is simple::
    
       .. xlsx-table:: Table 1 - EFTA countries from an Excel file
          :file: tables/EFTA.xlsx
@@ -265,29 +273,29 @@ The original formatting of the is **not** kept.
          :header-rows: 1
          :include-columns: D-E
          :include-rows: 4-8
-   
+         
+..   
    This is the result that you can link to using the name you gave it (:ref:`the-EFTA-table-in-Excel-ref`):
-   
-   .. _the-EFTA-table-in-Excel-ref:
-   
+
    .. xlsx-table:: Table 1 - EFTA countries from an Excel file
       :file: tables/EFTA.xlsx
       :sheet: Example
       :header-rows: 1
       :include-columns: D-E
       :include-rows: 4-8
-      
-   You can also embed worksheets with merged cells (:ref:`the-strange-table-in-Excel-ref`).
-   The original formatting of the is **not** kept.
-   
-   .. _the-strange-table-in-Excel-ref:
-   
+..
+
+You can also embed worksheets with merged cells.
+The original formatting of the is **not** kept.
+
+..
    .. xlsx-table:: A table with lots of strange cells
       :file: tables/EFTA.xlsx
       :sheet: StrangeExample
       :header-rows: 1
 ..
 
-.. links-placeholder
+It is possible to specify a caption, but it is NOT possible to use the generic `:name:` option.
 
+.. links-placeholder
 .. include:: ../_sharedFiles/Links.rst
