@@ -1,0 +1,105 @@
+
+*  ``--from=FORMAT``
+
+   Input format. 
+
+      * ``commonmark`` (CommonMark Markdown)
+      * ``docx`` (Word docx)
+      * ``rst`` (reStructuredText)
+
+*  ``--to=FORMAT``
+
+   Output format
+   
+      * ``commonmark`` (CommonMark Markdown)
+      * ``docx`` (Word docx)
+      * ``rst`` (reStructuredText)
+      * ``pdf`` (PDF)
+
+*  ``--output=FILE``
+
+   Write output to FILE.
+
+*  ``--defaults=FILE``
+
+   Specify a set of default option settings. 
+   FILE is a YAML or JSON file whose fields correspond to command-line option settings. 
+   All options for document conversion, including input and output files, can be set using a defaults file.
+
+*  ``--fail-if-warnings[=true|false]``
+
+   Exit with error status if there are any warnings.
+
+*  ``--shift-heading-level-by=NUMBER``
+
+   Shift heading levels by a positive or negative integer. 
+   For example, with --shift-heading-level-by=-1, 
+   level 2 headings become level 1 headings, and level 3 headings become level 2 headings. 
+   Headings cannot have a level less than 1, 
+   so a heading that would be shifted below level 1 becomes a regular paragraph. 
+
+*  ``--extract-media=DIR|FILE.zip``
+
+   Extract images and other media contained in or linked from the source document to the path DIR, 
+   creating it if necessary, and adjust the images references in the document 
+   so they point to the extracted files. 
+
+*  ``--template=FILE|URL``
+
+   Use the specified file as a custom template for the generated document. Implies --standalone. 
+
+*  ``--table-of-contents[=true|false]``
+
+   Include an automatically generated table of contents 
+   (or, in the case of latex, docx, and rst, an instruction to create one) in the output document.
+
+*  ``--toc-depth=NUMBER``
+
+   Specify the number of section levels to include in the table of contents. 
+   The default is 3 (which means that level-1, 2, and 3 headings will be listed in the contents).
+
+*  ``--list-of-figures[=true|false]``
+
+   Include an automatically generated list of figures 
+   (or, in some formats, an instruction to create one) 
+   in the output document. 
+   This option only has an effect on latex, and docx output.
+
+*  ``--list-of-tables[=true|false]``
+
+   Include an automatically generated list of tables 
+   (or, in some formats, an instruction to create one) 
+   in the output document. 
+   This option only has an effect on latex, and docx output.
+
+*  ``--reference-links[=true|false]``
+
+   Use reference-style links, rather than inline links, in writing Markdown or reStructuredText. 
+   By default inline links are used. 
+   The placement of link references is affected by the --reference-location option.
+
+*  ``--reference-location=block|section|document``
+
+   Specify whether footnotes (and references, if reference-links is set) 
+   are placed at the end of the current (top-level) block, the current section, or the document. 
+   The default is document. 
+
+*  ``--figure-caption-position=above|below``
+
+   Specify whether figure captions go above or below figures (default is below). 
+   This option only affects HTML, LaTeX, Docx and ODT output.
+
+*  ``--table-caption-position=above|below``
+
+   Specify whether figure captions go above or below figures (default is above). 
+   This option only affects HTML, LaTeX, Docx and ODT output.
+
+*  ``--markdown-headings=setext|atx``
+
+   Specify whether to use ATX-style (#-prefixed) 
+   or Setext-style (underlined) headings for level 1 and 2 headings in Markdown output. 
+   (The default is atx.) ATX-style headings are always used for levels 3+.
+
+*  ``--list-tables[=true|false]``
+
+   Render tables as list tables in RST output.
