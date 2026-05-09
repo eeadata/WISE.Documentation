@@ -14,6 +14,9 @@ dependencies:
   # Command Line Interface Creation Kit; used to build intuitive terminal commands.
   - click=8.3.1
   
+  # GeoPandas extends the datatypes used by pandas to allow spatial operations on geometric types
+  - geopandas
+  
   # Interactive HTML widgets for Jupyter notebooks to build dynamic GUIs.
   - ipywidgets=8.1.8
   
@@ -31,6 +34,9 @@ dependencies:
   
   # Tools for diffing and merging Jupyter notebooks, essential for version control.
   - nbdime=4.0.2
+  
+  # nbsphinx is a Sphinx extension that provides a source parser for *.ipynb files
+  - nbsphinx
   
   # The fundamental package for scientific computing and working with N-dimensional arrays.
   - numpy=2.4.2
@@ -70,7 +76,13 @@ dependencies:
 
   # The official and widely used Read the Docs theme for Sphinx.
   - sphinx_rtd_theme=3.1.0
+
+  #SQLAlchemy is the Python SQL toolkit and Object Relational Mapper
+  - sqlalchemy
   
+  # https://jupysql.readthedocs.io/en/latest/quick-start.html
+  - jupysql
+ 
   - pip:
       - sphinxcontrib-xlsxtable
       - sphinxcontrib-excel-table
