@@ -1,33 +1,5 @@
-Creating technical documentation
-*******************************************
-
-This chapter covers the following topics:
-
-* How to write the documentation using reStructuredText_.
-* How to write the documentation using Markdown_.
-
-.. * How to generate the documentation in HTML format or PDF format using Sphinx_.
-.. * How to maintain the documentation using version control (Git_ and GitHub_).
-.. * How to publish the documentation using `GitHub Pages`_.
-
-The purpose is to provide 'quick' reference information
-(on syntax, available tools, style conventions, etc)
-that may be required by those writing technical documentation.
-
-The most important information is about reStructuredText_,
-the markup language used in the technical documentation (user manual, etc.).
-
-There is also some (basic) information about Sphinx_,
-the application that automatically converts the text files
-and generates the documentation in HTML format or PDF format.
-
-For example, this HTML page was originally written in reStructuredText.
-
-Press the *View page source* link (in the top right of the page) 
-to see the original reStructuredText source code.
-
-Sphinx
-=====================
+About Sphinx
+*************************
 
 Sphinx_ is a document generator based on docutils_
 (an open-source text processing system, 
@@ -50,9 +22,8 @@ the text can be translated (using translation tools, if required),
 and all the formatting is applied later 
 (without requiring further changes to the localised documents).
 
-
-reStructuredText and Markdown
-=============================
+Using reStructuredText or using Markdown?
+=========================================
 
 reStructuredText_ and Markdown_ are two popular lightweight markup languages.
 They are both plain text formats, and can be edited with any text editor.
@@ -86,20 +57,6 @@ Markdown_ is also supported by Sphinx_, but only the CommonMark_ flavour
       tables, links, ...                tables, links, ...
 
 
-reStructuredText
-=============================
-
-.. toctree::
-   :maxdepth: 2
-      
-   OnReStructuredText.rst
-   UsingTables.rst
-   ShowingCodeExamplesInSphinx.rst
-   UsingGraphicsAndDiagramsInSphinx.rst
-   UsingMathEquationsInSphinx.rst
-   UsingBibTeXCitationsInSphinx.rst
-
 .. links-placeholder
 
-.. include:: ../_sharedFiles/Links.rst
-      
+.. include:: ../_sharedFiles/Links.rst      

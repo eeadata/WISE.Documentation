@@ -22,8 +22,8 @@
    :DC.Rights:
       Public.
 
-Mathematical equations
-**********************
+Using reStructuredText - Mathematical equations
+************************************************
 
 .. contents:: On this page...
    :depth: 3

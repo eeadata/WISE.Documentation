@@ -1,4 +1,4 @@
-# More features here
+# Using Markdown
 
 
 ## Some text
@@ -9,6 +9,18 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+## Lists
+
+Let's make a list (empty surrounding lines required):
+
+- item 1
+
+  - nested item 1
+  - nested item 2
+
+- item 2
+- item 3
 
 
 ## Table

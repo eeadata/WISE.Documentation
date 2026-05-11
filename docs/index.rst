@@ -13,11 +13,11 @@ The WISE Documentation is organized into three main sections:
 
 * **Getting Started**: 
 
-  *You only need to read this, if you are setting up your work environment for the first time.* 
+  *You only need to read this once, if you are setting up your work environment for the first time.* 
 
   This section provides instructions on how to set up the WISE environment and get started with the documentation.
 
-* **Technical documentation**: 
+* **Writing documentation**: 
 
   This section provides guidelines and best practices 
   for creating and maintaining technical documentation for WISE dataflows and projects. 
@@ -31,15 +31,19 @@ The WISE Documentation is organized into three main sections:
 
 
 .. toctree:: 
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Chapters:
    
    GettingStarted/index
-   On_TechnicalDocumentation/index
+   WritingDocs/index
    On_VersionControl/index
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Miscellanea:
-      
+
+
+
+.. toctree:: 
+   :maxdepth: 1
+   :caption: Work in progress:
+   
    Notebook/index
+   

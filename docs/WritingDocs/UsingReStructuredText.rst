@@ -28,12 +28,19 @@
 
 .. _rst-primer-ref:
   
-What is reStructuredText?
-=========================
+Using reStructuredText
+*************************
+
+.. contents:: On this page...
+   :depth: 3
+   :local:
 
 .. note::
 
    This document is an abridged and modified version of `Sphinx's reStructuredText Primer`_.
+
+What is reStructuredText
+========================
 
 reStructuredText_ (reST) is a simple, easy-to-read markup language used by Sphinx_.
 
@@ -52,7 +59,6 @@ There are two types of markup:
    is used for blocks of text that need special handling,
    such as footnotes, tables, or generic directives.
    Explicit markup always starts with ``..`` followed by whitespace.
-
 
 .. _rst-paragraphs-ref:
 
@@ -92,7 +98,7 @@ Here is the result of the above markup:
 .. _rst-sections-ref: 
   
 Sections
-========
+=========
 
 Section are created by underlining the title with a punctuation character::
 
@@ -110,9 +116,7 @@ Sections must be properly nested.
       *  ``*`` for Chapters
       *  ``=`` for sections ("Heading 1")
       *  ``-`` for subsections ("Heading 2")
-      *  ``^`` for subsubsections ("Heading 3")
-      *  ``"`` for paragraphs ("Heading 4")
-
+ 
       When converting to HTML format, 
       sections are converted to an appropriate heading tag 
       (for example: ``<h2>Heading text</h2>``).
@@ -123,7 +127,7 @@ Sections must be properly nested.
 .. _rst-inlinemarkup-ref:
 
 Bold, italics, and other inline markup
-==================================================
+=======================================
 
 The markup is quite simple:
 
@@ -705,6 +709,7 @@ You can indent text after a comment start to form multiline comments::
    *  the ``.. metadata-placeholder`` can mark the place 
       where document metadata (author, date, etc) 
       is kept together at the beginning of the document.
+
    
 .. links-placeholder
 

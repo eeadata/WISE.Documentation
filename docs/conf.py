@@ -17,7 +17,7 @@ if on_rtd:
                  #'sphinx.ext.imgmath', 
                  'sphinx.ext.mathjax', 
                  'sphinx.ext.graphviz',
-                 'sphinxcontrib-sqltable',
+                 'sphinxcontrib.sqltable',
                  'nbsphinx']
 else:
    extensions = ['sphinx.ext.autodoc',
@@ -30,7 +30,7 @@ else:
                  'sphinxcontrib.mermaid', 
                  'sphinxcontrib.excel_table',
                  'sphinxcontrib.xlsxtable',
-                 'sphinxcontrib-sqltable',
+                 'sphinxcontrib.sqltable',
                  'nbsphinx']
 
 bibtex_bibfiles = ['./_sharedFiles/Bibliography.bib']

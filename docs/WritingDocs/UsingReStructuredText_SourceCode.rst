@@ -22,8 +22,8 @@
 
 .. _rst-sourcecode-ref:
 
-Source code
-====================
+Using reStructuredText - Source code
+====================================
 
 .. contents:: On this page...
    :depth: 3
@@ -156,7 +156,7 @@ Another option is to include part of a given source code file, using the ``liter
 
 Just below is a example of the use of the ``lines`` option, which includes only the specified lines of the file.:
 
-.. literalinclude:: ShowingCodeExamplesInSphinx.rst
+.. literalinclude:: UsingReStructuredText_SourceCode.rst
    :language: rst
    :lines: 111-114
 
@@ -172,7 +172,7 @@ For example::
 
 produces this result:
 
-.. literalinclude:: ShowingCodeExamplesInSphinx.rst
+.. literalinclude:: UsingReStructuredText_SourceCode.rst
       :language: rst
       :start-after: Instead of using
       :end-before: For example

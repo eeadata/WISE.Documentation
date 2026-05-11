@@ -24,20 +24,21 @@
       Copyright (c) 2007-2011 by Georg Brandl
       Copyright (c) 2007-2013 by the Sphinx team
 
-   
+  
 .. _rst-tables-ref:
 
-Tables
-======
+Using reStructuredText - Tables
+===============================
 
 .. contents:: On this page...
    :depth: 3
    :local:
 
 Grid tables
------------
+--------------------------------------------
 
 The reStructuredText markup supports two basic types of tables.
+
 For *grid tables*,
 you have to "paint" the cell grid yourself.
 They look like this::
@@ -63,7 +64,7 @@ This is the result:
 +------------------------+------------+----------+----------+
 
 Simple tables
--------------
+--------------------------------------------
 
 *Simple tables* are easier to write, but limited:
 they must contain more than one row,
@@ -93,7 +94,7 @@ True   True   True
 .. _rst-table-directive-ref:
 
 Table directive
----------------
+--------------------------------------------
 
 The ``table`` directive associates a title with the following table::
 
@@ -127,7 +128,7 @@ And you can cross-reference to the :numref:`table-user-list-with-two-persons-ref
 .. _rst-list-table-directive-ref:
 
 List-table directive - **recommended**
---------------------------------------
+--------------------------------------------
 
 A ``list-table`` is created from a uniform two-level bullet list::
 
@@ -183,7 +184,7 @@ Same as before, you can also use just a numbered reference :numref:`a-name-you-c
 .. _rst-csv-table-directive-ref:
 
 CSV-table directive - **recommended**
--------------------------------------
+--------------------------------------------
 
 A ``csv-table`` is created from comma-separated values
 (either in the document or in an external file)::
@@ -223,7 +224,7 @@ This is the result that you can link to using the name you gave it (:ref:`the-EF
 .. _rst-excel-table-directive-ref:
 
 Excel tables using the excel-table extension
----------------------------------------------
+--------------------------------------------
 
 Using Excel tables requires an additional module `sphinxcontrib-excel-table`.
 See https://pypi.org/project/sphinxcontrib-excel-table/ for the instalation instructions,
@@ -264,7 +265,7 @@ It is not possible to specify a caption, nor to use the generic `:name:` option.
 .. _rst-xlsx-table-directive-ref:
 
 Excel tables using the xlsx-table extension
--------------------------------------------
+--------------------------------------------
       
 Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`.
 
@@ -311,5 +312,7 @@ The original formatting of the is **not** kept.
 
 It is possible to specify a caption, but it is NOT possible to use the generic `:name:` option.
 
+
 .. links-placeholder
+
 .. include:: ../_sharedFiles/Links.rst

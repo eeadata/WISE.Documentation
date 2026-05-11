@@ -20,8 +20,8 @@
 
 .. _rst-diagrams-ref:
 
-Creating diagrams
-***************************
+Using reStructuredText - Mermaid diagrams
+*********************************************
 
 .. contents:: On this page...
    :depth: 3
@@ -81,7 +81,7 @@ This class diagram...
 
 ...is created by this block of code:
 
-.. literalinclude:: UsingGraphicsAndDiagramsInSphinx.rst
+.. literalinclude:: UsingReStructuredText_MermaidDiagrams.rst
    :start-after: block_begin_202602251652
    :end-before: block_end_202602251652
 
@@ -111,7 +111,7 @@ This sequence diagram...
 
 ...is created by this block of code:
 
-.. literalinclude:: UsingGraphicsAndDiagramsInSphinx.rst
+.. literalinclude:: UsingReStructuredText_MermaidDiagrams.rst
    :start-after: block_begin_202602251651
    :end-before: block_end_202602251651
 

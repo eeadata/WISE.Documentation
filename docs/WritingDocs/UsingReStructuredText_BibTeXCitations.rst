@@ -28,12 +28,16 @@
 
 .. _rst-biblio-ref:
 
-Bibliographic citations
-##########################################
+Using reStructuredText - Bibliographic citations
+################################################
 
 .. warning:
 
    To be revised.
+
+.. contents:: On this page...
+   :depth: 3
+   :local:
 
 Introduction
 ************

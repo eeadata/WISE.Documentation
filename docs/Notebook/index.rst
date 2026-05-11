@@ -1,9 +1,8 @@
-To be completed...
-*********************************
+Work in progress
+*******************
 
-.. toctree::
+.. toctree:: 
    :maxdepth: 2
-   :caption: Miscellanea:
-
-   some-feature.md
-   another-feature.md
+   :caption: Sections:
+   
+   Testing_SQLTable.rst
