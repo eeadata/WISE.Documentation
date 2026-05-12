@@ -31,6 +31,7 @@ It also works as a quick reference in case you don't remember something.
    UsingReStructuredText_MathEquations.rst
    UsingReStructuredText_BibTeXCitations.rst
    UsingMarkdown.md
+   UsingMarkdown_InternalLinks.md
 
 .. links-placeholder
 
