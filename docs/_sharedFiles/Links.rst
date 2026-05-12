@@ -6,7 +6,6 @@
    :DC.Creator: 
       Nery, Fernanda
 
-.. rubric:: Links
 
 .. _Anaconda: https://www.anaconda.com/
 .. _authorship trigraph: https://en.wikipedia.org/wiki/Citation
@@ -16,6 +15,7 @@
 .. _Conda: https://docs.conda.io/en/latest/
 .. _CommonMark: https://commonmark.org/
 
+.. _discodata: https://discodata.eea.europa.eu
 .. _docutils: https://docutils.sourceforge.io/
 .. _Dublin Core: https://www.dublincore.org/
 

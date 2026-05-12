@@ -38,7 +38,7 @@ bibtex_bibfiles = ['./_sharedFiles/Bibliography.bib']
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store','*.txt']
 
-# Numbering - begin config
+# NUMBERING - begin config
 
 numfig = True
 
@@ -51,15 +51,15 @@ numfig_format = {
 
     # The separator must defined in a custom.css
 
-# Numbering - end config
+# NUMBERING - end config
 
-# Mermaid diagrams - begin config
+# MERMAID DIAGRAMS - begin config
 
 mermaid_init_js = """
 mermaid.initialize({theme:"neutral"});
 """
 
-# Mermaid diagrams - end config
+# MERMAID DIAGRAMS - end config
 
 # SYNTAX HIGHLIGHTING - The name of the Pygments style to use.
 pygments_style = 'sphinx'
@@ -73,6 +73,9 @@ myst_enable_extensions = [
     "dollarmath",
 ]
 
+# SQLTABLE - configure the default connection if there is one
+
+#sqltable_connection_string = ''
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
