@@ -43,7 +43,14 @@ This will start a local web server and automatically refresh your browser whenev
 
    Open your web browser and navigate to the local URL provided in the terminal (usually `http://127.0.0.1:8000`).
 
-*   Use `CTRL+C` to stop the autobuild.
+*  Use `CTRL+C` to stop the autobuild.
+
+*  If port `8000` is already in use by another application: 
+
+   .. code-block:: bash
+
+      sphinx-autobuild docs docs/_build/html --port 9000
+
 
 Standard HTML Build
 -----------------------------

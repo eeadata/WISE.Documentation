@@ -53,6 +53,7 @@ See the other options in the `sqltable documentation <https://sphinxcontrib-sqlt
    .. sqltable:: Tables in the GWB schema
       :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
       :name: sqltable-example-using-wise_wfd_metadata-gwb-tables
+      :widths: 20 80
 
       select title AS Tablename, description AS Description
       from metadata
@@ -66,6 +67,7 @@ The table resulting from the **..sqltable** directive is the one below:
 .. sqltable:: Tables in the GWB schema
    :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
    :name: sqltable-example-using-wise_wfd_metadata-gwb-tables
+   :widths: 20 80
 
    select title AS Tablename, description AS Description
    from metadata
@@ -84,6 +86,7 @@ The example below shows how to document the content of the [GWB_GroundWaterBody]
    .. sqltable:: Columns in the [GWB_GroundWaterBody] table
       :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
       :name: sqltable-example-using-wise_wfd_metadata-GWB_GroundWaterBody
+      :widths: 10 10 80
 
       select title AS Columnname, DATA_TYPE AS Datatype, description AS Description
       from metadata
@@ -96,6 +99,7 @@ This is the resulting table:
 .. sqltable:: Columns in the [GWB_GroundWaterBody] table
    :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
    :name: sqltable-example-using-wise_wfd_metadata-GWB_GroundWaterBody
+   :widths: 10 10 80
 
    select title AS Columnname, DATA_TYPE AS Datatype, description AS Description
    from metadata
