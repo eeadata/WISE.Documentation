@@ -1,40 +1,39 @@
-.wy-table-responsive table {
-    white-space: normal !important;
-}
+/* =========================
+   Table base
+========================= */
 
-.wy-table-responsive table td,
-.wy-table-responsive table th {
-    white-space: normal !important;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Allow line wrapping in headings */
-.wy-nav-content h1,
-.wy-nav-content h2,
-.wy-nav-content h3,
-.wy-nav-content h4,
-.wy-nav-content h5,
-.wy-nav-content h6 {
-    white-space: normal !important;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Force wrapping in table headers */
-.wy-table-responsive table.docutils th {
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-}
-
-.wy-table-responsive {
-    overflow-x: visible !important;
+.rst-content table.docutils {
+    width: 100%;
+    table-layout: auto;
 }
 
 
-.wy-table-responsive table {
-    display: table !important;
-    width: 100% !important;
-    table-layout: auto !important;
+/* =========================
+   Default cells (legible)
+========================= */
+
+.rst-content table.docutils th,
+.rst-content table.docutils td {
+    vertical-align: top !important;
+    white-space: normal;
+    word-break: normal;             
+    overflow-wrap: break-word;        
+}
+
+
+/* =========================
+   First column (force break ONLY here)
+========================= */
+
+.rst-content table.docutils td:first-child {
+    word-break: break-all !important;
+}
+
+/* =========================
+   Second column protection (VERY IMPORTANT)
+========================= */
+
+.rst-content table.docutils td:nth-child(2) {
+    word-break: normal !important;
+    white-space: normal;            
 }
