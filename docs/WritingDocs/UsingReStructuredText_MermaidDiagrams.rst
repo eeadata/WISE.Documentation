@@ -23,11 +23,6 @@
 Using reStructuredText - Mermaid diagrams
 *********************************************
 
-.. contents:: On this page...
-   :depth: 3
-   :local:
-
-
 Using Mermaid
 ==============
 

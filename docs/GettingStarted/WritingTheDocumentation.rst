@@ -63,9 +63,9 @@ to and from reStructuredText_ and Markdown_ (including the CommonMark_ flavour s
 You can use it to convert existing documents to `*.rst` or `*.md` format,
 before editing them with a text or code editor (e.g. Notepad++, Visual Studio Code).
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      pandoc --from=docx --to=rst --output=myfile.rst --extract-media=img myfile.docx  
+   pandoc --from=docx --to=rst --output=myfile.rst --extract-media=img myfile.docx  
 
 Refer to https://pandoc.org/MANUAL.html for a full list of options (besides the ones listed below).
 

@@ -65,9 +65,9 @@ Where are new environments created?
 By default, Conda looks at your `envs_dirs`` configuration to decide where to put new environments. 
 If you want them strictly in `~/.conda/envs` (or whatever your prefered path is), you need to tell Conda that this path is your top priority.
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      conda config --prepend envs_dirs ~/.conda/envs
+   conda config --prepend envs_dirs ~/.conda/envs
 
 To make sure Conda heard you loud and clear, check your configuration:
 

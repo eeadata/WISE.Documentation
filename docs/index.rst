@@ -1,6 +1,15 @@
 Welcome to the WISE Documentation 
 *********************************
 
+.. toctree:: 
+   :maxdepth: 1
+   :hidden: 
+   
+   GettingStarted/index
+   WritingDocs/index
+   On_VersionControl/index
+   Notebook/index
+
 Here you will find information about how to create and maintain the documentation for WISE dataflows and projects. 
 
 We want to move away from the traditional "Guidance Documents" in PDF format.
@@ -30,20 +39,5 @@ The WISE Documentation is organized into three main sections:
   It includes guidelines for organizing documentation files, committing changes, and collaborating with other contributors.
 
 
-.. toctree:: 
-   :maxdepth: 1
-   :caption: Chapters:
-   
-   GettingStarted/index
-   WritingDocs/index
-   On_VersionControl/index
 
-
-
-
-.. toctree:: 
-   :maxdepth: 1
-   :caption: Work in progress:
-   
-   Notebook/index
    

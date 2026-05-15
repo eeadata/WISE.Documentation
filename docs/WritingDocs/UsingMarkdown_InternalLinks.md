@@ -6,7 +6,11 @@ There are two main ways to do this: using standard Markdown relative links, or u
 
 Here is how to do both.
 
-## Method 1: Sphinx Cross-Referencing (Recommended)
+## Sphinx cross-referencing
+
+```{warning}
+This is the recommended option.
+```
 
 This method uses "labels" (anchors). It is the best practice because the link will work no matter where the files are moved within your project, and Sphinx will generate a warning during the build if the target label is missing.
 
@@ -38,7 +42,7 @@ Read more by clicking [this custom link](#my-custom-heading).
 
 ---
 
-## Method 2: Standard Relative Markdown Links
+## Standard relative Markdown links
 
 If you prefer not to use custom labels, MyST parser can automatically resolve standard Markdown relative links. It automatically creates anchors for all headings by lowercasing the text and replacing spaces with hyphens.
 

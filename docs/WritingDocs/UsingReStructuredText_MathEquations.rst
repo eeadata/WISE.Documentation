@@ -25,10 +25,6 @@
 Using reStructuredText - Mathematical equations
 ************************************************
 
-.. contents:: On this page...
-   :depth: 3
-   :local:
-
 LaTeX
 =====
 

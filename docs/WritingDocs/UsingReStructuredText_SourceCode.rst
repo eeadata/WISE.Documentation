@@ -25,10 +25,6 @@
 Using reStructuredText - Source code
 ====================================
 
-.. contents:: On this page...
-   :depth: 3
-   :local:
-
 Literal blocks
 -----------------
 

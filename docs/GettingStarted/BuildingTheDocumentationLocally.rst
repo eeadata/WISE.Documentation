@@ -22,8 +22,12 @@ Before building the documentation, ensure your Conda environment is activated:
 
    conda activate wiseEnvironment
 
-"Live build" (Recommended for Development)
+"Live build" 
 ----------------------------------------------------
+
+.. note::
+
+   This is the recommended option during development.
 
 If you are actively writing or editing documentation, the best way to preview your changes is using `sphinx-autobuild`. 
 This will start a local web server and automatically refresh your browser whenever you save a file.

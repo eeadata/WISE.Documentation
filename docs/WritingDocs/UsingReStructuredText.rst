@@ -31,10 +31,6 @@
 Using reStructuredText
 *************************
 
-.. contents:: On this page...
-   :depth: 3
-   :local:
-
 .. note::
 
    This document is an abridged and modified version of `Sphinx's reStructuredText Primer`_.
@@ -108,21 +104,21 @@ Section are created by underlining the title with a punctuation character::
 The underlining must be at least as long as the text itself.
 Sections must be properly nested.
 
-   .. admonition:: This is a style convention.
-      
-      Use the following punctuation characters in the section titles:
+.. admonition:: This is a style convention.
+   
+   Use the following punctuation characters in the section titles:
 
-      *  ``#`` for Parts
-      *  ``*`` for Chapters
-      *  ``=`` for sections ("Heading 1")
-      *  ``-`` for subsections ("Heading 2")
- 
-      When converting to HTML format, 
-      sections are converted to an appropriate heading tag 
-      (for example: ``<h2>Heading text</h2>``).
-      
-      When converting to ODT or DOCX, 
-      an appropriate Heading style is applied.
+   *  ``#`` for Parts
+   *  ``*`` for Chapters
+   *  ``=`` for sections ("Heading 1")
+   *  ``-`` for subsections ("Heading 2")
+
+   When converting to HTML format, 
+   sections are converted to an appropriate heading tag 
+   (for example: ``<h2>Heading text</h2>``).
+   
+   When converting to ODT or DOCX, 
+   an appropriate Heading style is applied.
 
 .. _rst-inlinemarkup-ref:
 
@@ -147,24 +143,24 @@ There are some restrictions:
    Use a backslash-escaped-space to work around that.
    For example: ``thisis\ *one*\ word`` is rendered like thisis\ *one*\ word.
 
-   .. tip:: 
+.. tip:: 
 
-      Whitespace or punctuation is required around interpreted text, 
-      but often not desired with subscripts & superscripts. 
-      Backslash-escaped whitespace can be used; 
-      the whitespace will be removed from the processed document::
+   Whitespace or punctuation is required around interpreted text, 
+   but often not desired with subscripts & superscripts. 
+   Backslash-escaped whitespace can be used; 
+   the whitespace will be removed from the processed document::
+   
+      The chemical formula for molecular oxygen is O\ :sub:`2`. 
+   
+   To improve the readability of the text, the use backslash-escapes is discouraged.
+   If possible, use :ref:`rst-substitutions-ref` instead::
+   
+      The chemical formula for pure water is |H2O|.
       
-         The chemical formula for molecular oxygen is O\ :sub:`2`. 
-      
-      To improve the readability of the text, the use backslash-escapes is discouraged.
-      If possible, use :ref:`rst-substitutions-ref` instead::
-      
-         The chemical formula for pure water is |H2O|.
-         
-         .. |H2O| replace:: H\ :sub:`2`\ O
-      
-      Keep all substitutions together (e.g. at the end of the file or in a separate file).
-      
+      .. |H2O| replace:: H\ :sub:`2`\ O
+   
+   Keep all substitutions together (e.g. at the end of the file or in a separate file).
+   
 .. _rst-lists-ref:
 
 Lists
@@ -292,41 +288,41 @@ For example::
 
 In this project, field lists are used to include metadata in each document.
 
-   .. admonition:: This is a style convention.
-           
-      The basic `Dublin Core`_ metadata fields
-      should be included in the very beginning of each document
-      (like a header to the text file),
-      like this::
-      
-         .. metadata-placeholder
-      
-         :DC.title: 
-            Document title
-         :DC.creator:
-            Author(s) and/or organisation(s) responsible for the content of the document.
-         :DC.date:
-            Creation date or last update date of the document.
-            Use the YYYY-MM-DD format.
-         :DC.description:
-            Abstract
-         :DC.language:
-            eng
-         :DC.format:
-            text/x-rst
-         :DC.license:
-            https://creativecommons.org/licenses/by/4.0/
-         :DC.rights:
-            Access rights
-         :DC.rightsHolder:
-            E.g. European Environment Agency, European Commission, etc.
-
-      Note that these metadata field names 
-      are not automatically recognised by the Sphinx parser, 
-      so the text itself will not be visible in the HTML pages (for example). 
-      The metadata fields are the equivalent 
-      to the *Document properties* fields in a ``DOCX`` file or an ``ODT`` file.
+.. admonition:: This is a style convention.
+         
+   The basic `Dublin Core`_ metadata fields
+   should be included in the very beginning of each document
+   (like a header to the text file),
+   like this::
    
+      .. metadata-placeholder
+   
+      :DC.title: 
+         Document title
+      :DC.creator:
+         Author(s) and/or organisation(s) responsible for the content of the document.
+      :DC.date:
+         Creation date or last update date of the document.
+         Use the YYYY-MM-DD format.
+      :DC.description:
+         Abstract
+      :DC.language:
+         eng
+      :DC.format:
+         text/x-rst
+      :DC.license:
+         https://creativecommons.org/licenses/by/4.0/
+      :DC.rights:
+         Access rights
+      :DC.rightsHolder:
+         E.g. European Environment Agency, European Commission, etc.
+
+   Note that these metadata field names 
+   are not automatically recognised by the Sphinx parser, 
+   so the text itself will not be visible in the HTML pages (for example). 
+   The metadata fields are the equivalent 
+   to the *Document properties* fields in a ``DOCX`` file or an ``ODT`` file.
+
 docutils_ recognises a number of Bibliographic Fields 
 (such as ``docinfo``, ``author``, ``authors``, 
 ``organization``, ``contact``, ``version``, ``status``, 
@@ -622,9 +618,9 @@ the citations are "global",
 meaning that every citation can be referenced from any .rst files.
 In this case, a separate file may be created (e.g. a ``references.rst`` file).
 
-   .. tip:: 
+.. tip:: 
 
-      See :ref:`rst-biblio-ref` for further information.
+   See :ref:`rst-biblio-ref` for further information.
    
 .. _rst-substitutions-ref:
    
@@ -655,27 +651,27 @@ to avoid Sphinx finding it as a standalone document.
 For example, use the ``.rst`` file extension for the source files,
 and the ``.txt`` file extension for the files which are to be included.
 
-   .. tip:: 
+.. tip:: 
 
-      This is useful in technical documentation such as User's Manuals, 
-      where a substitution file can be built for each localised version 
-      of the interface elements (menus, messages, etc), 
-      guaranteeing the consistency of the document translation 
-      with the software's human user interface.
+   This is useful in technical documentation such as User's Manuals, 
+   where a substitution file can be built for each localised version 
+   of the interface elements (menus, messages, etc), 
+   guaranteeing the consistency of the document translation 
+   with the software's human user interface.
 
-   .. warning::
+.. warning::
 
-      Substitutions do NOT work inside directives (or inside the options of a directive).
-      
-      Do not try to google for a solution (...been there). 
-      It is a design limitation: RST markup can not be nested. Period.
+   Substitutions do NOT work inside directives (or inside the options of a directive).
+   
+   Do not try to google for a solution (...been there). 
+   It is a design limitation: RST markup can not be nested. Period.
 
-   .. warning::
+.. warning::
 
-      Substitutions can be used with the ``image`` directive, 
-      which is an inline element.
-      Substitutions can **not** be used with the ``figure`` directive, 
-      which creates a block-level element.
+   Substitutions can be used with the ``image`` directive, 
+   which is an inline element.
+   Substitutions can **not** be used with the ``figure`` directive, 
+   which creates a block-level element.
 
 .. _rst-comments-ref:
 

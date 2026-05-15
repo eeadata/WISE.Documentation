@@ -26,13 +26,13 @@ that automatically builds and deploys your HTML files whenever you push changes 
 
 Your documentation will now be publicly accessible at `https://<your-username>.github.io/<your-repository-name>/`.
 
-   .. warning::
+.. warning::
 
-      Before publishing your documentation, make sure to review it locally and ensure that it is accurate and up-to-date. 
-      Once published, the documentation will be publicly accessible, so it's important to verify its quality beforehand.
+   Before publishing your documentation, make sure to review it locally and ensure that it is accurate and up-to-date. 
+   Once published, the documentation will be publicly accessible, so it's important to verify its quality beforehand.
 
-      Make sure that your WISE project manager is aware of the publication and has approved the content,
-      specially is it is being published in an organisational repository.
+   Make sure that your WISE project manager is aware of the publication and has approved the content,
+   specially is it is being published in an organisational repository.
 
 
 .. links-placeholder

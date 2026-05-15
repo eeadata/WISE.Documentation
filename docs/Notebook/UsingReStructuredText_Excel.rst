@@ -2,7 +2,7 @@
 .. _rst-excel-table-ref:
 
 Using reStructuredText - Excel tables
---------------------------------------------
+=======================================
 
 .. note:: **NOT RECOMMENDED**
    
@@ -15,7 +15,8 @@ Using reStructuredText - Excel tables
 
 .. _rst-excel-table-directive-ref:
 
-**Excel tables using the excel-table extension**
+Excel tables using the excel-table extension
+---------------------------------------------
 
 Using Excel tables requires an additional module `sphinxcontrib-excel-table`.
 See https://pypi.org/project/sphinxcontrib-excel-table/ for the instalation instructions,
@@ -56,7 +57,8 @@ It is not possible to specify a caption, nor to use the generic `:name:` option.
 
 .. _rst-xlsx-table-directive-ref:
 
-**Excel tables using the xlsx-table extension**
+Excel tables using the xlsx-table extension
+---------------------------------------------
       
 Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`.
 

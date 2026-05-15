@@ -15,11 +15,8 @@
 :DC.Rights:
 	Public.
 
-On Version Control
-******************
-
-Introduction
-============
+What is version control
+***********************
 
 `Version Control`_ is the management of of changes to documents,
 computer programs, large web sites, and other collections of information.
