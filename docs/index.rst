@@ -50,6 +50,8 @@ using Sphinx.
    :name: wise-projects-using-Sphinx
    :header-rows: 1
    :stub-columns: 1
+   :width: 80
+   :align: center
 
    *  - Project
       - Link
@@ -68,5 +70,6 @@ and are a good source of inspiration and examples.
    :file: GettingStarted/tables/ProjectsUsingThePyDataTheme.csv
    :header-rows: 1
    :stub-columns: 1
-
+   :width: 80
+   :align: center
    

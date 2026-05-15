@@ -75,11 +75,10 @@ html_css_files = [
 html_theme_options = {
     "logo": {
         "alt_text": "WISE Documentation",
-        "text": "Docs-as-Code",
+        "text": "Docs-as-Code"},
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink"],
     "show_toc_level": 3, 
     "use_edit_page_button": True,
-    }
 }
 
 html_context = {
