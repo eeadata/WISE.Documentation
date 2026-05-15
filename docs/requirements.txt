@@ -8,7 +8,7 @@ myst_parser
 
 sphinxcontrib.bibtex
 sphinxcontrib.mermaid 
-sphinxcontrib-sqltablecd
+sphinxcontrib-sqltable
 sphinx-design
 nbsphinx
 
