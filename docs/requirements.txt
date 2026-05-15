@@ -12,9 +12,6 @@ sphinxcontrib.mermaid
 nbsphinx
 
 sphinxcontrib-sqltable
-sphinxcontrib-excel-table
-sphinxcontrib-xlsxtable==1.1.1
-openpyxl  # Required dependency for xlsxtable
 
 # Add your theme here, e.g., sphinx-rtd-theme
 sphinx_rtd_theme
