@@ -24,6 +24,7 @@ It also works as a quick reference in case you don't remember something.
    UsingReStructuredText.rst
    UsingReStructuredText_Tables.rst
    UsingReStructuredText_Excel.rst
+   UsingReStructuredText_SQLTable.rst
    UsingReStructuredText_SourceCode.rst
    UsingReStructuredText_MermaidDiagrams.rst
    UsingReStructuredText_MathEquations.rst

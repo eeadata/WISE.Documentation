@@ -1,10 +1,10 @@
 
 .. _rst-excel-table-ref:
 
-Excel tables - **not recommended**
+Using reStructuredText - Excel tables
 --------------------------------------------
 
-.. note:: 
+.. note:: **NOT RECOMMENDED**
    
    Two extensions were explored but so far the results were deemed inadequate.  
    The extensions are not installed in this project.  

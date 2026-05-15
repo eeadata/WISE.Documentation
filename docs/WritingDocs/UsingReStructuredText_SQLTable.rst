@@ -1,5 +1,5 @@
-Testing the sqltable extension
-******************************
+Using reStructuredText - SQL tables 
+***********************************
 
 The ``sphinxcontrb-sqltable`` is an extension to Sphinx_ to allow authors 
 to embed SQL statements in source documents and produce tabular output
@@ -7,11 +7,15 @@ in rendered documents.
 
 It supports all databases accessible via SQLAlchemy.
 
-Using ..sqltable in the WISE documentation
-==========================================
+Using ..sqltable
+================
 
-For the WISE documentation, the most likely use-case 
-is to create the reporting guidance documents for dataflows.
+For the WISE documentation, 
+the most likely use-case is to create 
+the guidance documentation for dataflows.
+
+For example, to mantain an up-to-date description 
+of tables, columns and codelists.
 
 Let's start at the end...
 
@@ -35,8 +39,10 @@ Why is this relevant?
 Therefore, it is possible to use that "standard" struture 
 to create more user-friendly documentation about tables, columns, etc.
 
-Example: All the published tables related to groundwater bodies and their description
------------------------------------------------------------------------------------------
+The **[metadata]** can be put into a SQlite file and queried.
+
+Example: the description of a WISE table
+-----------------------------------------
 
 See the code example below.
 
@@ -50,33 +56,33 @@ See the other options in the `sqltable documentation <https://sphinxcontrib-sqlt
 .. code-block:: rst
    :linenos:
 
-   .. sqltable:: Tables in the GWB schema
-      :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
-      :name: sqltable-example-using-wise_wfd_metadata-gwb-tables
-      :widths: 20 80
+   .. sqltable:: This is the description of the GWB_GroundWaterBody table.
+      :connection_string: sqlite:///docs/WritingDocs/tables/wise_wfd_metadata.db
+      :name: sqltable-example-using-wise_wfd_metadata-gwb-table
+      :widths: 30 70
 
-      select title AS Tablename, description AS Description
+      select title AS "Table name", description AS "Description"
       from metadata
       where objectType = 'table'
-      and title like 'GWB%'
+      and title like 'GWB_GroundWaterBody'
       order by title
 
 
 The table resulting from the **..sqltable** directive is the one below:
 
-.. sqltable:: Tables in the GWB schema
-   :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
-   :name: sqltable-example-using-wise_wfd_metadata-gwb-tables
-   :widths: 20 80
+.. sqltable:: This is the description of the GWB_GroundWaterBody table.
+   :connection_string: sqlite:///docs/WritingDocs/tables/wise_wfd_metadata.db
+   :name: sqltable-example-using-wise_wfd_metadata-gwb-table
+   :widths: 30 70
 
-   select title AS Tablename, description AS Description
+   select title AS "Table name", description AS "Description"
    from metadata
    where objectType = 'table'
-   and title like 'GWB%'
+   and title like 'GWB_GroundWaterBody'
    order by title
 
-Example: The struture of the GWB_GroundWaterBody table
-------------------------------------------------------
+Example: the description of the columns in a WISE table
+--------------------------------------------------------
 
 The example below shows how to document the content of the [GWB_GroundWaterBody] table.
 
@@ -84,11 +90,11 @@ The example below shows how to document the content of the [GWB_GroundWaterBody]
    :linenos:
 
    .. sqltable:: Columns in the [GWB_GroundWaterBody] table
-      :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
+      :connection_string: sqlite:///docs/WritingDocs/tables/wise_wfd_metadata.db
       :name: sqltable-example-using-wise_wfd_metadata-GWB_GroundWaterBody
-      :widths: 10 10 80
+      :widths: 30 20 50
 
-      select title AS Columnname, DATA_TYPE AS Datatype, description AS Description
+      select title AS "Column name", DATA_TYPE AS "Datatype", description AS "Description"
       from metadata
       where objectType = 'column'
       and parentIdentifier = '[WISE_WFD].[v2r1].[GWB_GroundWaterBody]'
@@ -97,19 +103,19 @@ The example below shows how to document the content of the [GWB_GroundWaterBody]
 This is the resulting table:
 
 .. sqltable:: Columns in the [GWB_GroundWaterBody] table
-   :connection_string: sqlite:///docs/Notebook/tables/wise_wfd_metadata.db
+   :connection_string: sqlite:///docs/WritingDocs/tables/wise_wfd_metadata.db
    :name: sqltable-example-using-wise_wfd_metadata-GWB_GroundWaterBody
-   :widths: 10 10 80
+   :widths: 30 20 50
 
-   select title AS Columnname, DATA_TYPE AS Datatype, description AS Description
+   select title AS "Column name", DATA_TYPE AS "Datatype", description AS "Description"
    from metadata
    where objectType = 'column'
    and parentIdentifier = '[WISE_WFD].[v2r1].[GWB_GroundWaterBody]'
    order by [ORDINAL_POSITION],title
 
 
-About the example database wise_wfd_metadata.db 
------------------------------------------------
+About the database wise_wfd_metadata.db 
+---------------------------------------
 
 The wise_wfd_metadata.db sqLite database 
 contains data extracted form discodata_ 
