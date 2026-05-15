@@ -1,30 +1,7 @@
-:tocdepth: 2
-
 .. role:: raw-tex(raw)
     :format: latex html
 
 .. highlight:: rst
-
-.. metadata-placeholder
-
-   :DC.Title:
-   	Managing bibliographic citations in Sphinx
-   :DC.Creator:
-   	Nery, Fernanda
-   :DC.Date:
-   	2013-05-25
-   :DC.Description:
-      Overview on the available alternatives for bibliographic citations  in Sphinx.
-   :DC.Language:
-   	en
-   :DC.Format:
-   	text/x-rst
-   :DC.license:
-      http://creativecommons.org/licenses/by-sa/4.0/
-   :DC.Rights:
-      Public
-   :DC.RightsHolder:
-      Fernanda Nery 2013 © CC BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/
 
 .. _rst-biblio-ref:
 

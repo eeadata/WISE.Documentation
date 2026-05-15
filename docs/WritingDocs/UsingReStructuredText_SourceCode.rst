@@ -1,24 +1,4 @@
-:tocdepth: 2
-
 .. highlight:: rst
-
-.. metadata-placeholder
-
-   :DC.Title:
-      Showing source code examples in Sphinx
-   :DC.Creator:
-      Fernanda Nery
-   :DC.Date:
-      2013-05-25
-   :DC.Description:
-      Overview on the available alternatives for showing source code examples
-      in Sphinx.
-   :DC.Language:
-      en
-   :DC.Format:
-      text/x-rst
-   :DC.Rights:
-      Public 
 
 .. _rst-sourcecode-ref:
 
@@ -92,9 +72,9 @@ If we want to stop highlighting, we can use the ``none`` language, which is a sp
    
 From here on no highlighting will be done. 
    
-   :: 
+:: 
 
-      SELECT * FROM mytable
+   SELECT * FROM mytable
     
 
 Code-block directive

@@ -1,30 +1,5 @@
-:tocdepth: 3
-
 .. highlight:: rst
-
-.. metadata-placeholder
-
-   :DC.title:
-   	Separate document just about tables
-   :DC.creator:
-   	Fernanda Nery
-   :DC.date:
-   	2026-02-27
-   :DC.description:
-      Putting everything related to tables into a separate document
-   :DC.language:
-   	eng
-   :DC.format:
-   	text/x-rst
-   :DC.license:
-         https://creativecommons.org/licenses/by/4.0/      
-   :DC.rights:
-   	Public.
-   :DC.rightsHolder:
-      Copyright (c) 2007-2011 by Georg Brandl
-      Copyright (c) 2007-2013 by the Sphinx team
-
-  
+    
 .. _rst-tables-ref:
 
 Using reStructuredText - Tables

@@ -42,7 +42,7 @@ to create more user-friendly documentation about tables, columns, etc.
 The **[metadata]** can be put into a SQlite file and queried.
 
 Showing the description of a WISE table
------------------------------------------
+==========================================
 
 See the code example below.
 
@@ -82,7 +82,7 @@ The table resulting from the **..sqltable** directive is the one below:
    order by title
 
 Showing the description of the columns in a WISE table
---------------------------------------------------------
+======================================================
 
 The example below shows how to document the content of the [GWB_GroundWaterBody] table.
 
@@ -115,7 +115,7 @@ This is the resulting table:
 
 
 About the database wise_wfd_metadata.db 
----------------------------------------
+========================================
 
 The wise_wfd_metadata.db sqLite database 
 contains data extracted form discodata_ 

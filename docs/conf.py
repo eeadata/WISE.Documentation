@@ -27,10 +27,9 @@ bibtex_bibfiles = ['./_sharedFiles/Bibliography.bib']
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store','*.txt']
 
-# NUMBERING - begin config
-
+# NUMBERING
+# The separator must defined in a custom.css :-(
 numfig = True
-
 numfig_format = {
     'figure': 'Figure %s',       # Changes "Fig. 1" to "Figure 1"
     'table': 'Table %s',    
@@ -38,17 +37,11 @@ numfig_format = {
     'section': 'Section %s',     
 }
 
-    # The separator must defined in a custom.css
 
-# NUMBERING - end config
-
-# MERMAID DIAGRAMS - begin config
-
+# MERMAID DIAGRAMS 
 mermaid_init_js = """
 mermaid.initialize({theme:"neutral"});
 """
-
-# MERMAID DIAGRAMS - end config
 
 # SYNTAX HIGHLIGHTING - The name of the Pygments style to use.
 pygments_style = 'sphinx'
@@ -64,13 +57,11 @@ myst_enable_extensions = [
 ]
 
 # SQLTABLE - configure the default connection if there is one
-
 #sqltable_connection_string = ''
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_theme = 'pydata_sphinx_theme'
-#html_theme = 'sphinx_rtd_theme'
 html_show_copyright = False
 # The _static folder is where you place files that should be copied as-is to your final build output (_build/html/_static). It is commonly used for:
 # Custom.css: To override the default theme colors or fonts.
@@ -81,20 +72,27 @@ html_css_files = [
    'customTable.css'
 ]
 
-
 html_theme_options = {
     "logo": {
         "alt_text": "WISE Documentation",
         "text": "Docs-as-Code",
+    "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink"],
+    "show_toc_level": 3, 
+    "use_edit_page_button": True,
     }
 }
 
+html_context = {
+    "github_user": "eeadata",
+    "github_repo": "WISE.Documentation",
+    "github_version": "main",
+    "doc_path": "docs",
+}
 html_logo = "_static/wise.svg"
 
-# -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'WISE'
+project = 'WISE.Docs-as-Code'
 copyright = '2013-2026. These pages aggregate content from multiple sources (refer to the metadata).'
-author = 'Fernanda Nery'
+author = 'WISEr team'
 version = '0.1'

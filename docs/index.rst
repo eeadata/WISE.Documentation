@@ -1,3 +1,5 @@
+:html_theme.sidebar_secondary.remove:
+
 WISE Docs-as-Code
 *********************************
 

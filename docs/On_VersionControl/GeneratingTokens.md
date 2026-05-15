@@ -1,4 +1,4 @@
-# Generating a Personal Access Token in GitHub 
+# GitHub Personal Access Tokens
 
 Using a **Personal Access Token** or PAT is the standard way to authenticate when using the command line or the API. GitHub now offers two types: **Fine-grained** (recommended) and **Classic**.
 

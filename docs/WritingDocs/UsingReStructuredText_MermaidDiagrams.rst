@@ -1,30 +1,7 @@
-:tocdepth: 2
-
-.. highlight:: none
-
-.. metadata-placeholder
-
-   :DC.Title:
-   	Creating diagrams
-   :DC.Creator:
-   	Nery, Fernanda
-   :DC.Date:
-   	2013-10-01
-   :DC.Description:
-      Overview of some available alternatives for
-      producing and including SVG graphics and UML diagrams in Sphinx.
-   :DC.Language:
-   	en
-   :DC.Format:
-   	text/x-rst
-
 .. _rst-diagrams-ref:
 
 Using reStructuredText - Mermaid diagrams
 *********************************************
-
-Using Mermaid
-==============
 
 The sphinxcontrib-mermaid_ extension allows you to embed Mermaid_ graphs in your documents, including general flowcharts, sequence diagrams, gantt diagrams and more.
 
@@ -32,7 +9,7 @@ It adds a directive to embed mermaid markup.
 
 
 Class diagrams
-------------------
+=================
 
 Refer to https://mermaid.ai/open-source/syntax/classDiagram.html for the full syntax.
 
@@ -81,7 +58,7 @@ This class diagram...
    :end-before: block_end_202602251652
 
 Sequence diagrams
-------------------
+=================
  
 This sequence diagram...
 

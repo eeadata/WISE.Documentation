@@ -19,8 +19,8 @@
 :DC.Rights:
    Public.
 
-Setting up an online Git Repository using Github
-*************************************************
+Using Github
+*************
 
 
 1. Create a GitHub account and a new repository "projectXPTO"
