@@ -1,4 +1,4 @@
-Welcome to the WISE Documentation 
+WISE Docs-as-Code
 *********************************
 
 .. toctree:: 
@@ -38,6 +38,33 @@ The WISE Documentation is organized into three main sections:
   for managing and publishing the documentation. 
   It includes guidelines for organizing documentation files, committing changes, and collaborating with other contributors.
 
+WISE documentation using Sphinx
+=======================================
 
+The following projects have WISE **public** documentation 
+using Sphinx.
+
+.. list-table:: 
+   :name: wise-projects-using-Sphinx
+   :header-rows: 1
+   :stub-columns: 1
+
+   *  - Project
+      - Link
+   *  - Water Framework Directive
+      - https://eeadata.github.io/WISE.WFD.Documentation/
+
+
+Projects using Sphinx and the PyData theme
+==========================================
+
+The following projects use the PyData Sphinx theme, 
+and are a good source of inspiration and examples.
+
+.. csv-table:: 
+   :name: projects-using-the-PyData-Sphinx-theme
+   :file: GettingStarted/tables/ProjectsUsingThePyDataTheme.csv
+   :header-rows: 1
+   :stub-columns: 1
 
    

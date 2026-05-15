@@ -96,3 +96,4 @@ dependencies:
       - sphinxcontrib-mermaid
       - sphinxcontrib-bibtex
       - sphinx-design
+      - sphinx-gallery

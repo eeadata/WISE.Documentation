@@ -30,10 +30,6 @@
 Using reStructuredText - Tables
 ===============================
 
-.. contents:: On this page...
-   :depth: 3
-   :local:
-
 Grid tables
 --------------------------------------------
 
@@ -127,8 +123,12 @@ And you can cross-reference to the :numref:`table-user-list-with-two-persons-ref
 
 .. _rst-list-table-directive-ref:
 
-List-table directive - **recommended**
+List-table directive
 --------------------------------------------
+
+.. note::
+
+   This is the recommended option for simple tables.
 
 A ``list-table`` is created from a uniform two-level bullet list::
 
@@ -183,8 +183,13 @@ Same as before, you can also use just a numbered reference :numref:`a-name-you-c
    
 .. _rst-csv-table-directive-ref:
 
-CSV-table directive - **recommended**
+CSV-table directive
 --------------------------------------------
+
+.. note::
+
+   This is the recommended option for long tables, 
+   specially using a separate CSV file.
 
 A ``csv-table`` is created from comma-separated values
 (either in the document or in an external file)::

@@ -7,8 +7,8 @@ in rendered documents.
 
 It supports all databases accessible via SQLAlchemy.
 
-Using ..sqltable
-================
+Using sqltable to document WISE databases
+==========================================
 
 For the WISE documentation, 
 the most likely use-case is to create 
@@ -41,7 +41,7 @@ to create more user-friendly documentation about tables, columns, etc.
 
 The **[metadata]** can be put into a SQlite file and queried.
 
-Example: the description of a WISE table
+Showing the description of a WISE table
 -----------------------------------------
 
 See the code example below.
@@ -81,7 +81,7 @@ The table resulting from the **..sqltable** directive is the one below:
    and title like 'GWB_GroundWaterBody'
    order by title
 
-Example: the description of the columns in a WISE table
+Showing the description of the columns in a WISE table
 --------------------------------------------------------
 
 The example below shows how to document the content of the [GWB_GroundWaterBody] table.

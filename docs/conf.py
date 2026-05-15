@@ -10,27 +10,17 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 
-if on_rtd:
-   extensions = ['sphinx.ext.autodoc',
-                 'myst_parser',
-                 'sphinx.ext.todo', 
-                 #'sphinx.ext.imgmath', 
-                 'sphinx.ext.mathjax', 
-                 'sphinx.ext.graphviz',
-                 'sphinxcontrib.sqltable',
-                 'nbsphinx']
-else:
-   extensions = ['sphinx.ext.autodoc',
-                 'myst_parser',
-                 'sphinx.ext.todo', 
-                 #'sphinx.ext.imgmath', 
-                 'sphinx.ext.mathjax', 
-                 'sphinx.ext.graphviz', 
-                 'sphinxcontrib.bibtex', 
-                 'sphinxcontrib.mermaid', 
-                 'sphinxcontrib.sqltable',
-                 'nbsphinx',
-                 'sphinx_design']
+extensions = ['sphinx.ext.autodoc',
+                'myst_parser',
+                'sphinx.ext.todo', 
+                #'sphinx.ext.imgmath', 
+                'sphinx.ext.mathjax', 
+                'sphinx.ext.graphviz', 
+                'sphinxcontrib.bibtex', 
+                'sphinxcontrib.mermaid', 
+                'sphinxcontrib.sqltable',
+                'nbsphinx',
+                'sphinx_design']
 
 bibtex_bibfiles = ['./_sharedFiles/Bibliography.bib']
 
