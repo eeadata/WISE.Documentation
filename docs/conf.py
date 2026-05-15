@@ -29,7 +29,8 @@ else:
                  'sphinxcontrib.bibtex', 
                  'sphinxcontrib.mermaid', 
                  'sphinxcontrib.sqltable',
-                 'nbsphinx']
+                 'nbsphinx',
+                 'sphinx_design']
 
 bibtex_bibfiles = ['./_sharedFiles/Bibliography.bib']
 
@@ -69,6 +70,7 @@ todo_include_todos = True
 myst_enable_extensions = [
     "amsmath",
     "dollarmath",
+    "colon_fence"
 ]
 
 # SQLTABLE - configure the default connection if there is one
@@ -77,8 +79,8 @@ myst_enable_extensions = [
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'pydata_sphinx_theme'
+#html_theme = 'sphinx_rtd_theme'
 html_show_copyright = False
 # The _static folder is where you place files that should be copied as-is to your final build output (_build/html/_static). It is commonly used for:
 # Custom.css: To override the default theme colors or fonts.
@@ -86,12 +88,23 @@ html_show_copyright = False
 # JavaScript: Scripts for custom interactivity not provided by extensions.
 html_static_path = ['_static']
 html_css_files = [
-    'customTable.css'
+#   'customTable.css'
 ]
+
+
+html_theme_options = {
+    "logo": {
+        "alt_text": "WISE Documentation",
+        "text": "Docs-as-Code",
+    }
+}
+
+html_logo = "_static/wise.svg"
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'WISE.Documentation'
+project = 'WISE'
 copyright = '2013-2026. These pages aggregate content from multiple sources (refer to the metadata).'
 author = 'Fernanda Nery'
 version = '0.1'

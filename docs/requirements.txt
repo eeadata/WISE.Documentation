@@ -7,11 +7,11 @@ sphinx
 myst_parser
 
 sphinxcontrib.bibtex
-
 sphinxcontrib.mermaid 
+sphinxcontrib-sqltablecd
+sphinx-design
 nbsphinx
 
-sphinxcontrib-sqltable
-
 # Add your theme here, e.g., sphinx-rtd-theme
-sphinx_rtd_theme
+#sphinx_rtd_theme
+pydata_sphinx_theme
