@@ -74,7 +74,7 @@ just indenting them more than the surrounding paragraphs::
 
 .. tip:: 
 
-   Each indentation level is created with 3 whitespaces.
+   Each indentation level is created with 4 whitespaces.
    Do not use tabs.
 
 Line blocks are a way of preserving **line breaks**::
@@ -86,10 +86,10 @@ Line blocks are a way of preserving **line breaks**::
 
 Here is the result of the above markup:
 
-   | the sweet & aged people
-   | who rule this world(and me and
-   | you if we’re not very
-   | careful)
+| the sweet & aged people
+| who rule this world(and me and
+| you if we’re not very
+| careful)
    
 .. _rst-sections-ref: 
   
@@ -108,10 +108,10 @@ Sections must be properly nested.
    
    Use the following punctuation characters in the section titles:
 
-   *  ``#`` for Parts
-   *  ``*`` for Chapters
-   *  ``=`` for sections ("Heading 1")
-   *  ``-`` for subsections ("Heading 2")
+   *  ``#`` for Chapters
+   *  ``*`` for Heading 1
+   *  ``=`` for Heading 2
+   *  ``-`` for Heading 3
 
    When converting to HTML format, 
    sections are converted to an appropriate heading tag 
@@ -291,9 +291,7 @@ In this project, field lists are used to include metadata in each document.
 .. admonition:: This is a style convention.
          
    The basic `Dublin Core`_ metadata fields
-   should be included in the very beginning of each document
-   (like a header to the text file),
-   like this::
+   should be included in the very beginning of each document::
    
       .. metadata-placeholder
    
@@ -317,11 +315,9 @@ In this project, field lists are used to include metadata in each document.
       :DC.rightsHolder:
          E.g. European Environment Agency, European Commission, etc.
 
-   Note that these metadata field names 
+   The metadata field names 
    are not automatically recognised by the Sphinx parser, 
-   so the text itself will not be visible in the HTML pages (for example). 
-   The metadata fields are the equivalent 
-   to the *Document properties* fields in a ``DOCX`` file or an ``ODT`` file.
+   so the text itself will not be visible in the HTML pages.
 
 docutils_ recognises a number of Bibliographic Fields 
 (such as ``docinfo``, ``author``, ``authors``, 
@@ -526,7 +522,7 @@ to be included (sorted according to their name)::
       chapter2/*
       references 
     
-   
+
 .. _rst-images-ref:
 
 Images

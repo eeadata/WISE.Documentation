@@ -12,67 +12,67 @@ dependencies:
   - python>=3.10,<3.14
   
   # Command Line Interface Creation Kit; used to build intuitive terminal commands.
-  - click=8.3.1
+  - click
   
   # GeoPandas extends the datatypes used by pandas to allow spatial operations on geometric types
   - geopandas
   
   # Interactive HTML widgets for Jupyter notebooks to build dynamic GUIs.
-  - ipywidgets=8.1.8
+  - ipywidgets
   
   # The next-generation web-based user interface for Project Jupyter.
-  - jupyterlab=4.5.3
+  - jupyterlab
   
   # A JupyterLab extension providing a UI for version control using Git.
-  - jupyterlab-git=0.51.4
+  - jupyterlab-git
   
   # Python's foundational plotting library for static, animated, and interactive visualizations.
-  - matplotlib=3.10.8
+  - matplotlib
   
   # Parser for MyST (Markedly Structured Text), a rich and extensible Markdown flavor for Sphinx.
-  - myst-parser=5.0.0
+  - myst-parser
   
   # Tools for diffing and merging Jupyter notebooks, essential for version control.
-  - nbdime=4.0.2
+  - nbdime
   
   # nbsphinx is a Sphinx extension that provides a source parser for *.ipynb files
   - nbsphinx
   
   # The fundamental package for scientific computing and working with N-dimensional arrays.
-  - numpy=2.4.2
+  - numpy
   
   # Powerful, flexible data structures for data analysis and manipulation.
-  - pandas=3.0.1
+  - pandas
   
   # The standard package installer for Python; needed to install packages not found in Conda channels.
   - pip
   
   # Generic syntax highlighter suitable for use in code hosting, forums, and documentation.
-  - pygments=2.19.2
+  - pygments
 
   # A mature, full-featured, and highly scalable Python testing framework.
-  - pytest=9.0.2
+  - pytest
   
   # A pytest plugin for measuring code coverage during test runs.
-  - pytest-cov=7.0.0
+  - pytest-cov
 
   # A Python interface for Graphviz, a graph visualization software.
-  - python-graphviz=0.21
+  - python-graphviz
   
   # Statistical data visualization library based on matplotlib, providing high-level drawing interfaces.
-  - seaborn=0.13.2
+  - seaborn
   
   # Workflow management system for reproducible and scalable data analyses (minimal build).
-  - snakemake-minimal=9.14.8
+  - snakemake-minimal
   
   # Documentation generator that makes it easy to create beautiful documentation for Python projects.
-  - sphinx=8.2.3
+  - sphinx
   
   # Automatically rebuilds Sphinx documentation and refreshes the browser on file changes.
-  - sphinx-autobuild=2025.8.25
+  - sphinx-autobuild
 
   # A Sphinx extension to automatically generate documentation from Python docstrings.
-  - sphinx-autodoc2=0.5.0
+  - sphinx-autodoc2
 
   # A Sphinx extension to add a copy-button to code blocks https://sphinx-copybutton.readthedocs.io/en/latest/
   - sphinx-copybutton
