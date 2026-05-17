@@ -32,6 +32,7 @@
 .. _Mermaid: https://mermaid.ai/web/
 .. _MyST: https://myst-parser.readthedocs.io/en/latest/
 
+.. _nbsphinx: https://nbsphinx.readthedocs.io/en/latest/
 .. _Notepad++: https://notepad-plus-plus.org/
 .. _Notepad++ User Defined Languages Collection: https://github.com/notepad-plus-plus/userDefinedLanguages
 .. _Notepad++ Markdown syntax file: https://github.com/Edditoria/markdown-plus-plus
@@ -50,8 +51,12 @@
 
 .. _sphinxcontrib-bibtex: https://pypi.org/project/sphinxcontrib-bibtex/ 
 .. _sphinxcontrib-mermaid: https://pypi.org/project/sphinxcontrib-mermaid/
+.. _sphinx-copybutton: https://sphinx-copybutton.readthedocs.io/en/latest/
 .. _sphinx.ext.graphviz: https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
 .. _sphinx-plantuml: https://pypi.org/project/sphinx-plantuml/
+.. _sphinxcontrib-sqltable: https://sphinxcontrib-sqltable.readthedocs.io/en/latest/ 
+.. _sphinx-togglebutton: https://sphinx-togglebutton.readthedocs.io/en/latest/
+
 .. _Sphinx Thesis Resource: https://jterrace.github.io/sphinxtr/
 
 .. _Version Control: https://en.wikipedia.org/wiki/Version_control

@@ -10,7 +10,16 @@ Setting up the wiseEnvironment
 
 *  Open the Anaconda PowerShell (Windows) or your terminal of choice (Linux/Mac).  
 
-   Navigate to the root directory of the project where the `environment.yml` file was copied to:
+   .. important::
+      If you're using a remote desktop connection to the CWS,
+      check if the `wiseEnvironment` already exists, using: 
+      
+      .. code-block:: bash
+
+         conda env list
+
+
+*  Navigate to the root directory of the project where the `environment.yml` file was copied to:
 
    .. code-block:: bash
 
@@ -59,11 +68,12 @@ Updating the environment
 
       conda env update -f https://raw.githubusercontent.com/eeadata/WISE.Documentation/refs/heads/main/docs/GettingStarted/src/environment.yml --prune
 
-Where are new environments created?
+Where are environments created?
 -----------------------------------
 
 By default, Conda looks at your `envs_dirs`` configuration to decide where to put new environments. 
-If you want them strictly in `~/.conda/envs` (or whatever your prefered path is), you need to tell Conda that this path is your top priority.
+If you want them strictly in `~/.conda/envs` (or whatever your prefered path is), 
+you need to tell Conda that this path is your top priority.
 
 .. code-block:: bash
 
@@ -75,7 +85,9 @@ To make sure Conda heard you loud and clear, check your configuration:
 
       conda config --show envs_dirs
 
-The output should list `~/.conda/envs` (or the full path equivalent) at the very top.      
+The output should list `~/.conda/envs` (or the full path equivalent) at the very top.  
+
+
 
 .. links-placeholder
 

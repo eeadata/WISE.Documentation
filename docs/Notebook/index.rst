@@ -5,6 +5,8 @@ Work in progress...
    :maxdepth: 2
    :hidden: 
 
+   UsingToggleButton.rst
+   UsingCopyButton.rst
    UsingReStructuredText_Excel.rst
 
 This section contains documentation about:

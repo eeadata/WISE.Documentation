@@ -74,6 +74,9 @@ dependencies:
   # A Sphinx extension to automatically generate documentation from Python docstrings.
   - sphinx-autodoc2=0.5.0
 
+  # A Sphinx extension to add a copy-button to code blocks https://sphinx-copybutton.readthedocs.io/en/latest/
+  - sphinx-copybutton
+
   # The official and widely used Read the Docs theme for Sphinx.
   - sphinx_rtd_theme=3.1.0
 
@@ -97,3 +100,4 @@ dependencies:
       - sphinxcontrib-bibtex
       - sphinx-design
       - sphinx-gallery
+      - sphinx-togglebutton
