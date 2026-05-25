@@ -91,6 +91,9 @@ dependencies:
   
   # https://jupysql.readthedocs.io/en/latest/quick-start.html
   - jupysql
+  
+  # https://jupytext.readthedocs.io/en/latest/
+  - jupytext
  
   - pip:
       - sphinxcontrib-xlsxtable
