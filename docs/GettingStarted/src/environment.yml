@@ -31,6 +31,9 @@ dependencies:
 
   # https://jupytext.readthedocs.io/en/latest/
   - jupytext  
+
+  # Links recognition library with FULL unicode support.
+  - linkify-it-py
   
   # Python's foundational plotting library for static, animated, and interactive visualizations.
   - matplotlib

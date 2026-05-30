@@ -61,7 +61,8 @@ todo_include_todos = True
 myst_enable_extensions = [
     "amsmath",
     "dollarmath",
-    "colon_fence"
+    "colon_fence",
+    "linkify"
 ]
 
 # SQLTABLE - configure the default connection if there is one
