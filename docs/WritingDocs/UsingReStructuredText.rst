@@ -571,30 +571,53 @@ There must be blank lines before the caption paragraph and before the legend.
 To specify a legend without a caption,
 use an empty comment (``..``) in place of the caption.
 
-.. _rst-footnotes-ref:
+.. _footnotes-ref:
 
 Footnotes
 ---------
 
-For footnotes, use ``[#name]_`` to mark the footnote
-location, and add the footnote body at the bottom of the document after a
-"Footnotes" rubric heading, like so::
+First of all, **do not number your footnotes**.
 
-   Lorem ipsum [#first-footnote-name]_ dolor sit amet [#second-footnote-name]_
+Sphinx will create the numbers for you. 
+Give each footnote a unique and descriptive name. 
+You can reference a footnote several times in the text, 
+using the descriptive name.   
 
-   .. rubric:: Footnotes
+.. tab-set::
 
-   .. [#first-footnote-name] Text of the first footnote.
-   .. [#fsecond-footnote-name] Text of the second footnote.
+   .. tab-item:: rst
 
-You can also explicitly number the footnotes (``[1]_``) or use auto-numbered
-footnotes without names (``[#]_``).
+      .. code-block:: rst
 
-   .. tip:: 
+         You can use footnotes [#what-is-a-footnote]_ 
+         that always appear at the end of the page.
+         I don't think you can place them all together
+         in a separate page, like a global place with endnotes [#what-is-an-endnote]_
+         
+         You can put the footnotes' text at the end of the file,
+         or simply write them in the middle of the text.
 
-      To facilitate editing, auto-numbered footnotes should **not** be used. 
-      Instead, use short descriptive names (that simplify cross-referencing).    
-   
+         .. rubric:: Footnotes
+
+         .. [#what-is-a-footnote] A footnote appears at the bottom of a page.
+         .. [#what-is-an-endnote] An endnote appear at the end of a document.
+
+   .. tab-item:: md
+
+      .. code-block:: md
+
+         You can use footnotes [^what-is-a-footnote] 
+         that always appear at the end of the page.
+         I don't think you can place them all together
+         in a separate page, like a global place with endnotes [^what-is-an-endnote]
+         
+         You can put the footnotes' text at the end of the file,
+         or simply write them in the middle of the text.
+
+         [^what-is-a-footnote] A footnote appears at the bottom of a page.
+         [^what-is-an-endnote] An endnote appear at the end of a document.
+
+
 .. _rst-citations-ref:  
    
 Citations
