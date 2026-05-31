@@ -2,6 +2,7 @@ Project,Link
 ArviZ,https://python.arviz.org/en/stable/index.html
 Conda,https://docs.conda.io/projects/conda/en/stable/index.html
 GeoPandas,https://geopandas.org/en/stable/
+ipyleaflet,https://ipyleaflet.readthedocs.io/en/latest/
 Jupyter,https://docs.jupyter.org/en/latest/
 Matplotlib,https://matplotlib.org/stable/
 NetworkX,https://networkx.org/documentation/stable/
