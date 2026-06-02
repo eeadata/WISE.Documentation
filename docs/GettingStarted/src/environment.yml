@@ -14,6 +14,9 @@ dependencies:
   # Command Line Interface Creation Kit; used to build intuitive terminal commands.
   - click
   
+  # GeoAlchemy 2 provides extensions to SQLAlchemy for working with spatial databases.
+  - geoalchemy2
+
   # GeoPandas extends the datatypes used by pandas to allow spatial operations on geometric types
   - geopandas
   
