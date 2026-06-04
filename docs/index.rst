@@ -73,3 +73,35 @@ and are a good source of inspiration and examples.
    :width: 80
    :align: center
    
+Good documentation about good documentation
+==============================================================
+
+When (if...) this project grows and matures, it would be nice to have something like:
+
+* the Canonical `Sphinx Stack documentation <https://documentation.ubuntu.com/sphinx-stack/latest/#>`_ 
+  describes the Sphinx stack used by Canonical in the Ubuntu documentation 
+  (and in the documentation of all their other products) 
+
+* the Canonical `Documentation Style Guide <https://documentation.ubuntu.com/style-guide>`_ 
+  contains basic style guidelines. 
+  When in doubt, and until there's a strong case for having different guidelines, it's OK to follow theirs.
+
+Once time allows, some simple guidelines have to be made based on:
+
+* the SEMIC style guidelines for data specifications, specifically the part about 
+  `conceptual model conventions (UML) <https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html>`_
+* the EC Library Guides on `how to cite documents and data <https://ec-europa-eu.libguides.com/EU_sources/citing>`_
+
+TL;DR yet
+=========
+
+Technical documentation is frequently organised into four blocks 
+(see for example the `Ubuntu documentation <https://documentation.ubuntu.com/core/>`_):
+
+* Tutorials - learning-oriented experiences
+* How-to guides - goal-oriented directions
+* Reference - information-oriented technical description
+* Explanation - understanding-oriented discussion
+
+Aparently there's a methodology behind it: 
+see `diátaxis <https://diataxis.fr/application/>`_ for a complete guide.
