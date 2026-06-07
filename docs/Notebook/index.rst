@@ -8,6 +8,7 @@ Work in progress...
    UsingToggleButton.rst
    UsingCopyButton.rst
    UsingReStructuredText_Excel.rst
+   EmbeddingTableau
 
 This section contains documentation about:
 
