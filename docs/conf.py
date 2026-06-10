@@ -24,7 +24,7 @@ extensions = ['sphinx.ext.autodoc',
                 'sphinx_copybutton',
                 'sphinx_togglebutton']
 
-bibtex_bibfiles = ['./_sharedFiles/Bibliography.bib']
+bibtex_bibfiles = ['_sharedFiles/bibliography.bib']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store','*.txt']

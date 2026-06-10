@@ -12,7 +12,7 @@ Writing documentation
    UsingReStructuredText_SourceCode.rst
    UsingReStructuredText_MermaidDiagrams.rst
    UsingReStructuredText_MathEquations.rst
-   UsingReStructuredText_BibTeXCitations.rst
+   Using_BibTeXCitations.rst
    UsingMarkdown.md
    UsingMarkdown_InternalLinks.md
 
