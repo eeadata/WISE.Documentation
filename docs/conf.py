@@ -81,6 +81,10 @@ html_css_files = [
    'customTable.css'
 ]
 
+html_js_files = [
+    "js/mermaid-zoom.js",
+]
+
 html_theme_options = {
     "logo": {
         "alt_text": "WISE Documentation",
