@@ -20,7 +20,7 @@ Before building the documentation, ensure your Conda environment is activated:
 
 .. code-block:: bash
 
-   conda activate wiseEnvironment
+   source activate wiseEnvironment
 
 "Live build" 
 ----------------------------------------------------

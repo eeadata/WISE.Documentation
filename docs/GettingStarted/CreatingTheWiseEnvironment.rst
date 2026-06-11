@@ -47,7 +47,7 @@ Setting up the wiseEnvironment
 
    .. code-block:: bash
 
-      conda activate wiseEnvironment
+      source activate wiseEnvironment
 
 
 *  You should now see `(wiseEnvironment)` at the beginning of your terminal prompt.
