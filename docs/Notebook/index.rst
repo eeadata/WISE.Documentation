@@ -9,7 +9,7 @@ Work in progress...
    UsingCopyButton.rst
    UsingReStructuredText_Excel.rst
    EmbeddingTableau
-
+   
 This section contains documentation about:
 
 * Things that are being explored (extensions, ideas, etc).
