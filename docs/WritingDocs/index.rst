@@ -8,12 +8,12 @@ Writing documentation
    AboutSphinx
    UsingReStructuredText.rst
    UsingReStructuredText_Tables.rst
-   UsingReStructuredText_SQLTable.rst
-   UsingReStructuredText_SourceCode.rst
+   Using_SQLTable.md
+   Using_SourceCode.md
    UsingReStructuredText_MermaidDiagrams.rst
-   UsingReStructuredText_MathEquations.rst
-   Using_Footnotes.rst
-   Using_Citations.rst
+   Using_MathEquations.md
+   Using_Footnotes.md
+   Using_Citations.md
    Using_BibTeXCitations.md
    UsingMarkdown.md
    UsingMarkdown_InternalLinks.md
