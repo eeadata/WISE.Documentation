@@ -1,26 +1,22 @@
 Building the documentation locally
 ================================== 
 
-Sphinx
+Quickstart
 -------------------
 
 `Sphinx`_ is a Python documentation generator.
 
-If your using the `wiseEnvironment` Conda environment, Sphinx_ should already be installed.
-The `wiseEnvironment` includes the `sphinx-autobuild` package, 
-which allows you to automatically rebuild and preview your documentation in a web browser as you edit it (see next section).
+If you are using the `wiseEnvironment` Conda environment, Sphinx should already be installed.
+Just open the Anaconda Prompt, activate the wiseEnvironment, and navigate to the repository and folder where you have your docs.
 
-..
-   The Sphinx builder can produce a number of output formats (e.g. HTML, PDF).
-   PDF files can be produced using the LaTeX builder (more complicated)
-   or using the direct PDF builder called rst2pdf (see below).
-..
-
-Before building the documentation, ensure your Conda environment is activated:
+Sphinx comes with a script called `sphinx-quickstart` that sets up a source directory 
+and creates a default `conf.py` with the most useful configuration values from a few questions it asks you: 
 
 .. code-block:: bash
 
-   source activate wiseEnvironment
+   sphinx-quickstart
+
+The script creates an `index.rst` file. You can open it and add some text there...
 
 "Live build" 
 ----------------------------------------------------
@@ -31,7 +27,6 @@ Before building the documentation, ensure your Conda environment is activated:
 
 If you are actively writing or editing documentation, the best way to preview your changes is using `sphinx-autobuild`. 
 This will start a local web server and automatically refresh your browser whenever you save a file.
-
 
 *  **Start the autobuild server.**  
 
@@ -49,12 +44,11 @@ This will start a local web server and automatically refresh your browser whenev
 
 *  Use `CTRL+C` to stop the autobuild.
 
-*  If port `8000` is already in use by another application: 
+*  If port 8000 is already in use by another application, use another...: 
 
    .. code-block:: bash
 
       sphinx-autobuild docs docs/_build/html --port 9000
-
 
 Standard HTML Build
 -----------------------------
@@ -67,9 +61,7 @@ If you just want to generate the static HTML files once without starting a persi
 
    .. code-block:: bash
 
-      make html
-
-   *(On Windows, use `.\make.bat html` instead).*
+      .\make.bat html
 
 *  **View the docs**  
 

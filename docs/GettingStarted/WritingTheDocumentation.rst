@@ -19,7 +19,6 @@ Writing the documentation
 
 *  You you already have documentation in other formats, you may convert it using Pandoc_.
 
-
 Notepad++
 ------------------
 
@@ -40,13 +39,30 @@ Visual Studio Code
 -------------------- 
 
 `Visual Studio Code`_ is a open source code editor for **Windows, Linux and Mac**.  
-It has a large number of extensions available, including some for reStructuredText.
+It has a large number of extensions available:
 
-If you are using Visual Studio Code, you select the `wiseEnvironment` Conda environment as your Python interpreter 
-to ensure that all Sphinx extensions and dependencies are available while editing and previewing your documentation.
+* Python extension for Visual Studio Code (ms-python.python): **required**
+* MyST Syntax Highlighting (chrisjsewell.myst-tml-syntax): *recommended* if you are using Markdown
+* markdownlint (DavidAnson.vscode-markdownlint): useful if you are using Markdown (but you may need to configure and disable some options)
+* reStructuredText Syntax highlighting	(trond-snekvik.simple-rst): useful if you are using reStructuredText
+* Mermaid (MermaidChart.vscode-mermaid-chart): *recommended* if you are using Mermaid diagrams
+* Code Spell Checker (streetsidesoftware.code-spell-checker):  *recommended* as a spell checker
+
+Anyway... you just need the Python extension:
+
+* Activate `wiseEnvironment` Conda environment as your Python environment
+  to ensure that all Sphinx extensions and dependencies are available 
+  while editing and previewing your documentation.  
 
 *  In Visual Studio Code, open the Command Palette (Ctrl+Shift+P) and type "Python: Select Interpreter".
-*  Choose the interpreter that corresponds to your `wiseEnvironment` Conda environment.
+   Choose the interpreter that corresponds to your `wiseEnvironment` Conda environment.
+   If you don't remember were the `python.exe` file is, check the location of your environment using a terminal window and:
+
+   .. code-block:: bash
+
+      conda env list
+
+* If you are using a git repository, add the `.vscode` folder to your `.gitignore` file.
 
 .. figure:: img/VisualStudioCode.png
    :alt: This document opened in Visual Studio Code.

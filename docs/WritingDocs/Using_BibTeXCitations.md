@@ -1,6 +1,12 @@
 (heading_using_bibtex_citations)=
 # Using BibTeX citations
 
+https://ec-europa-eu.libguides.com/EU_sources/citing
+
+https://style-guide.europa.eu/en/content/-/isg/topic?identifier=5.9.4-bibliographic-references
+
+https://www.zotero.org/styles?q=id%3Aeu-interinstitutional-style
+
 ## Inline citations 
 
 The base format for inline citations (e.g., whether your whole project uses author-year `[Smith, 2020]` or numeric `[1]`) 
