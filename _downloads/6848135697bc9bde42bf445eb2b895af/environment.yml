@@ -1,0 +1,115 @@
+# This file is used to create a conda environment for the wiseEnvironment projects. 
+# It is based on the CodeRefinery project environment.yml
+# It specifies the name of the environment, the channels to use for package installation, and the dependencies required for the project. 
+# To create the environment, run `conda env create -f environment.yml` in your terminal.
+
+name: wiseEnvironment
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Python interpreter; restricted to versions 3.10 through 3.13 to ensure broad compatibility.
+  - python>=3.10,<3.14
+  
+  # Command Line Interface Creation Kit; used to build intuitive terminal commands.
+  - click
+  
+  # GeoAlchemy 2 provides extensions to SQLAlchemy for working with spatial databases.
+  - geoalchemy2
+
+  # GeoPandas extends the datatypes used by pandas to allow spatial operations on geometric types
+  - geopandas
+  
+  # Interactive HTML widgets for Jupyter notebooks to build dynamic GUIs.
+  - ipywidgets
+
+  # https://jupysql.readthedocs.io/en/latest/quick-start.html
+  - jupysql
+  
+  # The next-generation web-based user interface for Project Jupyter.
+  - jupyterlab
+  
+  # A JupyterLab extension providing a UI for version control using Git.
+  - jupyterlab-git
+
+  # https://jupytext.readthedocs.io/en/latest/
+  - jupytext  
+
+  # Links recognition library with FULL unicode support.
+  - linkify-it-py
+  
+  # Python's foundational plotting library for static, animated, and interactive visualizations.
+  - matplotlib
+  
+  # Parser for MyST (Markedly Structured Text), a rich and extensible Markdown flavor for Sphinx.
+  - myst-parser
+  
+  # Tools for diffing and merging Jupyter notebooks, essential for version control.
+  - nbdime
+  
+  # nbsphinx is a Sphinx extension that provides a source parser for *.ipynb files
+  - nbsphinx
+  
+  # The fundamental package for scientific computing and working with N-dimensional arrays.
+  - numpy
+  
+  # Powerful, flexible data structures for data analysis and manipulation.
+  - pandas
+  
+  # The standard package installer for Python; needed to install packages not found in Conda channels.
+  - pip
+
+  # PyData Sphinx Theme https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html
+  - pydata-sphinx-theme
+
+  # Generic syntax highlighter suitable for use in code hosting, forums, and documentation.
+  - pygments
+
+  #https://mkleehammer.github.io/pyodbc/
+  - pyodbc
+
+  # A mature, full-featured, and highly scalable Python testing framework.
+  - pytest
+  
+  # A pytest plugin for measuring code coverage during test runs.
+  - pytest-cov
+
+  # A Python interface for Graphviz, a graph visualization software.
+  - python-graphviz
+  
+  # Statistical data visualization library based on matplotlib, providing high-level drawing interfaces.
+  - seaborn
+  
+  # Workflow management system for reproducible and scalable data analyses (minimal build).
+  - snakemake-minimal
+  
+  # Documentation generator that makes it easy to create beautiful documentation for Python projects.
+  - sphinx
+  
+  # Automatically rebuilds Sphinx documentation and refreshes the browser on file changes.
+  - sphinx-autobuild
+
+  # A Sphinx extension to automatically generate documentation from Python docstrings.
+  - sphinx-autodoc2
+
+  # A Sphinx extension to add a copy-button to code blocks https://sphinx-copybutton.readthedocs.io/en/latest/
+  - sphinx-copybutton
+
+  # The official and widely used Read the Docs theme for Sphinx.
+  - sphinx_rtd_theme=3.1.0
+  
+  #SQLAlchemy is the Python SQL toolkit and Object Relational Mapper
+  - sqlalchemy
+  
+  # An easily customizable SQL parser and transpiler
+  - sqlglot
+ 
+  - pip:
+      - sphinxcontrib-xlsxtable
+      - sphinxcontrib-excel-table
+      - sphinxcontrib-sqltable
+      - sphinxcontrib-mermaid
+      - sphinxcontrib-bibtex
+      - sphinx-design
+      - sphinx-gallery
+      - sphinx-togglebutton

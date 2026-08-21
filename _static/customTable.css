@@ -1,0 +1,39 @@
+/* =========================
+   Table base
+========================= */
+
+.rst-content table.docutils {
+    width: 100%;
+    table-layout: auto;
+}
+
+
+/* =========================
+   Default cells (legible)
+========================= */
+
+.rst-content table.docutils th,
+.rst-content table.docutils td {
+    vertical-align: top !important;
+    white-space: normal;
+    word-break: normal;             
+    overflow-wrap: break-word;        
+}
+
+
+/* =========================
+   First column (force break ONLY here)
+========================= */
+
+.rst-content table.docutils td:first-child {
+    word-break: break-all !important;
+}
+
+/* =========================
+   Second column protection (VERY IMPORTANT)
+========================= */
+
+.rst-content table.docutils td:nth-child(2) {
+    word-break: normal !important;
+    white-space: normal;            
+}

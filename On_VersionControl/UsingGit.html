@@ -1,0 +1,903 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version Control using Git &#8212; WISE.Docs-as-Code  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/customTable.css?v=0cc09019" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=18a8d5f5"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'On_VersionControl/UsingGit';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/js/mermaid-zoom.js?v=572d2af9"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using Github" href="UsingAnOnlineGitRepository.html" />
+    <link rel="prev" title="What is version control" href="OnVersionControl.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/wise.svg" class="logo__image only-light" alt="WISE Documentation"/>
+    <img src="../_static/wise.svg" class="logo__image only-dark pst-js-only" alt="WISE Documentation"/>
+  
+  
+    <p class="title logo__title">Docs-as-Code</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../GettingStarted/index.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../WritingDocs/index.html">
+    Writing documentation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Using version control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Notebook/index.html">
+    Work in progress…
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../GettingStarted/index.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../WritingDocs/index.html">
+    Writing documentation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Using version control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Notebook/index.html">
+    Work in progress…
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="OnVersionControl.html">What is version control</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Version Control using Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UsingAnOnlineGitRepository.html">Using Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeneratingTokens.html">GitHub Personal Access Tokens</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Using version control</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Version Control using Git</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="version-control-using-git">
+<h1>Version Control using Git<a class="headerlink" href="#version-control-using-git" title="Link to this heading">#</a></h1>
+<section id="before-you-start">
+<h2>Before you start<a class="headerlink" href="#before-you-start" title="Link to this heading">#</a></h2>
+<p>The following resources contain useful information on version control systems:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a>:</dt><dd><p>a simple explanation of version control with Subversion examples.</p>
+</dd>
+</dl>
+</li>
+<li><p><a class="reference external" href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a>: a clear and structured workflow.</p></li>
+</ul>
+</section>
+<section id="git-cheatsheet">
+<h2>Git CheatSheet<a class="headerlink" href="#git-cheatsheet" title="Link to this heading">#</a></h2>
+<div class="admonition-source admonition">
+<p class="admonition-title">Source</p>
+<p>Git CheatSheet,(c) 2011, salesforce.com, inc.,
+URL: <a class="reference external" href="https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf">https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf</a></p>
+</div>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h3>
+<p>When you first setup Git, set up your user name and email address so your first
+commits will record them properly.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;My Name&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;user@email.com&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="basic-git-workflow-example">
+<h3>Basic Git Workflow Example<a class="headerlink" href="#basic-git-workflow-example" title="Link to this heading">#</a></h3>
+<p>Initialise a new git repository,
+then stage all the files in the directory
+and finally commit the initial snapshot.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>init
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;initial commit&#39;</span>
+</pre></div>
+</div>
+<p>Create a new branch named feature_A,
+check it out so it is the active branch,
+then edit and stage some files
+and finally commit the new snapshot.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>feature_A
+git<span class="w"> </span>checkout<span class="w"> </span>feature_A
+<span class="o">(</span>edit-your-files<span class="o">)</span>
+git<span class="w"> </span>add<span class="w"> </span><span class="o">(</span>the-files-that-you-edited<span class="o">)</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;add feature A&#39;</span>
+</pre></div>
+</div>
+<p>Switch back to the master branch,
+reverting the feature_A changes you just made,
+then edit some files
+and commit your new changes directly in the master branch context.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>master
+<span class="o">(</span>edit-your-files<span class="o">)</span>
+git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;change files&#39;</span>
+</pre></div>
+</div>
+<p>Merge the feature_A changes into the master branch context,
+combining all your work.
+Finally delete the feature_A branch.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>git merge feature_A
+git branch -d feature_A</p>
+</div></blockquote>
+</section>
+<section id="setup-init">
+<h3>Setup &amp; Init<a class="headerlink" href="#setup-init" title="Link to this heading">#</a></h3>
+<p>Git configuration, and repository initialisation &amp; cloning.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">[key]</span> <span class="pre">[value]</span></code></p></td>
+<td><p>set a config value in this repository</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">global</span> <span class="pre">[key]</span> <span class="pre">[value]</span></code></p></td>
+<td><p>set a config value globally for this user</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></p></td>
+<td><p>initialise an existing directory as a Git repository</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">[url]</span></code></p></td>
+<td><p>clone a Git repository from a URL</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">help</span> <span class="pre">[command]</span></code></p></td>
+<td><p>get help on any Git command</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="stage-snapshot">
+<h3>Stage &amp; Snapshot<a class="headerlink" href="#stage-snapshot" title="Link to this heading">#</a></h3>
+<p>Working with snapshots and the Git staging area.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p></td>
+<td><p>show the status of what is staged for your next commit and what is modified in your working directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">[file]</span></code></p></td>
+<td><p>add a file as it looks now to your next commit (stage)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">[file]</span></code></p></td>
+<td><p>reset the staging area for a file so the change is not in your next commit (unstage)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code></p></td>
+<td><p>diff of what is changed but not staged</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--staged</span></code></p></td>
+<td><p>diff of what is staged but not yet committed</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code></p></td>
+<td><p>commit your staged content as a new commit snapshot</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">[file]</span></code></p></td>
+<td><p>remove a file from your working directory and unstage</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="branch-merge">
+<h3>Branch &amp; Merge<a class="headerlink" href="#branch-merge" title="Link to this heading">#</a></h3>
+<p>Working with Git branches and with the stash.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code></p></td>
+<td><p>list your branches. a * will appear next to the currently active branch</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">[branch-name]</span></code></p></td>
+<td><p>create a new branch at the current commit</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>switch to another branch and check it out into your working directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>create a branch and immediately switch to it</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>merge another branch into your currently active one and record the merge as a commit</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p></td>
+<td><p>show commit logs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span></code></p></td>
+<td><p>stash away the currently uncommitted modifications in your working directory temporarily</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">apply</span></code></p></td>
+<td><p>re-apply the last stashed changes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="share-update">
+<h3>Share &amp; Update<a class="headerlink" href="#share-update" title="Link to this heading">#</a></h3>
+<p>Fetching, merging and working with updates from another repository.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">[alias]</span> <span class="pre">[url]</span></code></p></td>
+<td><p>add a git URL as an alias</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">[alias]</span></code></p></td>
+<td><p>fetch down all the branches from that Git remote</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[alias]/[branch]</span></code></p></td>
+<td><p>merge a branch on the server into your currently active branch to bring it up to date</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">[alias]</span> <span class="pre">[branch]</span></code></p></td>
+<td><p>push the work on your branch to update that branch on the remote git repository</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p></td>
+<td><p>fetch from the URL tracked by the current branch and immediately try to merge in the tracked branch</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="inspect-compare">
+<h3>Inspect &amp; Compare<a class="headerlink" href="#inspect-compare" title="Link to this heading">#</a></h3>
+<p>Examining logs, diffs and object information.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>command</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p></td>
+<td><p>show the commit history for the currently active branch</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">branchB..branchA</span></code></p></td>
+<td><p>show the commits on branchA that are not on branchB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--follow</span> <span class="pre">[file]</span></code></p></td>
+<td><p>show the commits that changed file, even across renames</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">branchB...branchA</span></code></p></td>
+<td><p>show the diff of what is in branchA that is not in branchB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span> <span class="pre">[SHA]</span></code></p></td>
+<td><p>show any object in Git in human-readable format</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="contributing-on-github">
+<h3>Contributing on GitHub<a class="headerlink" href="#contributing-on-github" title="Link to this heading">#</a></h3>
+<p>To contribute to a project that is hosted on GitHub
+(or another repository hosting site, such as BitBucket)
+you can fork the project online,
+then clone your fork locally,
+make a change, push back to GitHub
+and then send a pull request, which will email the maintainer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>fork-the-project-on-github<span class="o">)</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/my-user/project
+<span class="nb">cd</span><span class="w"> </span>project
+<span class="o">(</span>edit-your-files<span class="o">)</span>
+git<span class="w"> </span>add<span class="w"> </span><span class="o">(</span>the-files-that-you-edited<span class="o">)</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;Explain what I changed&#39;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+<span class="o">(</span>now-go-to-github-and-click-the-pull-request-button<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="visual-git-cheatsheet">
+<h2>Visual Git Cheatsheet<a class="headerlink" href="#visual-git-cheatsheet" title="Link to this heading">#</a></h2>
+<div class="admonition-source admonition">
+<p class="admonition-title">Source</p>
+<p>Git Cheatsheet, (c) 2009-2012, Andrew Peterson
+url: <a class="reference external" href="http://ndpsoftware.com/git-cheatsheet.html">http://ndpsoftware.com/git-cheatsheet.html</a></p>
+<p>A list of Git commands, categorized on what they affect.</p>
+<p>The interactive online version provides
+a description for each of the commands.</p>
+</div>
+<section id="stash">
+<h3>Stash<a class="headerlink" href="#stash" title="Link to this heading">#</a></h3>
+<p>A place to hide modifications made to the workspace,
+while working on something else.
+(The stash area is not required in a “normal” workflow.)</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_Stash.png"><img alt="Git commands that affect the stash" src="../_images/Git-Cheatsheet_Stash.png" style="width: 80%;" />
+</a>
+</section>
+<section id="workspace">
+<h3>Workspace<a class="headerlink" href="#workspace" title="Link to this heading">#</a></h3>
+<p>The local working area.</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_Workspace.png"><img alt="Git commands that affect the workspace" src="../_images/Git-Cheatsheet_Workspace.png" style="width: 80%;" />
+</a>
+</section>
+<section id="staging-area">
+<h3>Staging area<a class="headerlink" href="#staging-area" title="Link to this heading">#</a></h3>
+<p>The “index”– or “staging area” –
+holds a snapshot of the content of the working area,
+and it is this snapshot that is taken as the contents of the next commit.</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_Staging.png"><img alt="commands that affect the staging area" src="../_images/Git-Cheatsheet_Staging.png" style="width: 80%;" />
+</a>
+</section>
+<section id="local-repository">
+<h3>Local repository<a class="headerlink" href="#local-repository" title="Link to this heading">#</a></h3>
+<p>A local area under version control.
+Typical branches: master, dev (for local development), feature_x, bugfix_y</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_LocalRepo.png"><img alt="commands that affect the local repository" src="../_images/Git-Cheatsheet_LocalRepo.png" style="width: 80%;" />
+</a>
+</section>
+<section id="upstream-repository">
+<h3>Upstream repository<a class="headerlink" href="#upstream-repository" title="Link to this heading">#</a></h3>
+<p>Typically a remote area under version control.
+Default name is ‘origin’. Typical branches here: master, shared_feature_x, release_y.</p>
+<a class="reference internal image-reference" href="../_images/Git-Cheatsheet_UpstreamRepo.png"><img alt="commands that affect the upstream repository" src="../_images/Git-Cheatsheet_UpstreamRepo.png" style="width: 80%;" />
+</a>
+</section>
+</section>
+<section id="how-to">
+<h2>How to…<a class="headerlink" href="#how-to" title="Link to this heading">#</a></h2>
+<p>This section include miscellaneous Git commands to perform different operations.</p>
+<section id="set-up-a-merge-tool-to-resolve-conflicts">
+<h3>Set up a merge tool to resolve conflicts<a class="headerlink" href="#set-up-a-merge-tool-to-resolve-conflicts" title="Link to this heading">#</a></h3>
+<p>Configure kdiff3 as the merge tool (in Windows)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>mergetool.kdiff3.path<span class="w"> </span><span class="s1">&#39;C:\Program Files (x86)\KDiff3\kdiff3.exe&#39;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>merge.tool<span class="w"> </span>kdiff3
+</pre></div>
+</div>
+<p>Invoke kdiff3</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>mergetool<span class="w"> </span>&lt;file&gt;
+</pre></div>
+</div>
+</section>
+<section id="force-an-update-from-the-upstream-repository">
+<h3>Force an update from the upstream repository<a class="headerlink" href="#force-an-update-from-the-upstream-repository" title="Link to this heading">#</a></h3>
+<p>This operation will discard all changes in the local repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD
+git<span class="w"> </span>pull
+</pre></div>
+</div>
+</section>
+<section id="add-untracked-files-to-the-set-of-files-under-version-control">
+<h3>Add untracked files to the set of files under version control<a class="headerlink" href="#add-untracked-files-to-the-set-of-files-under-version-control" title="Link to this heading">#</a></h3>
+<p>A pattern can be used. For example, this will add any new or untracked <code class="docutils literal notranslate"><span class="pre">*.rst</span></code> file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span><span class="k">$(</span>git<span class="w"> </span>ls-files<span class="w"> </span>--other<span class="w"> </span>*.rst<span class="k">)</span>
+</pre></div>
+</div>
+</section>
+<section id="remove-multiple-files-from-the-set-of-files-under-version-control">
+<h3>Remove multiple files from the set of files under version control<a class="headerlink" href="#remove-multiple-files-from-the-set-of-files-under-version-control" title="Link to this heading">#</a></h3>
+<p>This will remove multiple files that have already been deleted from disk.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rm<span class="w"> </span><span class="k">$(</span>git<span class="w"> </span>ls-files<span class="w"> </span>--deleted<span class="k">)</span>
+</pre></div>
+</div>
+<p>Alternatively, edit the <code class="docutils literal notranslate"><span class="pre">.git\config</span></code> file, and add the following lines.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[alias]
+   rma = !git ls-files --deleted -z | xargs -0 git rm
+</pre></div>
+</div>
+<p>Then run the command using the alias</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rma
+</pre></div>
+</div>
+</section>
+<section id="disable-quoted-file-names">
+<h3>Disable quoted file names<a class="headerlink" href="#disable-quoted-file-names" title="Link to this heading">#</a></h3>
+<p>Special character and spaces in file names can be problematic.
+To disable quotes file names (Windows Unicode Support), use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span><span class="o">[</span>--global<span class="o">]</span><span class="w"> </span>core.quotepath<span class="w"> </span>off
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="OnVersionControl.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">What is version control</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="UsingAnOnlineGitRepository.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Using Github</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-start">Before you start</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-cheatsheet">Git CheatSheet</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-git-workflow-example">Basic Git Workflow Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-init">Setup &amp; Init</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stage-snapshot">Stage &amp; Snapshot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#branch-merge">Branch &amp; Merge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#share-update">Share &amp; Update</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-compare">Inspect &amp; Compare</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-on-github">Contributing on GitHub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-git-cheatsheet">Visual Git Cheatsheet</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stash">Stash</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workspace">Workspace</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#staging-area">Staging area</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-repository">Local repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upstream-repository">Upstream repository</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to">How to…</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-a-merge-tool-to-resolve-conflicts">Set up a merge tool to resolve conflicts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-an-update-from-the-upstream-repository">Force an update from the upstream repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-untracked-files-to-the-set-of-files-under-version-control">Add untracked files to the set of files under version control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-multiple-files-from-the-set-of-files-under-version-control">Remove multiple files from the set of files under version control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-quoted-file-names">Disable quoted file names</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/eeadata/WISE.Documentation/edit/main/docs/On_VersionControl/UsingGit.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/On_VersionControl/UsingGit.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
