@@ -40,6 +40,7 @@
 
 .. _Pandoc: https://pandoc.org/
 .. _PlantUML: https://plantuml.com/
+.. _PyData theme: https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html
 .. _Pygments: https://pygments.org/
 .. _Pygments language lexers: https://pygments.org/docs/lexers/
 .. _Python: https://www.python.org/

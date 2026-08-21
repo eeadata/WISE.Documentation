@@ -7,33 +7,46 @@ https://style-guide.europa.eu/en/content/-/isg/topic?identifier=5.9.4-bibliograp
 
 https://www.zotero.org/styles?q=id%3Aeu-interinstitutional-style
 
-## Inline citations 
+## Inline citations
 
-The base format for inline citations (e.g., whether your whole project uses author-year `[Smith, 2020]` or numeric `[1]`) 
-is set **globally** in your `conf.py` and cannot be easily mixed. 
+The base format for inline citations (e.g., whether your whole project uses author-year `[Smith, 2020]` or numeric `[1]`)
+is set **globally** in your `conf.py` and cannot be easily mixed.
 However, you *can* dynamically change how individual citations are presented in the text using different **roles**.
 
 For example, you can mix parenthetical citations, textual citations, and footnote citations in the exact same paragraph:
 
 ::::{tab-set}
+:::{tab-item} md
+
+* **Parenthetical:** `{cite:p}` renders as `[Smith 2023]` or `[1]`
+* **Textual:** `{cite:t}` renders as `Smith [2023]` or `Smith [1]`
+* **Footnote:** `{footcite}` renders as a footnote marker `[1]`
+:::
+
 :::{tab-item} rst
 
 * **Parenthetical:** `:cite:p:` renders as `[Smith 2023]` or `[1]`
 * **Textual:** `:cite:t:` renders as `Smith [2023]` or `Smith [1]`
 * **Footnote:** `:footcite:` renders as a footnote marker `[1]`
 :::
-
-:::{tab-item} md 
-
-* **Parenthetical:** `{cite:p}` renders as `[Smith 2023]` or `[1]`
-* **Textual:** `{cite:t}` renders as `Smith [2023]` or `Smith [1]`
-* **Footnote:** `{footcite}` renders as a footnote marker `[1]`
-:::
 ::::
 
 Here is an example:
 
 ::::{tab-set}
+
+:::{tab-item} md
+
+```md
+According to {cite:t}`smith2023`, the algorithm is highly efficient. 
+Other researchers have found similar results {cite:p}`doe2021, johnson2022`. 
+We also want to note this secondary finding {footcite:p}`adams2019`.
+
+```{footbibliography}
+```
+
+:::
+
 :::{tab-item} rst
 
 ```rst
@@ -43,24 +56,15 @@ We also want to note this secondary finding :footcite:p:`adams2019`.
 
 .. footbibliography::
 ```
+
 :::
 
-:::{tab-item} md 
-
-```md
-According to {cite:t}`smith2023`, the algorithm is highly efficient. 
-Other researchers have found similar results {cite:p}`doe2021, johnson2022`. 
-We also want to note this secondary finding {footcite:p}`adams2019`.
-
-```{footbibliography}
-```
-:::
 ::::
 
-## Bibliography lists 
+## Bibliography lists
 
-You can have multiple bibliography lists in your project (or even on the same page), 
-each using a completely different styling format (e.g., one list sorted alphabetically, another numbered in order of appearance). 
+You can have multiple bibliography lists in your project (or even on the same page),
+each using a completely different styling format (e.g., one list sorted alphabetically, another numbered in order of appearance).
 You do this by passing a `:style:` flag to the `.. bibliography::` directive.
 
 ### Global options in `conf.py`
@@ -105,31 +109,13 @@ When generating a reference list using `.. bibliography::`, you can pass these o
 The BibTeX files can be managed with Zotero_.
 Zotero is available on Windows, Linux, Mac and Android
 
-
 ## Example with different styles
 
-If you want to split your references into two distinct lists on the same page—say, 
-one for books formatted alphabetically, 
+If you want to split your references into two distinct lists on the same page—say,
+one for books formatted alphabetically,
 and one for articles formatted numerically—you can use the `:style:` and `:filter:` options:
 
 ::::{tab-set}
-
-:::{tab-item} rst
-
-```rst
-## References: Books (Alphabetical)
-.. bibliography:: books.bib
-   :style: alpha
-   :filter: type == 'book'
-   :labelprefix: B-
-
-## References: Articles (Numbered by appearance)
-.. bibliography:: articles.bib
-   :style: unsrt
-   :filter: type == 'article'
-   :list: enumerated
-```
-:::
 
 :::{tab-item} md
 
@@ -146,9 +132,26 @@ and one for articles formatted numerically—you can use the `:style:` and `:fil
 :filter: type == 'article'
 :list: enumerated
 ```
+
+:::
+:::{tab-item} rst
+
+```rst
+## References: Books (Alphabetical)
+.. bibliography:: books.bib
+   :style: alpha
+   :filter: type == 'book'
+   :labelprefix: B-
+
+## References: Articles (Numbered by appearance)
+.. bibliography:: articles.bib
+   :style: unsrt
+   :filter: type == 'article'
+   :list: enumerated
+```
+
 :::
 ::::
-
 
 In this example, any book cited will appear with a prefix like **[B-Smi23]**, while articles will appear in a standard numbered list like **1, 2, 3**, completely independent of each other.
 
@@ -177,23 +180,6 @@ This is how you can use it in the text.
 
 ::::{tab-set}
 
-:::{tab-item} rst
-
-```{code-block} rst
-
-    If you are using Markdown do the citations like this:
-    see :cite:`Strunk1979` for an introduction to stylish blah, blah...
-
-    There are also the variations. 
-    For example, this one shows the authors names before the citation, which appears as a footnote :footcite:t:`1987:nelson`. 
-
-    And place the bibliography directive at the end of the document,
-    where the bibliography should appear. (It can also go to a separate document.)
-
-    .. footbibliography:: 
-```
-:::
-
 :::{tab-item} md
 
 ```{code-block} md
@@ -211,6 +197,24 @@ This is how you can use it in the text.
 
     ```{footbibliography}
 ```
+
+:::
+:::{tab-item} rst
+
+```{code-block} rst
+
+    If you are using Markdown do the citations like this:
+    see :cite:`Strunk1979` for an introduction to stylish blah, blah...
+
+    There are also the variations. 
+    For example, this one shows the authors names before the citation, which appears as a footnote :footcite:t:`1987:nelson`. 
+
+    And place the bibliography directive at the end of the document,
+    where the bibliography should appear. (It can also go to a separate document.)
+
+    .. footbibliography:: 
+```
+
 :::
 
 ::::
@@ -220,8 +224,8 @@ This is how you can use it in the text.
 If you are using Markdown do the citations like this:
 see {cite}`Strunk1979` for an introduction to stylish blah, blah...
 
-There are also the variations. 
-For example, this one shows the authors names before the citation, which appears as a footnote {footcite:t}`1987:nelson`. 
+There are also the variations.
+For example, this one shows the authors names before the citation, which appears as a footnote {footcite:t}`1987:nelson`.
 
 And place the bibliography directive at the end of the document,
 where the bibliography should appear. (It can also go to a separate document.)

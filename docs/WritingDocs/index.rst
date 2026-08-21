@@ -6,6 +6,8 @@ Writing documentation
    :hidden: 
    
    AboutSphinx
+   UsingMarkdown.md
+   UsingMarkdown_InternalLinks.md   
    UsingReStructuredText.rst
    UsingReStructuredText_Tables.rst
    Using_SQLTable.md
@@ -15,8 +17,6 @@ Writing documentation
    Using_Footnotes.md
    Using_Citations.md
    Using_BibTeXCitations.md
-   UsingMarkdown.md
-   UsingMarkdown_InternalLinks.md
 
 This section covers the following topics:
 

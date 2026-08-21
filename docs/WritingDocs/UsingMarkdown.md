@@ -1,5 +1,7 @@
 # Using Markdown
 
+Some examples below.  
+Follow the link to see more [basic syntax](https://www.markdownguide.org/basic-syntax/).
 
 ## Some text
 
@@ -22,7 +24,6 @@ Let's make a list (empty surrounding lines required):
 - item 2
 - item 3
 
-
 ## Table
 
 | No.  |  Prime |
@@ -32,17 +33,17 @@ Let's make a list (empty surrounding lines required):
 | 3    |  Yes   |
 | 4    |  No    |
 
-
-
 ## Code blocks
 
 The following is a Python code block:
+
 ```python
   def hello():
       print("Hello world")
 ```
 
 And this is a C code block:
+
 ```c
 #include <stdio.h>
 int main()
@@ -52,12 +53,11 @@ int main()
 }
 ```
 
-
 ## Math
 
 ### Using the `$` dollar sign notation
 
-* Add `myst_parser` to your active extensions in the project `conf.py` 
+- Add `myst_parser` to your active extensions in the project `conf.py`
 
     ```python
         extensions = [
@@ -66,7 +66,7 @@ int main()
         ]
     ````
 
-* Tell MyST to allow dollar signs and advanced math blocks
+- Tell MyST to allow dollar signs and advanced math blocks
 
     ```python
         myst_enable_extensions = [
@@ -75,7 +75,7 @@ int main()
         ]
     ````
 
-*   Now you can use the `$` notation for in-line equations.
+- Now you can use the `$` notation for in-line equations.
 
     Code:
 
@@ -87,7 +87,7 @@ int main()
 
     The area of a circle is $A = \pi r^2$.
 
-*   You can also use code blocks.
+- You can also use code blocks.
 
     Code:
 
@@ -105,7 +105,7 @@ int main()
 
 ### Using a `{math}` block
 
-*   This also works for in-line equations.
+- This also works for in-line equations.
 
     Code:
 
@@ -117,7 +117,7 @@ int main()
 
     This is an in-line equation, {math}`a^2 + b^2 = c^2`, embedded in text.
 
-*   And also works for code blocks.
+- And also works for code blocks.
 
     Code:
 
@@ -135,8 +135,7 @@ int main()
 
 ### How to label and cross-reference equations in Markdown
 
-*   Define the label after the closing `$$` 
-
+- Define the label after the closing `$$`
 
     Code:
 
@@ -152,23 +151,23 @@ int main()
     E = mc^2
     $$ (einstein-mass-energy)
 
-*   Once labeled, you can reference the equation anywhere in your documentation 
+- Once labeled, you can reference the equation anywhere in your documentation
     using the Sphinx `{eq}` role.
 
     Code:
 
     ````md
         As we can see in equation {eq}`einstein-mass-energy`, energy and mass are interchangeable.
-    ````       
+    ````
 
     Output:
 
     As we can see in equation {eq}`einstein-mass-energy`, energy and mass are interchangeable.
 
-By default, Sphinx only numbers equations that have a label attached to them. 
-If you want Sphinx to assign a number to every block equation in your documentation 
+By default, Sphinx only numbers equations that have a label attached to them.
+If you want Sphinx to assign a number to every block equation in your documentation
 (even the ones you haven't labeled), you can add this line to your conf.py:
 
-    ````python
-        math_number_all = True
-    ````     
+````python
+    math_number_all = True
+````

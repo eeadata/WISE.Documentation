@@ -2,7 +2,11 @@
 Publishing to GitHub Pages
 ==========================
 
+Use `GitHub Desktop` to create a git repository in your local project folder, and push it to GitHub.
+
 Once your documentation is ready to be shared, you can automatically publish it using GitHub Pages. 
+You can only use GitHub Pages over **public** repositories (unless you have an entreprise account).
+
 The best way to do this is by setting up a GitHub Actions workflow 
 that automatically builds and deploys your HTML files whenever you push changes to your main branch.
 
@@ -12,8 +16,9 @@ that automatically builds and deploys your HTML files whenever you push changes 
    Use the configuration in the `documentation.yml` file 
    that you can download :download:`here <src/documentation.yml>`.
 
-   Remember to use the `docs/requirements.txt` file 
+   The `documentation.yml` points to a  `docs/requirements.txt` file 
    that you can download :download:`here <../requirements.txt>`.
+   (If you put the requirements.txt file in another folder, you'll need to modify the documentation.yml file...)
 
 *  **Configure your repository settings**  
 
@@ -33,7 +38,6 @@ Your documentation will now be publicly accessible at `https://<your-username>.g
 
    Make sure that your WISE project manager is aware of the publication and has approved the content,
    specially is it is being published in an organisational repository.
-
 
 .. links-placeholder
 

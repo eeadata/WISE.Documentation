@@ -9,6 +9,7 @@ Quickstart
 If you are using the `wiseEnvironment` Conda environment, Sphinx should already be installed.
 Just open the Anaconda Prompt, activate the wiseEnvironment, and navigate to the repository and folder where you have your docs.
 
+If you want to start from scratch with an empty project,
 Sphinx comes with a script called `sphinx-quickstart` that sets up a source directory 
 and creates a default `conf.py` with the most useful configuration values from a few questions it asks you: 
 
@@ -17,6 +18,18 @@ and creates a default `conf.py` with the most useful configuration values from a
    sphinx-quickstart
 
 The script creates an `index.rst` file. You can open it and add some text there...
+
+Otherwise, the fastest way is to simply make a copy of this documentation and modify it as you want.
+
+.. warning::
+   Some of the functionality described in these pages 
+   depends on the use of the `PyData theme`_ 
+   and of a set of Sphinx extensions that are already defined in the project's `conf.py`.
+   The instalation and configuration of those extensions are not described here.  
+
+   The look-and-feel of the WISE dataflows documentation should be identical, 
+   so there is no strong reason to modify the theme or the configuration.
+
 
 "Live build" 
 ----------------------------------------------------
